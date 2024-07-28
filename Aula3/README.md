@@ -96,14 +96,14 @@ int main(){
 
 <h3>Configurar el software STM32 ST-LINK utility en Keil</h3>
 
-1. Seleccionar la opción 'Options for Target'
-2. En la pestaña 'Output' seleccionar la casilla 'Create HEX File'
-3. En la pestaña 'Debug' en la opción '<i>Use</i>', entre las opciones que se despliegan, seleccionar 'ST-LINK Debugger' y luego dar click en la opción 'Settings'
-4. Verificar que la tarjeta sea reconocida, debe aparecer el mensaje: 'ARM Core Sight SW-DP ...' en el espacio SWDIO
-5. En la misma pestaña 'Debug' en la parte inferior 'Debug' de la lista desplegable, seleccionar 'under Reset'
-6. En la pestaña 'Flash Download' seleccionar todas las casillas cuadradas, incluyendo la opción 'Reset and Run'
+1. Seleccionar la opción '<i>Options for Target</i>'
+2. En la pestaña '<i>Output</i>' seleccionar la casilla '<i>Create HEX File</i>'
+3. En la pestaña '<i>Debug</i>' en la opción '<i>Use</i>', entre las opciones que se despliegan, seleccionar '<i>ST-LINK Debugger</i>' y luego dar click en la opción '<i>Settings</i>'
+4. Verificar que la tarjeta sea reconocida, debe aparecer el mensaje: '<i>ARM Core Sight SW-DP ...</i>' en el espacio '<i>SWDIO</i>'
+5. En la misma pestaña '<i>Debug</i>' en la sección inferior '<i>Debug</i>' de la lista desplegable, seleccionar '<i>Under Reset</i>'
+6. En la pestaña '<i>Flash Download</i>' seleccionar todas las casillas cuadradas, incluyendo la opción '<i>Reset and Run</i>'
 7. Dar click en OK para aceptar las modificaciones previamente mencionadas
-8. Cargar el proyecto en la tarjeta, dando click en la opción 'Download' 
+8. Cargar el proyecto en la tarjeta, dando click en la opción '<i>Download</i>' 
 
 <h3>Depurar código en Keil</h3>
 

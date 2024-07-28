@@ -98,7 +98,7 @@ int main(){
 
 1. Seleccionar la opción 'Options for Target'
 2. En la pestaña 'Output' seleccionar la casilla 'Create HEX File'
-3. En la pestaña 'Debug' en la opción 'use', entre las opciones que se despliegan, seleccionar 'ST-LINK Debugger' y luego dar click en la opción 'Settings'
+3. En la pestaña 'Debug' en la opción '<i>Use</i>', entre las opciones que se despliegan, seleccionar 'ST-LINK Debugger' y luego dar click en la opción 'Settings'
 4. Verificar que la tarjeta sea reconocida, debe aparecer el mensaje: 'ARM Core Sight SW-DP ...' en el espacio SWDIO
 5. En la misma pestaña 'Debug' en la parte inferior 'Debug' de la lista desplegable, seleccionar 'under Reset'
 6. En la pestaña 'Flash Download' seleccionar todas las casillas cuadradas, incluyendo la opción 'Reset and Run'

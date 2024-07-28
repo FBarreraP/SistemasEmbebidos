@@ -1,19 +1,19 @@
 <h1>Aula 3</h1>
 
-Esta clase consiste en
+En esta clase se presenta un instructivo de instalación en Windows del software `ARM-Keil` para programar las tarjetas STM32, además de un hola mundo con la tarjeta NUCLEO STM32F767ZI o NUCLEO STM32F756ZG o NUCLEO STM32F746ZG o NUCLEO STM32F722ZE.
 
 <h2>Introducción a STM32F411RE</h2>
 
 ![Nucleo STM32F411RE](image-5.png)
 
-La página oficial de STM32 para esta tarjeta está <a url:"https://www.st.com/en/evaluation-tools/nucleo-f411re.html">aquí</a>
+La página oficial de STM32 para esta tarjeta está <a href="https://www.st.com/en/evaluation-tools/nucleo-f411re.html">aquí</a>
 
 
 La documentación (datasheets) requerida para la programación a descargar son:
 
-1. Datasheet chip -> Presenta la información del microcontrolador STM32F411RE se descarga <a url:"https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
-2. Manual user board -> Presenta la información de la placa (ej: pines de conexión, características eléctricas) se descarga <a url:"https://www.st.com/en/evaluation-tools/nucleo-f411re.html#documentation">aquí</a>
-3. Reference manual chip -> se descarga <a url:"https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
+1. Datasheet chip -> Presenta la información del microcontrolador STM32F411RE se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
+2. Manual user board -> Presenta la información de la placa (ej: pines de conexión, características eléctricas) se descarga <a href="https://www.st.com/en/evaluation-tools/nucleo-f411re.html#documentation">aquí</a>
+3. Reference manual chip -> se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
 
 
 ![Conectores pines](image.png)
@@ -30,7 +30,7 @@ Fuente: https://os.mbed.com/platforms/st-nucleo-f411re/
 
 <h2>Instrucciones instalación ARM-Keil</h2>
 
-1. Ir a la página https://www.keil.com/download/product/
+1. Ir a la página principal <a href="https://www.keil.com/download/product/">aquí</a>
 2. Seleccionar la opción <b>MDK-Arm</b> y diligenciar los datos requeridos
 3. Descargar el archivo ejecutable (.exe)
 4. Instalar el software `ARM-Keil` siguiendo el proceso de instalación e instalar el driver sugerido que aparece en la ventana emergente
@@ -39,7 +39,7 @@ Fuente: https://os.mbed.com/platforms/st-nucleo-f411re/
 7. Seleccionar el microcontrolador específico a trabajar y posteriormente instalar los paquetes requeridos, sin embargo, se recomiendan instalar y actualizar todos los paquetes para dicho microcontrolador y verificar que todos los paquetes tengan la etíqueta <i>Up to date</i>
 8. Instalar y/o actualizar los paquetes seleccionados siguiendo el proceso de instalación
 
-* Si desea instalar de manera más rápida y sencilla los paquetes para la tarjeta (ej: STM32F411RE), descargue el instalador de los paquetes  <a url:"https://www.keil.arm.com/devices/stmicroelectronics-stm32f411retx/features/">aquí</a> en la opción 'CMSIS Pack'. Por tanto, omita los pasos 5 al 8 del anterior procedimiento.
+* Si desea instalar de manera más rápida y sencilla los paquetes para la tarjeta (ej: STM32F411RE), descargue el instalador de los paquetes  <a href="https://www.keil.arm.com/devices/stmicroelectronics-stm32f411retx/features/">aquí</a> en la opción 'CMSIS Pack'. Por tanto, omita los pasos 5 al 8 del anterior procedimiento.
 
 <h2>Ejemplo 'hola mundo'</h2>
 
@@ -95,3 +95,24 @@ int main(){
 	}
 }
 ```
+
+<h3>Descargar el software STM32 ST-LINK utility</h3>
+
+1. Descargar el software del programador <a href="https://www.st.com/en/development-tools/stsw-link004.html">aquí</a> y el driver para las tarjetas para Windows <a href="https://www.st.com/en/development-tools/stsw-link009.html?dl=redirect">aquí</a>
+2. Instalar el software a través del proceso de instalación
+
+<h3>Configurar el software STM32 ST-LINK utility en Keil</h3>
+
+1. Seleccionar la opción 'Options for Target'
+2. En la pestaña 'Output' seleccionar la casilla 'Create HEX File'
+3. En la pestaña 'Debug' en la opción 'use', entre las opciones que se despliegan, seleccionar 'ST-LINK Debugger' y luego dar click en la opción 'Settings'
+4. Verificar que la tarjeta sea reconocida, debe aparecer el mensaje: 'ARM Core Sight SW-DP ...' en el espacio SWDIO
+5. En la misma pestaña 'Debug' en la parte inferior 'Debug' de la lista desplegable, seleccionar 'under Reset'
+6. En la pestaña 'Flash Download' seleccionar todas las casillas cuadradas, incluyendo la opción 'Reset and Run'
+7. Dar click en OK para aceptar las modificaciones previamente mencionadas
+8. Cargar el proyecto en la tarjeta, dando click en la opción 'Download' 
+
+<h3>Depurar código en Keil</h3>
+
+1. Seleccionar la opción 'Start/Stop Debug Session'
+2. Para controlar la depuración del código, se deben utilizar los botones que aparecen en la parte izquierda como control de la herramienta <i>debugger</i>

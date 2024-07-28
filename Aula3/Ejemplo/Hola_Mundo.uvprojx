@@ -10,6 +10,7 @@
       <TargetName>Target 1</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
+      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -47,14 +48,14 @@
             <NotGenerated>0</NotGenerated>
             <InvalidFlash>1</InvalidFlash>
           </TargetStatus>
-          <OutputDirectory>.\</OutputDirectory>
+          <OutputDirectory>.\Objects\</OutputDirectory>
           <OutputName>Hola_Mundo</OutputName>
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
-          <ListingPath>.\</ListingPath>
+          <ListingPath>.\Listings\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
@@ -125,47 +126,6 @@
             <HexOffset>0</HexOffset>
             <Oh166RecLen>16</Oh166RecLen>
           </OPTHX>
-          <Simulator>
-            <UseSimulator>0</UseSimulator>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>1</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <LimitSpeedToRealTime>0</LimitSpeedToRealTime>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Simulator>
-          <Target>
-            <UseTarget>1</UseTarget>
-            <LoadApplicationAtStartup>1</LoadApplicationAtStartup>
-            <RunToMain>1</RunToMain>
-            <RestoreBreakpoints>1</RestoreBreakpoints>
-            <RestoreWatchpoints>1</RestoreWatchpoints>
-            <RestoreMemoryDisplay>1</RestoreMemoryDisplay>
-            <RestoreFunctions>0</RestoreFunctions>
-            <RestoreToolbox>1</RestoreToolbox>
-            <RestoreTracepoints>1</RestoreTracepoints>
-            <RestoreSysVw>1</RestoreSysVw>
-          </Target>
-          <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>0</TargetSelection>
-          <SimDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-          </SimDlls>
-          <TargetDlls>
-            <CpuDll></CpuDll>
-            <CpuDllArguments></CpuDllArguments>
-            <PeripheralDll></PeripheralDll>
-            <PeripheralDllArguments></PeripheralDllArguments>
-            <InitializationFile></InitializationFile>
-            <Driver>BIN\UL2CM3.DLL</Driver>
-          </TargetDlls>
         </DebugOption>
         <Utilities>
           <Flash1>
@@ -173,7 +133,7 @@
             <UseExternalTool>0</UseExternalTool>
             <RunIndependent>0</RunIndependent>
             <UpdateFlashBeforeDebugging>1</UpdateFlashBeforeDebugging>
-            <Capability>0</Capability>
+            <Capability>1</Capability>
             <DriverSelection>-1</DriverSelection>
           </Flash1>
           <bUseTDR>1</bUseTDR>
@@ -423,9 +383,58 @@
       <Groups>
         <Group>
           <GroupName>Source Group 1</GroupName>
+          <Files>
+            <File>
+              <FileName>main.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\main.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>::CMSIS</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::Device</GroupName>
         </Group>
       </Groups>
     </Target>
   </Targets>
+
+  <RTE>
+    <apis/>
+    <components>
+      <component Cclass="CMSIS" Cgroup="CORE" Cvendor="ARM" Cversion="6.0.0" condition="ARMv6_7_8-M Device">
+        <package name="CMSIS" schemaVersion="1.7.7" url="https://www.keil.com/pack/" vendor="ARM" version="6.0.0"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+      <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" condition="STM32F4 CMSIS">
+        <package name="STM32F4xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.17.1"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </component>
+    </components>
+    <files>
+      <file attr="config" category="source" condition="STM32F411xE_ARMCC" name="Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f411xe.s" version="2.6.8">
+        <instance index="0">RTE\Device\STM32F411RETx\startup_stm32f411xe.s</instance>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" condition="STM32F4 CMSIS"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.17.1"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </file>
+      <file attr="config" category="source" name="Drivers\CMSIS\Device\ST\STM32F4xx\Source\Templates\system_stm32f4xx.c" version="2.6.8">
+        <instance index="0">RTE\Device\STM32F411RETx\system_stm32f4xx.c</instance>
+        <component Cclass="Device" Cgroup="Startup" Cvendor="Keil" Cversion="2.6.3" condition="STM32F4 CMSIS"/>
+        <package name="STM32F4xx_DFP" schemaVersion="1.7.2" url="https://www.keil.com/pack/" vendor="Keil" version="2.17.1"/>
+        <targetInfos>
+          <targetInfo name="Target 1"/>
+        </targetInfos>
+      </file>
+    </files>
+  </RTE>
 
 </Project>

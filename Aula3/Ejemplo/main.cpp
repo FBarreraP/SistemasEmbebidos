@@ -1,6 +1,6 @@
 //Ejemplo Hola mundo con led de usuario de la tarjeta
 //Fabián Barrera Prieto
-//UMNG
+//Universidad ECCI
 //STM32F411RET6U
 //operation 'or' (|) for set bit and operation 'and' (&) for clear bit
 

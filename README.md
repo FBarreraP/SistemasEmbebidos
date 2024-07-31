@@ -23,25 +23,25 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>02/08/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>03/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Introducción al microcontrolador STM32</td>
+		<td>03/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
 	</tr>
 	<tr>
-		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td></td>
+		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Manual de usuario (tarjeta nucleo) y datasheet del micro SMT32</td>
 	</tr>
 	<tr>
-		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td></td>
+		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>GPIOs (salidas)</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>FESTIVO </td>
+		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>GPIOs (entradas)</td>
 	</tr>
 	<tr>
 		<td>17/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Desarrollo de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Socialización de Guía No. 2 de laboratorio</td>
+		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Interrupciones</td>
 	</tr>
 	<tr>
-		<td>24/08/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
+		<td>24/08/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo de Laboratorio</td>
 	</tr>
 	<tr>
 		<td>30/08/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Parcial primer corte</td>
@@ -55,13 +55,16 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 <table>
 	<tr>
-		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Desarrollo y/o entrega de guía No. 3 de laboratorio</td>
+		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>07/09/2024</td> <td></td> <td>12</td> <td>12</td> <td>SEMANA DE RECESO</td>
+		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Socialización de proyecto</td>
 	</tr>
 	<tr>
-		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>FESTIVO</td>
+		<td>07/09/2024</td> <td></td> <td>12</td> <td>12</td> <td></td>
+	</tr>
+	<tr>
+		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td></td>
 	</tr>
 		<tr>
 		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Desarrollo y/o entrega guía No. 3 de laboratorio</td>
@@ -96,39 +99,38 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>11/10/2024</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td>12/10/2024</td> <td>2</td> <td>22</td> <td>11</td> <td>Sensor infrarrojo, ultrasonido y sensor de color</td>
+		<td>12/10/2024</td> <td>2</td> <td>22</td> <td>11</td> <td></td>
 	</tr>
 	<tr>
-		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td>CAD (SolidWorks)</td>
+		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td></td>
 	</tr>
 	<tr>
-		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>Plataforma omnidireccional 3 ruedas</td>
+		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td></td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>COPPELIA SIM</td>
+		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td></td>
 	</tr>
     <tr>
-		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>08/11/2024</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>08/11/2024</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr>
     <tr>
-		<td>09/11/2024</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
+		<td>09/11/2024</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
 	</tr><!--Finalización de clases-->
     <tr>
 		<td>15/11/2024</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
 	</tr>
 	<tr>
-		<td>16/11/2024</td> <td>2</td> <td>32</td> <td>16</td> <td>Entrega de proyecto</td>
+		<td>16/11/2024</td> <td>2</td> <td>32</td> <td>16</td> <td>Desarrollo y/o entrega de proyecto</td>
 	</tr>
-
 </table>
 
 <h3>MÉTODOS DE EVALUACIÓN ✍️</h3>

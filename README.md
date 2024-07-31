@@ -13,207 +13,176 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 <h3>TEMAS 🤓</h3>
 
-<h4>MEC D</h4>
+<h4>Primer corte</h4>
 
 <table>
 	<tr>
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>22/07/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>02/08/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>29/07/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Tutorial word para descargar Keil</td>
+		<td>03/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Introducción al microcontrolador STM32</td>
 	</tr>
 	<tr>
-		<td>05/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Socialización de guía No. 1 de laboratorio y proyecto</td>
+		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td></td>
 	</tr>
 	<tr>
-		<td>12/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Desarrollo y/o entrega de guía No. 1 de laboratorio</td>
+		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td></td>
 	</tr>
 	<tr>
-		<td>19/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>FESTIVO </td>
+		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>FESTIVO </td>
 	</tr>
 	<tr>
-		<td>26/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Desarrollo y/o entrega de guía No. 1 de laboratorio</td>
+		<td>17/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Desarrollo de Laboratorio</td>
+	</tr>
+	<tr>
+		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Socialización de Guía No. 2 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>24/08/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>30/08/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>02/09/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Socialización de Guía No. 2 de laboratorio</td>
+		<td>31/08/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
-	<tr>
-		<td>09/09/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>16/09/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>23/09/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Socialización de guía No. 3 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>30/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Desarrollo y/o entrega de guía No. 3 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>07/10/2024</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO</td>
-	</tr>
-	<tr>
-		<td>14/10/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>FESTIVO</td>
-	</tr><!--semana de parciales del segundo corte-->
-		<tr>
-		<td>21/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega guía No. 3 de laboratorio</td>
-	</tr><!--última semana de registro de notas del segundo corte-->
-	<tr>
-		<td>28/10/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Socialización de guías No. 4 y 5 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>04/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>FESTIVO</td>
-	</tr>
-	<tr>
-		<td>11/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>FESTIVO</td>
-	</tr><!--Finalización de clases-->
-	<tr>
-		<td>18/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Desarrollo y/o entrega de guías No. 4 y 5 de laboratorio y proyecto, y entrega de notas finales</td>
-	</tr><!--semana de examenes finales-->
 </table>
 
-<h4>MEC C</h4>
+<h4>Segundo corte</h4>
+
+<table>
+	<tr>
+		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Desarrollo y/o entrega de guía No. 3 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>07/09/2024</td> <td></td> <td>12</td> <td>12</td> <td>SEMANA DE RECESO</td>
+	</tr>
+	<tr>
+		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>FESTIVO</td>
+	</tr>
+		<tr>
+		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Desarrollo y/o entrega guía No. 3 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>20/09/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Socialización de guías No. 4 y 5 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>FESTIVO</td>
+	</tr>
+	<tr>
+		<td>27/09/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Socialización de guías No. 4 y 5 de laboratorio</td>
+	</tr>
+	<tr>
+		<td>28/09/2024</td> <td>2</td> <td>18</td> <td>18</td> <td>FESTIVO</td>
+	</tr>
+	<tr>
+		<td>04/10/2024</td> <td>2</td> <td>19</td> <td>19</td> <td>FESTIVO</td>
+	</tr><!--semana de parciales del segundo corte-->
+	<tr>
+		<td>05/10/2024</td> <td>2</td> <td>20</td> <td>20</td> <td>Desarrollo y/o entrega de guías No. 4 y 5 de laboratorio y proyecto, y entrega de notas finales</td>
+	</tr><!--última semana de registro de notas del segundo corte-->
+</table>
+
+<h4>Tercer corte</h4>
 
 <table>
 	<tr>
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>26/07/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>11/10/2024</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td>02/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Tutorial word para descargar Keil</td>
+		<td>12/10/2024</td> <td>2</td> <td>22</td> <td>11</td> <td>Sensor infrarrojo, ultrasonido y sensor de color</td>
 	</tr>
 	<tr>
-		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Socialización de guía No. 1 de laboratorio y proyecto</td>
+		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td>CAD (SolidWorks)</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>Desarrollo y/o entrega guía No. 1 de laboratorio</td>
+		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>Plataforma omnidireccional 3 ruedas</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Desarrollo y/o entrega guía No. 1 de laboratorio</td>
-	</tr><!--semana de parciales del primer corte-->
-	<tr>
-		<td>30/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Socialización de guía No. 2 de laboratorio</td>
-	</tr><!--última semana de registro de notas del primer corte-->
-	<tr>
-		<td>06/09/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
+		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>COPPELIA SIM</td>
 	</tr>
-	<tr>
-		<td>13/09/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de guía No. 2 de laboratorio</td>
+    <tr>
+		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo de Laboratorio y proyecto</td>
 	</tr>
-	<tr>
-		<td>20/09/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Socialización de guía No. 3 de laboratorio</td>
+    <tr>
+		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
 	</tr>
-	<tr>
-		<td>27/09/2024</td> <td></td> <td>10</td> <td>10</td> <td>Desarrollo y/o entrega de guía No. 3 de laboratorio</td>
+    <tr>
+		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo de Laboratorio y proyecto</td>
 	</tr>
-	<tr>
-		<td>04/10/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Desarrollo y/o entrega de guía No. 3 de laboratorio</td>
-	</tr><!--semana de parciales del segundo corte-->
-	<tr>
-		<td>11/10/2024</td> <td></td> <td></td> <td></td> <td>SEMANA DE RECESO </td>
+    <tr>
+		<td>08/11/2024</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
 	</tr>
-	<tr>
-		<td>18/10/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Socialización de guía No. 4 de laboratorio</td>
-	</tr><!--última semana de registro de notas del primer corte-->
-	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de guía No. 4 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>01/11/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Desarrollo y/o entrega de guía No. 4 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>08/11/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Socialización de guía No. 5 de laboratorio</td>
-	</tr>
-	<tr>
-		<td>15/11/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Desarrollo y/o entrega de guía No. 5 de laboratorio</td>
+    <tr>
+		<td>09/11/2024</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo de Laboratorio y proyecto</td>
 	</tr><!--Finalización de clases-->
+    <tr>
+		<td>15/11/2024</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
+	</tr>
 	<tr>
-		<td>22/11/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Desarrollo y/o entrega de guía No. 5 de laboratorio y proyecto, y entrega de notas finales</td>
-	</tr><!--semana de examenes finales-->
+		<td>16/11/2024</td> <td>2</td> <td>32</td> <td>16</td> <td>Entrega de proyecto</td>
+	</tr>
+
 </table>
 
 <h3>MÉTODOS DE EVALUACIÓN ✍️</h3>
 
-<h4>MEC D</h4>
-
 <table>
 	<tr>
+		<td>Corte</td>
 		<td>Actividad</td>
 		<td>Porcentaje 💯</td>
 		<td>Fecha</td>
 		<td>Metodología</td>
 	</tr>
 	<tr>
-		<td>Guía No. 1 de laboratorio</td>
-		<td>6%</td>
-		<td>12/08/2024<br>26/08/2024</td>
-		<td rowspan="5">Presencial</td>
+		<td rowspan="2">Primer (20%)</td>
+		<td>Parcial</td>
+		<td>10%</td>
+		<td>28/08/2024</td>
+		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
-		<td>Guía No. 2 de laboratorio</td>
-		<td>3%</td>
-		<td>09/09/2024<br>16/09/2024</td>
+		<td>Quices y/o laboratorio</td>
+		<td>10%</td>
+		<td>21/08/2024<br>22/08/2024</td>
 	</tr>
 	<tr>
-		<td>Guía No. 3 de laboratorio</td>
-		<td>6%</td>
-		<td>30/09/2024<br>21/10/2024</td>
+		<td rowspan="2">Segundo (30%)</td>
+		<td>Parcial</td>
+		<td>15%</td>
+		<td>02/10/2024</td>
 	</tr>
 	<tr>
-		<td>Guía No. 4 de laboratorio</td>
-		<td>7.5%</td>
-		<td>18/11/2024</td>
+		<td>Quices y/o laboratorio</td>
+		<td>15%</td>
+		<td>19/09/2024<br>25/09/2024<br>26/09/2024</td>
 	</tr>
 	<tr>
-		<td>Guía No. 5 de laboratorio</td>
-		<td>7.5%</td>
-		<td>18/11/2024</td>
+		<td rowspan="3">Tercer (50%)</td>
+		<td>Examen final</td>
+		<td>15%</td>
+		<td>13/11/2024</td>
+	</tr>
+	<tr>
+		<td>Quices y/o laboratorio</td>
+		<td>15%</td>
+		<td>30/10/2024<br>31/10/2024<br>06/11/2024<br>07/11/2024</td>
+	</tr>
+    <tr>
+		<td>Proyecto</td>
+		<td>20%</td>
+		<td>14/11/2024</td>
 	</tr>
 </table>
 
-<h4>MEC C</h4>
-
-<table>
-	<tr>
-		<td>Actividad</td>
-		<td>Porcentaje 💯</td>
-		<td>Fecha</td>
-		<td>Metodología</td>
-	</tr>
-	<tr>
-		<td>Guía No. 1 de laboratorio</td>
-		<td>6%</td>
-		<td>16/08/2024<br>23/08/2024</td>
-		<td rowspan="5">Presencial</td>
-	</tr>
-	<tr>
-		<td>Guía No. 2 de laboratorio</td>
-		<td>3%</td>
-		<td>06/09/2024<br>13/09/2024</td>
-	</tr>
-	<tr>
-		<td>Guía No. 3 de laboratorio</td>
-		<td>6%</td>
-		<td>27/09/2024<br>04/10/2024</td>
-	</tr>
-	<tr>
-		<td>Guía No. 4 de laboratorio</td>
-		<td>7.5%</td>
-		<td>25/10/2024<br>01/11/2024</td>
-	</tr>
-	<tr>
-		<td>Guía No. 5 de laboratorio</td>
-		<td>7.5%</td>
-		<td>15/11/2024<br>22/11/2024</td>
-	</tr>
-</table>
-
-Nota del curso = (0.21)*NotaCorte1 + (0.21)*NotaCorte2 + (0.28)*NotaCorte3 + (***0.3***)*NotaLab
+Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 
 <h3>OBSERVACIONES ⚠️</h3>
 
@@ -230,6 +199,7 @@ Nota del curso = (0.21)*NotaCorte1 + (0.21)*NotaCorte2 + (0.28)*NotaCorte3 + (**
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
 		<li> Los laboratorios y el proyecto se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
 		<li> Uso obligatorio de bata blanca en el laboratorio de robótica 🥼</li>
+		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li> 
 	</ul>
 
 <h4>Observaciones de reglamento estudiantil</h4>

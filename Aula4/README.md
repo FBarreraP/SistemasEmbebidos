@@ -1,5 +1,9 @@
-//Ejemplo Hola mundo con led de usuario de la tarjeta
-//Fabi�n Barrera Prieto
+
+
+
+```cpp
+//Ejemplo Hola mundo con led de usuario y botón de usuario de la tarjeta
+//Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F411RET6U
 //operation 'or' (|) for set bit and operation 'and' (&) for clear bit
@@ -48,3 +52,5 @@ int main(){
 		}
 	}
 }
+
+```

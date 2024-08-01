@@ -228,7 +228,7 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 <ul>
 	<li> Computador 💻</li>
 	<li> Keil</li>
-	<li> STM-32 (NUCLEO STM32F767ZI o NUCLEO STM32F756ZG o NUCLEO STM32F746ZG o NUCLEO STM32F722ZE)</li>
+	<li> STM-32 (NUCLEO STM32F767ZI)</li>
 	<img src="https://www.codeinsideout.com/blog/stm32/stm32-nucleo-boards.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
     <li> Fuentes de alimentación</li>
     <img src="https://cdnx.jumpseller.com/mactornica/image/9804941/1.jpg?1653696069" alt="Fuente AMS1117" caption="Hola"/>

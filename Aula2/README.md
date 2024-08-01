@@ -2,24 +2,55 @@
 
 Esta clase consiste en realizar una introducción al microcontrolador STM32F767ZI
 
+<h2>Sistemas microprogramable</h2>
+
+
+
+<h3>Arquitectura Von Neumann</h3>
+
+<img src="image-3.png" alt="Von Neumann"/>
+<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
+<br>
+
+<h3>Arquitectura Harvard</h3>
+
+<img src="image-4.png" alt="Harvard"/>
+<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
+<br>
+
+<h2>Microcontrolador</h2>
+
+<img src="image-2.png" alt="Microcontrolador"/>
+<figcaption>Fuente: https://tecnoelite.co/que-es-un-microcontrolador-tipos-usos-y-historia/</figcaption>
+<br>
+
+<h2>Sistemas embebidos</h2>
+
+Los sistemas embebidos son sistemas programables y diseñados para ejecutar tareas específicas, los cuales constan de un microcontrolador que está embebido o empotrado dentro de un sistema mayor, tarjeta de desarrollo que traen incluido: programador, pinout de conexiones, reguladores de voltajes, acondicionamientos de salida de potencia (Push Pull y Open Drain), configuraciones de entradas (Pull Up y Pull Down).
+
+
+
 <h2>Introducción al micro STM32</h2>
 
-El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquitectura Harvard. Entre las características más importantes del micro STM32F767ZI se destacan:
+El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquitectura Harvard de 32 bits. Entre las características más importantes de este microcontrolador se destacan:
 
 - Operación de voltaje (1.7V a 3.6V)
 - Frecuencia (máximo 216 MHz)
 - GPIOs (114)
-- Flash (2048 Kbytes)
-- Memoria SRAM (512 Kbytes = 368+16+128 Kbytes)
-- Timers (10)
-- Protocolos de comunicación (USART, SPI, I2C, I2S, CAN, etc.)
+- Flash (2 MB)
+- Memoria SRAM (512 KB = 368+16+128 KB)
+- Interrupciones externas (25)
+- Timers (15)
+- Protocolos de comunicación (USART (8), SPI (6), I2C (4), I2S (2), CAN (3), USB, etc.)
+- Ethernet
 - Interfaz de cámara
-- ADC 12 bits (24)
+- ADC 12 bits 16 canales (3)
 - DAC 12 bits (2)
 - PWM ()
 
 <img src="image.png" alt="característica micro STM32F767ZI"/>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+<br>
 
 El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal característica el uso de frecuencias diferentes para los diferentes buses de datos
 

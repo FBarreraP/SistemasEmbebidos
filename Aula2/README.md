@@ -1,6 +1,30 @@
 <h1>Aula 2</h1>
 
+Esta clase consiste en realizar una introducción al microcontrolador STM32F767ZI
 
+<h2>Introducción al micro STM32</h2>
+
+El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquitectura Harvard. Entre las características más importantes del micro STM32F767ZI se destacan:
+
+- Operación de voltaje (1.7V a 3.6V)
+- Frecuencia (máximo 216 MHz)
+- GPIOs (114)
+- Flash (2048 Kbytes)
+- Memoria SRAM (512 Kbytes = 368+16+128 Kbytes)
+- Timers (10)
+- Protocolos de comunicación (USART, SPI, I2C, I2S, CAN, etc.)
+- Interfaz de cámara
+- ADC 12 bits (24)
+- DAC 12 bits (2)
+- PWM ()
+
+<img src="image.png" alt="característica micro STM32F767ZI"/>
+<figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+
+El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal característica el uso de frecuencias diferentes para los diferentes buses de datos
+
+<img src="image-1.png" alt="hardware micro STM32F767ZI"/>
+<figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
 
 <h2>Bitwise</h2>
 
@@ -35,9 +59,8 @@ Las operaciones bitwise son aquellas que permiten realizar operaciones bit a bit
 
 <h3>AND</h3>
 
-![AND](image-15.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-15.png" alt="AND"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 ```c
 #include <stdio.h>
@@ -51,9 +74,8 @@ int main(){
 
 <h3>OR</h3>
 
-![OR](image-16.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-16.png" alt="OR"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 ```c
 #include <stdio.h>
@@ -67,9 +89,9 @@ int main(){
 
 <h3>XOR</h3>
 
-![XOR](image-17.png)
+<img src="image-17.png" alt="XOR"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
 
 ```c
 #include <stdio.h>
@@ -83,9 +105,8 @@ int main(){
 
 <h3>NOT</h3>
 
-![NOT](image-18.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-18.png" alt="NOT"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 ```c
 #include <stdio.h>
@@ -102,21 +123,18 @@ int main(){
 
 <h3>Corrimientos a la derecha</h3>
 
-![ShiftRight](image-19.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-19.png" alt="ShiftRight"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 <h3>Corrimientos a la izquierda</h3>
 
-![ShiftLeft](image-20.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-20.png" alt="ShiftLeft"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 <h3>Combinación de corrimientos</h3>
 
-![Shifts](image-21.png)
-
-Fuente: https://www.programiz.com/c-programming/bitwise-operators
+<img src="image-21.png" alt="Shifts"/>
+<figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
 
 ```c
 #include <stdio.h>

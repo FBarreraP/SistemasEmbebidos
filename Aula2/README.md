@@ -50,7 +50,7 @@ El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquit
 - Interfaz de cámara
 - ADC 12 bits 24 canales (3)
 - DAC 12 bits (2)
-- PWM 4 canales (13)
+- CCP 4 canales (13)
 
 <img src="image.png" alt="característica micro STM32F767ZI"/>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>

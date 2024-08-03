@@ -12,16 +12,19 @@ El microcontrolador es un sistema programable que cuenta con una CPU (microproce
 
 <h3>Arquitectura Von Neumann</h3>
 
+En la arquitectura Von Neumann la CPU se conecta a una única memoria central (RAM y ROM), por lo cual, se tienen únicamente tres buses para el control, las direcciones y el envío de datos e instrucciones para las dos memorias.
+
 <img src="image-3.png" alt="Von Neumann"/>
 <figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
 <br>
 
 <h3>Arquitectura Harvard</h3>
 
+En la arquitectura Harvard la CPU se conecta de manera independiente a las memorias RAM y ROM, por lo cual, se tienen tres buses para el control, las direcciones y el envío de datos e instrucciones para cada memoria, permitiendo tener acceso simultaneo a las dos.
+
 <img src="image-4.png" alt="Harvard"/>
 <figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
 <br>
-
 
 <h2>Sistemas embebidos</h2>
 

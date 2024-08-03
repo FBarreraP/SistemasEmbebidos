@@ -2,9 +2,13 @@
 
 Esta clase consiste en realizar una introducción al microcontrolador STM32F767ZI
 
-<h2>Sistemas microprogramable</h2>
+<h2>Microcontrolador</h2>
 
+El microcontrolador es un sistema programable que cuenta con una CPU (microprocesador), memorias (ROM y RAM), señal de reloj, periféricos, etc.
 
+<img src="image-2.png" alt="Microcontrolador"/>
+<figcaption>Fuente: https://tecnoelite.co/que-es-un-microcontrolador-tipos-usos-y-historia/</figcaption>
+<br>
 
 <h3>Arquitectura Von Neumann</h3>
 
@@ -18,17 +22,14 @@ Esta clase consiste en realizar una introducción al microcontrolador STM32F767Z
 <figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
 <br>
 
-<h2>Microcontrolador</h2>
-
-<img src="image-2.png" alt="Microcontrolador"/>
-<figcaption>Fuente: https://tecnoelite.co/que-es-un-microcontrolador-tipos-usos-y-historia/</figcaption>
-<br>
 
 <h2>Sistemas embebidos</h2>
 
 Los sistemas embebidos son sistemas programables y diseñados para ejecutar tareas específicas, los cuales constan de un microcontrolador que está embebido o empotrado dentro de un sistema mayor, tarjeta de desarrollo que traen incluido: programador, pinout de conexiones, reguladores de voltajes, acondicionamientos de salida de potencia (Push Pull y Open Drain), configuraciones de entradas (Pull Up y Pull Down).
 
-
+<img src="image-5.png" alt="STM32F767ZI"/>
+<figcaption>Fuente: https://www.sigmaelectronica.net/producto/nucleo-f767zi/</figcaption>
+<br>
 
 <h2>Introducción al micro STM32</h2>
 
@@ -56,6 +57,8 @@ El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal car
 
 <img src="image-1.png" alt="hardware micro STM32F767ZI"/>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+
+La funcionalidad de los pines del microcontrolador STM32F767ZI se encuentran en la tabla 11 y 12 del datasheet.
 
 <h2>Bitwise</h2>
 

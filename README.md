@@ -61,7 +61,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Socialización de proyecto</td>
 	</tr>
 	<tr>
-		<td>07/09/2024</td> <td></td> <td>12</td> <td>12</td> <td>Systick</td>
+		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Systick</td>
 	</tr>
 	<tr>
 		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
@@ -102,22 +102,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>12/10/2024</td> <td>2</td> <td>22</td> <td>11</td> <td>Timers</td>
 	</tr>
 	<tr>
-		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
 	</tr>
 	<tr>
-		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>PWM</td>
+		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>PWM</td>
 	</tr>
     <tr>
-		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>I2C</td>
+		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
-		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>I2C</td>
 	</tr>
     <tr>
-		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
 		<td>08/11/2024</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
@@ -196,7 +196,7 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 		<li> No presto mi computador para presentar laboratorios, talleres y/o proyectos 🤦‍♂️</li>
 		<li> Permitidas las salidas al baño 🚻 y a recibir llamadas 📲</li>
 		<li> Si no dejan dictar la clase, pasan al tablero a dar la clase o doy la clase por vista 😤</li>
-		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/Laboratorio_Microcontroladores </li>
+		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/SistemasEmbebidos </li>
 		<li> Los laboratorios y el proyecto consistirán únicamente de montaje y podrán ser realizados en grupos de máximo 2 estudiantes 🧍‍♂️🧍‍♀️</li>
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
 		<li> Los laboratorios y el proyecto se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 

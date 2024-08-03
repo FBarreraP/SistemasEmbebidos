@@ -1,6 +1,6 @@
 <h1>Aula 2</h1>
 
-Esta clase consiste en realizar una introducción al microcontrolador STM32F767ZI
+Esta clase consiste en realizar una introducción al microcontrolador STM32F767ZI y en repasar las operaciones bit a bit (bitwise)
 
 <h2>Microcontrolador</h2>
 

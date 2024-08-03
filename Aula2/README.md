@@ -36,11 +36,11 @@ Los sistemas embebidos son sistemas programables y diseñados para ejecutar tare
 
 <h2>Introducción al micro STM32</h2>
 
-El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquitectura Harvard de 32 bits. Entre las características más importantes de este microcontrolador se destacan:
+El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquitectura Harvard de 32 bits de empaquetado QFP144. Entre las características más importantes de este microcontrolador se destacan:
 
 - Operación de voltaje (1.7V a 3.6V)
 - Frecuencia (máximo 216 MHz)
-- GPIOs (168)
+- GPIOs (144)
 - Flash (2 MB)
 - Memoria SRAM (512 KB = 368+16+128 KB)
 - Interrupciones externas (25)

@@ -40,7 +40,7 @@ El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquit
 
 - Operación de voltaje (1.7V a 3.6V)
 - Frecuencia (máximo 216 MHz)
-- GPIOs (114)
+- GPIOs (168)
 - Flash (2 MB)
 - Memoria SRAM (512 KB = 368+16+128 KB)
 - Interrupciones externas (25)
@@ -48,12 +48,13 @@ El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquit
 - Protocolos de comunicación (USART (8), SPI (6), I2C (4), I2S (2), CAN (3), USB, etc.)
 - Ethernet
 - Interfaz de cámara
-- ADC 12 bits 16 canales (3)
+- ADC 12 bits 24 canales (3)
 - DAC 12 bits (2)
-- PWM ()
+- PWM 4 canales (13)
 
 <img src="image.png" alt="característica micro STM32F767ZI"/>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+
 <br>
 
 El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal característica el uso de frecuencias diferentes para los diferentes buses de datos
@@ -61,7 +62,7 @@ El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal car
 <img src="image-1.png" alt="hardware micro STM32F767ZI"/>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
 
-La funcionalidad de los pines del microcontrolador STM32F767ZI se encuentran en la tabla 11 y 12 del datasheet.
+La funcionalidad de los pines del microcontrolador STM32F767ZI se encuentran en la tabla 11 y 13 del datasheet.
 
 <h2>Bitwise</h2>
 

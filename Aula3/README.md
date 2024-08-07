@@ -28,7 +28,7 @@ Manual de usuario -> Diagrama St LInk
 
 <h3>Leds</h3>
 
-Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se debe verificar que el LED 4 esté en rojo encendido.
+Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se debe verificar que el LED 4 esté encendido en rojo.
 
 <div align="center">
 <img src="image-2.png" alt="Leds Nucleo STM32F767ZI"/>
@@ -51,11 +51,17 @@ El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjet
 <h4>Pines Zio o Arduino</h4>
 
 <div align="center">
+<img src="image-8.png" alt="Pines Zio o Arduino"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<div align="center">
 <img src="image-4.png" alt="CN8 y CN9"/>
 <br>
 <img src="image-5.png" alt="CN7 y CN10"/>
 <br>
-<figcaption>Fuente: Manual de usuario</figcaption>
+Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 </div>
 
 <h4>Pines Morphos</h4>
@@ -65,12 +71,8 @@ El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjet
 <br>
 <img src="image-7.png" alt="CN12"/>
 <br>
-<figcaption>Fuente: Manual de usuario</figcaption>
-</div>
-
-
-
 Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
+</div>
 
 <h2>Instrucciones instalación ARM-Keil</h2>
 

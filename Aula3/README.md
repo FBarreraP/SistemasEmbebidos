@@ -26,6 +26,12 @@ Manual de usuario -> Diagrama St LInk
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
+<div align="center">
+<img src="image-9.png" alt="Vista trasera Nucleo STM32F767ZI"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
 <h3>Leds</h3>
 
 Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se debe verificar que el LED 4 esté encendido en rojo.

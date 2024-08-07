@@ -1,41 +1,76 @@
 <h1>Aula 3</h1>
 
+Esta clase consiste en entender el manual de usuario de la tarjeta NUCLEO STM32F767ZI; así mismo, se presenta un instructivo de instalación en Windows del software `ARM-Keil` para programar las tarjetas STM32, además de un hola mundo con la tarjeta NUCLEO STM32F767ZI, NUCLEO STM32F411RE y NUCLEO STM32F303K8.
 
-Manual de usuario -> Diagrama St LInk
-Aspectos generales tarjeta
-LEDs
-Led rojo siempre para desconectar el cable de programación 
-Tarea: Buscar pines no existentes en la tarjeta
+<h2>Nucleo STM32F767ZI</h2>
 
-
-
-En esta clase se presenta un instructivo de instalación en Windows del software `ARM-Keil` para programar las tarjetas STM32, además de un hola mundo con la tarjeta NUCLEO STM32F767ZI o NUCLEO STM32F756ZG o NUCLEO STM32F746ZG o NUCLEO STM32F722ZE.
-
-<h2>Introducción a STM32F411RE</h2>
-
-![Nucleo STM32F411RE](image-5.png)
-
-La página oficial de STM32 para esta tarjeta está <a href="https://www.st.com/en/evaluation-tools/nucleo-f411re.html">aquí</a>
-
+La página oficial de STM32 para esta tarjeta está <a href="https://www.st.com/en/evaluation-tools/nucleo-f767zi.html">aquí</a>
 
 La documentación (datasheets) requerida para la programación a descargar son:
 
-1. Datasheet chip -> Presenta la información del microcontrolador STM32F411RE se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
-2. Manual user board -> Presenta la información de la placa (ej: pines de conexión, características eléctricas) se descarga <a href="https://www.st.com/en/evaluation-tools/nucleo-f411re.html#documentation">aquí</a>
-3. Reference manual chip -> se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f411/documentation.html">aquí</a>
+1. Datasheet chip -> Presenta la información del microcontrolador STM32F411RE se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f767zi.html">aquí</a>
+2. Manual user board -> Presenta la información de la placa (ej: pines de conexión, características eléctricas) se descarga <a href="https://www.st.com/en/evaluation-tools/nucleo-f767zi.html#documentation">aquí</a>
+3. Reference manual chip -> se descarga <a href="https://www.st.com/en/microcontrollers-microprocessors/stm32f767zi.html#documentation">aquí</a>
+
+Manual de usuario -> Diagrama St LInk
+
+<div align="center">
+<img src="image-1.png" alt="ST-LINK y microcontrolador"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<div align="center">
+<img src="image.png" alt="Vista superior Nucleo STM32F767ZI"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<h3>Leds</h3>
+
+Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se debe verificar que el LED 4 esté en rojo encendido.
+
+<div align="center">
+<img src="image-2.png" alt="Leds Nucleo STM32F767ZI"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<h3>Pulsadores</h3>
+
+<div align="center">
+<img src="image-3.png" alt="Pulsadores Nucleo STM32F767ZI"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+ <h3>Pinout</h3>
+
+El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjeta NUCLEO F767ZI utiliza solamente 114 pines GPIO.
+
+<h4>Pines Zio o Arduino</h4>
+
+<div align="center">
+<img src="image-4.png" alt="CN8 y CN9"/>
+<br>
+<img src="image-5.png" alt="CN7 y CN10"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<h4>Pines Morphos</h4>
+
+<div align="center">
+<img src="image-6.png" alt="CN11"/>
+<br>
+<img src="image-7.png" alt="CN12"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
 
 
-![Conectores pines](image.png)
 
-![CN6 y CN8](image-1.png)
-
-![CN5 y CN9](image-2.png)
-
-![CN7](image-3.png)
-
-![CN10](image-4.png)
-
-Fuente: https://os.mbed.com/platforms/st-nucleo-f411re/
+Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 
 <h2>Instrucciones instalación ARM-Keil</h2>
 

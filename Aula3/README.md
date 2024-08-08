@@ -173,7 +173,7 @@ int main(){
 	
 	RCC->AHB1ENR |= (1<<0);  // Enable the GPIOA clock (user led LD2 is connected to PA_5)
 	
-    GPIOA->MODER &= ~(0b11<<10); //clear (00) pin PA_5(bits 7:6)  
+	GPIOA->MODER &= ~(0b11<<10); //clear (00) pin PA_5(bits 7:6)  
 	GPIOA->MODER |= (1<<10); //pin PA_5(bits 11:10) as Output (01)
 	
 	GPIOA->OTYPER &= ~(1<<5);  // bit 5=0 --> Output push pull (HIGH or LOW)

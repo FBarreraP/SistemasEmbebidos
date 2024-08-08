@@ -52,7 +52,7 @@ Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se 
 
  <h3>Pinout</h3>
 
-El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjeta NUCLEO F767ZI utiliza solamente 114 pines GPIO.
+El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjeta NUCLEO F767ZI utiliza solamente 114 pines GPIO. Los pines son compatibles con +3.3V. En las tablas 19 y 21 se encuentran la asignación de pines Zio y Morpho, respectivamente, para la tarjeta NUCLEO F767ZI.
 
 <h4>Pines Zio o Arduino</h4>
 
@@ -102,6 +102,56 @@ Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 5. Crear un archivo .cpp y añadirlo al proyecto en la carpeta 'Source Group 1'
 6. Posteriormente a escribir el código en C++, limpiar y compilar el proyecto en la opción 'rebuild'
 
+NUCLEO F303K8
+
+```cpp
+//Ejemplo Hola mundo con led de usuario de la tarjeta
+//Fabián Barrera Prieto
+//UMNG
+//STM32F303K8T6
+//operation 'or' (|) for set bit and operation 'and' (&) for clear bit
+
+#include <stdio.h>
+#include "stm32f3xx.h"
+
+void Delay (uint32_t time)
+{
+	//while (time--);  
+	for (int t=0;t<time;t++);
+
+}
+
+int main(){
+	
+	/************** STEPS TO FOLLOW *****************
+	1. Enable GPIOD clock
+	2. Set the PIN PD13 as output
+	3. Configure the output mode i.e state, speed, and pull
+	************************************************/
+	//Reference manual chip
+	//Step 1
+	RCC->AHBENR |= (1<<18);  // Enable the GPIOB clock (user led LD3 is connected to PB_3)
+	//Step 2
+	GPIOB->MODER &= ~(0b11<<6); //clear (00) pin PB_3(bits 7:6)  
+	GPIOB->MODER |= (1<<6); //pin PB_3(bits 7:6) as Output (01)
+	//Step 3
+	GPIOB->OTYPER &= ~(1<<3);  // bit 3=0 --> Output push pull (HIGH or LOW)
+	GPIOB->OSPEEDR |= ((1<<7)|(1<<6));//(0b11<<6)  // Pin PB_3 (bits 7:6) as High Speed (11)
+	GPIOB->PUPDR &= ~(0b11<<6); //~((1<<7)|(1<<6)) // Pin PB_3 (bits 7:6) are 0:0 --> no pull up or pull down
+	
+	while(1){
+		//GPIOD->BSRR |= (1<<3); // Set the Pin PB_3
+		GPIOB->ODR |= 1<<3; // Set the Pin PB_3
+		Delay(1000000);
+		//GPIOD->BSRR |= (1<<19); // Reset the Pin PB_3
+		GPIOB->ODR &= ~(1<<3); // Reset the Pin PB_3
+		Delay(1000000);
+	}
+}
+```
+
+NUCLEO F411RET6U
+
 ```cpp
 //Ejemplo Hola mundo con led de usuario de la tarjeta
 //Fabián Barrera Prieto
@@ -137,6 +187,61 @@ int main(){
 		//GPIOA->BSRR |= (1<<21); // Reset the Pin PA_5
 		GPIOA->ODR &= ~(1<<5); // Reset the Pin PA_5
 		Delay(1000000);
+	}
+}
+```
+
+NUCLEO F767ZIT6U
+
+```cpp
+//Ejemplo Hola mundo con led de usuario de la tarjeta
+//Fabián Barrera Prieto
+//Universidad ECCI
+//STM32F767ZIT6U
+//operation 'or' (|) for set bit and operation 'and' (&) for clear bit
+
+#include <stdio.h>
+#include "stm32f7xx.h"
+
+void Delay (uint32_t time)
+{
+	//while (time--);  
+	for (int t=0;t<time;t++);
+
+}
+
+int main(){
+	
+	/************** STEPS TO FOLLOW *****************
+	1. Enable GPIOA clock
+	2. Set the PIN D33=PB0 as output
+	3. Configure the output mode i.e state, speed, and pull
+	************************************************/
+	//Reference manual chip
+	//Step 1
+	RCC->AHB1ENR |= (1<<1); //Enable the GPIOB clock (user led LD1 is connected to PB0)
+	RCC->AHB1ENR |= (1<<2); //Enable the GPIOC clock (user push button B1 is connected to PC13)
+	//Step 2
+	GPIOB->MODER &= ~(0b11<<0); //clear (00) pin PB0(bits 1:0) and set as Input (00) for default 
+	GPIOB->MODER |= (1<<0); //pin PB0(bits 1:0) as Output (01)
+	GPIOC->MODER &= ~(0b11<<26); //clear (00) pin PC13(bits 27:26) and set as Input (00) for default 
+	//Step 3
+	GPIOB->OTYPER &= ~(1<<0);  // clear (0) pin PB0 (bit 0) --> Output push pull (HIGH or LOW)
+	GPIOB->OSPEEDR |= ((1<<1)|(1<<0));//(0b11<<0)  // Pin PB0 (bits 1:0) as Very High Speed (11)
+	GPIOC->OSPEEDR |= ((1<<27)|(1<<26));//(0b11<<26)  // Pin PC13 (bits 27:26) as Very High Speed (11)
+	GPIOB->PUPDR &= ~(0b11<<0); //~((1<<1)|(1<<0)) // Pin PB0 (bits 1:0) are 0:0 --> no pull up or pull down
+	GPIOC->PUPDR &= ~(0b11<<26); //~((1<<27)|(1<<26)) // Pin PC13 (bits 27:26) are 0:0 --> no pull up or pull down
+	GPIOC->PUPDR |= (1<<26); // Pin PC_13 (bits 27:26) are 0:1 --> pull up
+	
+	while(1){
+		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
+			//GPIOB->BSRR |= (1<<0); // Set the Pin PB0
+			GPIOB->ODR |= 1<<0; // Set the Pin PB0
+			Delay(1000000);
+			//GPIOB->BSRR |= (1<<16); // Reset the Pin PB0
+			GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+			Delay(1000000);
+		}
 	}
 }
 ```

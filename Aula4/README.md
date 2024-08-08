@@ -45,7 +45,7 @@ A través de los siguientes registros:
 
 <h3>Salidas digitales</h3>
 
-<dl>
+<ul>
   <dt>- El búfer de salida está habilitado:</dt>
   <dd>- Modo Open Drain: un "0" en el registro de salida activa el N-MOS, mientras que un "1" en el registro de salida deja el puerto en alta impedancia (el P-MOS nunca se activa)</dd>
   <dd>– Modo Push-Pull: un "0" en el registro de salida activa el N-MOS, mientras que un "1" en el registro de salida activa el P-MOS</dd>
@@ -54,7 +54,7 @@ A través de los siguientes registros:
   <dt>- Los datos presentes en el pin de I/O se muestrean en el registro de datos de entrada cada ciclo de reloj AHB</dt>
   <dt>- Un acceso de lectura al registro de entrada de datos obtiene el estado de I/O</dt>
   <dt>- Un acceso de lectura al registro de salida de datos obtiene el último valor escrito</dt>
-</dl>
+</ul>
 
 <div align="center">
 <img src="image-2.png" alt="Salidas digitales"/>

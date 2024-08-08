@@ -1,3 +1,52 @@
+<h1>Aula 3</h1>
+
+Esta clase consiste en entender las diferentes configuraciones de las entradas y salidas de los GPIOs de la tarjeta NUCLEO F767ZI.
+
+<h2>GPIO</h2>
+
+Cada pin de la tarjeta NUCLEO F767ZI puede ser configurado en diferentes modos:
+
+<div align="center">
+<img src="image.png" alt="Estructura pin I/O"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+- Entrada flotante
+- Entrada Pull Up
+- Entrada Pull Down
+- Análogo
+- Salida Push Pull
+- Salida Open Drain
+- Función alternante (Timers, PWM, SPI, I2C, USART, etc.)
+
+<h3>Entradas digitales</h3>
+
+<div align="center">
+<img src="image-1.png" alt="Entradas digitales"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<h3>Salidas digitales</h3>
+
+<div align="center">
+<img src="image-2.png" alt="Salidas digitales"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+
+
+
+<h2>GPIO</h2>
+
+
+
+
+
+
+
 
 
 

@@ -78,6 +78,12 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
 </div>
 
+<h5>Open-Drain con Pull-Up</h5>
+
+
+<h5>Open-Drain con Pull-Down</h5>
+
+
 <h4>Push-Pull</h4>
 
 Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de salida a través del flujo de la corriente.

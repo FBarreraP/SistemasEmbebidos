@@ -36,6 +36,21 @@ Cada pin de la tarjeta NUCLEO F767ZI puede ser configurado en diferentes modos:
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
+<h3>Función alternante</h3>
+
+<div align="center">
+<img src="image-3.png" alt="Función alternante"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<h3>Análogo</h3>
+
+<div align="center">
+<img src="image-4.png" alt="Análogo"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
 
 
 

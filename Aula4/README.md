@@ -4,13 +4,7 @@ Esta clase consiste en entender las diferentes configuraciones de las entradas y
 
 <h2>GPIO</h2>
 
-Cada pin de la tarjeta NUCLEO F767ZI puede ser configurado en diferentes modos:
-
-<div align="center">
-<img src="image.png" alt="Estructura pin I/O"/>
-<br>
-<figcaption>Fuente: Manual de usuario</figcaption>
-</div>
+Los GPIOs pueden ser configurado en diferentes modos:
 
 - Entrada flotante
 - Entrada Pull Up
@@ -20,7 +14,28 @@ Cada pin de la tarjeta NUCLEO F767ZI puede ser configurado en diferentes modos:
 - Salida Open Drain
 - Función alternante (Timers, PWM, SPI, I2C, USART, etc.)
 
+A través de los siguientes registros: 
+
+- GPIOx_MODER -> configurar el pin como análogos/in/out/AF
+- GPIOx_OTYPER -> Seleccionar el tipo de salida
+- GPIOx_PUPDR -> Seleccionar Pull Up o Pull Down
+- GPIOx_OSPEEDER -> Velocidad del pin
+- GPIOx_IDR -> Leer el pin
+- GPIOx_ODR	-> Escribir en el pin
+
+<div align="center">
+<img src="image.png" alt="Estructura pin I/O"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
 <h3>Entradas digitales</h3>
+
+- El búfer de salida está desactivado
+- La entrada de disparo Schmitt- Trigger está activada
+- Las resistencias pull-up y pull-down se activan en función del valor en el registro GPIOx_PUPDR
+- El dato presente en el pin de I/O se muestrea en el registro de entrada de datos cada ciclo de reloj AHB
+- Un acceso de lectura al registro de entrada de dator proporciona el estado de I/O
 
 <div align="center">
 <img src="image-1.png" alt="Entradas digitales"/>

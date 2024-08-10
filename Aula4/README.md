@@ -39,6 +39,12 @@ A través de los siguientes registros:
 
 <h4>Entrada flotante</h4>
 
+<div align="center">
+<img src="image-21.png" alt="Entradas digitales"/>
+<br>
+<figcaption>Fuente: https://zonamaker.com/resistencias-de-pull-up-y-pull-down</figcaption>
+</div>
+
 <h4>Entrada Pull-Up y Pull-Down</h4>
 
 <div align="center">
@@ -69,13 +75,13 @@ Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de
 <div align="center">
 <img src="image-15.png" alt="Push-Pull"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
 <img src="image-16.png" alt="Push-Pull"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <h4>Open-Drain</h4>
@@ -85,13 +91,13 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <div align="center">
 <img src="image-6.png" alt="Open-Drain GND"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
 <img src="image-17.png" alt="Open-Drain floating"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <h5>Open-Drain con Pull-Up</h5>
@@ -99,19 +105,19 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <div align="center">
 <img src="image-18.png" alt="Open-Drain con Pull-Up"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
 <img src="image-19.png" alt="Open-Drain VCC con Pull-Up"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
 <img src="image-20.png" alt="Open-Drain GND con Pull-Up"/>
 <br>
-<figcaption>Fuente: </figcaption>
+<figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <h3>Función alternante</h3>

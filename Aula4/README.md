@@ -122,10 +122,109 @@ Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
+<h2>Registros STM32F767ZI</h2>
 
+```cpp
+//Ejemplo Hola mundo con led de usuario de la tarjeta
+//Fabián Barrera Prieto
+//Universidad ECCI
+//STM32F767ZIT6U
+//operation 'or' (|) for set bit and operation 'and' (&) for clear bit
 
-<h2>GPIO</h2>
+#include <stdio.h>
+#include "stm32f7xx.h"
 
+void Delay (uint32_t time)
+{
+	//while (time--);  
+	for (int t=0;t<time;t++);
+
+}
+
+int main(){
+
+	RCC->AHB1ENR |= (1<<1); //Enable the GPIOB clock (user led LD1 is connected to PB0)
+	//RCC->AHB1ENR |= (1<<2); //Enable the GPIOC clock (user push button B1 is connected to PC13)
+	
+	GPIOB->MODER &= ~(0b11<<0); //clear (00) pin PB0(bits 1:0) and set as Input (00) for default 
+	GPIOB->MODER |= (1<<0); //pin PB0(bits 1:0) as Output (01)
+	//GPIOC->MODER &= ~(0b11<<26); //clear (00) pin PC13(bits 27:26) and set as Input (00) for default 
+	
+	GPIOB->OTYPER &= ~(1<<0);  // clear (0) pin PB0 (bit 0) --> Output push pull (HIGH or LOW)
+	GPIOB->OSPEEDR |= ((1<<1)|(1<<0));//(0b11<<0)  // Pin PB0 (bits 1:0) as Very High Speed (11)
+	//GPIOC->OSPEEDR |= ((1<<27)|(1<<26));//(0b11<<26)  // Pin PC13 (bits 27:26) as Very High Speed (11)
+	GPIOB->PUPDR &= ~(0b11<<0); //~((1<<1)|(1<<0)) // Pin PB0 (bits 1:0) are 0:0 --> no pull up or pull down
+	//GPIOC->PUPDR &= ~(0b11<<26); //~((1<<27)|(1<<26)) // Pin PC13 (bits 27:26) are 0:0 --> no pull up or pull down
+	//GPIOC->PUPDR |= (1<<26); // Pin PC_13 (bits 27:26) are 0:1 --> pull up
+	
+	while(1){
+    //if(((GPIOC->IDR & (1<<13)) >> 13) == 0){//Read PC13 pin
+      //GPIOB->BSRR |= (1<<0); // Set the Pin PB0
+      GPIOB->ODR |= 1<<0; // Set the Pin PB0
+      Delay(1000000);
+      //GPIOB->BSRR |= (1<<16); // Reset the Pin PB0
+      GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+      Delay(1000000);
+    //}
+	}
+}
+```
+
+<h3>RCC_AHB1ENR</h3>
+
+<div align="center">
+<img src="image-7.png" alt="RCC_AHB1ENR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_MODER</h3>
+
+<div align="center">
+<img src="image-8.png" alt="GPIOx_MODER"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_OTYPER</h3>
+
+<div align="center">
+<img src="image-9.png" alt="GPIOx_OTYPER"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_OSPEEDR</h3>
+
+<div align="center">
+<img src="image-10.png" alt="GPIOx_OSPEEDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_PUPDR</h3>
+
+<div align="center">
+<img src="image-11.png" alt="GPIOx_PUPDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_IDR</h3>
+
+<div align="center">
+<img src="image-12.png" alt="GPIOx_IDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>GPIOx_ODR</h3>
+
+<div align="center">
+<img src="image-13.png" alt="GPIOx_ODR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 
 

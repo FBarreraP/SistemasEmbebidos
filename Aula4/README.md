@@ -56,6 +56,28 @@ A través de los siguientes registros:
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<h4>Push-Pull</h4>
+
+Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de salida a través del flujo de la corriente.
+
+<div align="center">
+<img src="image-5.png" alt="Push-Pull"/>
+<br>
+<figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
+</div>
+
+<div align="center">
+<img src="image-15.png" alt="Push-Pull"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<div align="center">
+<img src="image-16.png" alt="Push-Pull"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
 <h4>Open-Drain</h4>
 
 La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOSFET (canal N o P) al "aire" como salida para conectar a la carga, por tanto, el pin "Source" va conectado a GND y el pin "Gate" está polarizado.
@@ -88,28 +110,6 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 
 <div align="center">
 <img src="image-20.png" alt="Open-Drain GND con Pull-Up"/>
-<br>
-<figcaption>Fuente: </figcaption>
-</div>
-
-<h4>Push-Pull</h4>
-
-Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de salida a través del flujo de la corriente.
-
-<div align="center">
-<img src="image-5.png" alt="Push-Pull"/>
-<br>
-<figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
-</div>
-
-<div align="center">
-<img src="image-15.png" alt="Push-Pull"/>
-<br>
-<figcaption>Fuente: </figcaption>
-</div>
-
-<div align="center">
-<img src="image-16.png" alt="Push-Pull"/>
 <br>
 <figcaption>Fuente: </figcaption>
 </div>

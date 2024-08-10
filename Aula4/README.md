@@ -2,7 +2,7 @@
 
 Esta clase consiste en entender las diferentes configuraciones de las entradas y salidas de los GPIOs de la tarjeta NUCLEO F767ZI.
 
-<h2>GPIO</h2>
+<h2>GPIOs</h2>
 
 Los GPIOs pueden ser configurado en diferentes modos:
 

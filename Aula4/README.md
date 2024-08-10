@@ -39,9 +39,13 @@ A través de los siguientes registros:
 
 <h4>Entrada flotante</h4>
 
-<h4>Entrada Pull-Up</h4>
+<h4>Entrada Pull-Up y Pull-Down</h4>
 
-<h4>Entrada Pull-Down</h4>
+<div align="center">
+<img src="image-14.png" alt="Pull-Up y Pull-Down"/>
+<br>
+<figcaption>Fuente: http://nosinmiarduino.blogspot.com/2014/07/resistencias-de-pull-up-y-pull-down.html</figcaption>
+</div>
 
 <h3>Salidas digitales</h3>
 
@@ -57,16 +61,36 @@ A través de los siguientes registros:
 La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOSFET (canal N o P) al "aire" como salida para conectar a la carga, por tanto, el pin "Source" va conectado a GND y el pin "Gate" está polarizado.
 
 <div align="center">
-<img src="image-6.png" alt="Open-Drain"/>
+<img src="image-6.png" alt="Open-Drain GND"/>
 <br>
-<figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<div align="center">
+<img src="image-17.png" alt="Open-Drain floating"/>
+<br>
+<figcaption>Fuente: </figcaption>
 </div>
 
 <h5>Open-Drain con Pull-Up</h5>
 
+<div align="center">
+<img src="image-18.png" alt="Open-Drain con Pull-Up"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
 
-<h5>Open-Drain con Pull-Down</h5>
+<div align="center">
+<img src="image-19.png" alt="Open-Drain VCC con Pull-Up"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
 
+<div align="center">
+<img src="image-20.png" alt="Open-Drain GND con Pull-Up"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
 
 <h4>Push-Pull</h4>
 
@@ -76,6 +100,18 @@ Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de
 <img src="image-5.png" alt="Push-Pull"/>
 <br>
 <figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
+</div>
+
+<div align="center">
+<img src="image-15.png" alt="Push-Pull"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<div align="center">
+<img src="image-16.png" alt="Push-Pull"/>
+<br>
+<figcaption>Fuente: </figcaption>
 </div>
 
 <h3>Función alternante</h3>

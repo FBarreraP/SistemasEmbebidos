@@ -24,7 +24,7 @@ A través de los siguientes registros:
 - GPIOx_ODR	-> Registro de salida de datos en el pin (Escribir)
 
 <div align="center">
-<img src="image.png" alt="Estructura pin I/O"/>
+<img src="Imagenes/image.png" alt="Estructura pin I/O"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -32,7 +32,7 @@ A través de los siguientes registros:
 <h3>Entradas digitales</h3>
 
 <div align="center">
-<img src="image-1.png" alt="Entradas digitales"/>
+<img src="Imagenes/image-1.png" alt="Entradas digitales"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -40,7 +40,7 @@ A través de los siguientes registros:
 <h4>Entrada flotante</h4>
 
 <div align="center">
-<img src="image-21.png" alt="Entradas digitales"/>
+<img src="Imagenes/image-21.png" alt="Entradas digitales"/>
 <br>
 <figcaption>Fuente: https://zonamaker.com/resistencias-de-pull-up-y-pull-down</figcaption>
 </div>
@@ -48,7 +48,7 @@ A través de los siguientes registros:
 <h4>Entrada Pull-Up y Pull-Down</h4>
 
 <div align="center">
-<img src="image-14.png" alt="Pull-Up y Pull-Down"/>
+<img src="Imagenes/image-14.png" alt="Pull-Up y Pull-Down"/>
 <br>
 <figcaption>Fuente: http://nosinmiarduino.blogspot.com/2014/07/resistencias-de-pull-up-y-pull-down.html</figcaption>
 </div>
@@ -57,7 +57,7 @@ A través de los siguientes registros:
 
 
 <div align="center">
-<img src="image-2.png" alt="Salidas digitales"/>
+<img src="Imagenes/image-2.png" alt="Salidas digitales"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -67,19 +67,19 @@ A través de los siguientes registros:
 Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de salida a través del flujo de la corriente.
 
 <div align="center">
-<img src="image-5.png" alt="Push-Pull"/>
+<img src="Imagenes/image-5.png" alt="Push-Pull"/>
 <br>
 <figcaption>Fuente: https://www.hardwareinterviews.fyi/t/what-does-open-drain-push-pull-mean/556/2</figcaption>
 </div>
 
 <div align="center">
-<img src="image-15.png" alt="Push-Pull"/>
+<img src="Imagenes/image-15.png" alt="Push-Pull"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
-<img src="image-16.png" alt="Push-Pull"/>
+<img src="Imagenes/image-16.png" alt="Push-Pull"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
@@ -89,13 +89,13 @@ Las configuraciones Push-Pull garantizan dos niveles de voltaje (alto y bajo) de
 La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOSFET (canal N o P) al "aire" como salida para conectar a la carga, por tanto, el pin "Source" va conectado a GND y el pin "Gate" está polarizado.
 
 <div align="center">
-<img src="image-6.png" alt="Open-Drain GND"/>
+<img src="Imagenes/image-6.png" alt="Open-Drain GND"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
-<img src="image-17.png" alt="Open-Drain floating"/>
+<img src="Imagenes/image-17.png" alt="Open-Drain floating"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
@@ -103,19 +103,19 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <h5>Open-Drain con Pull-Up</h5>
 
 <div align="center">
-<img src="image-18.png" alt="Open-Drain con Pull-Up"/>
+<img src="Imagenes/image-18.png" alt="Open-Drain con Pull-Up"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
-<img src="image-19.png" alt="Open-Drain VCC con Pull-Up"/>
+<img src="Imagenes/image-19.png" alt="Open-Drain VCC con Pull-Up"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
 
 <div align="center">
-<img src="image-20.png" alt="Open-Drain GND con Pull-Up"/>
+<img src="Imagenes/image-20.png" alt="Open-Drain GND con Pull-Up"/>
 <br>
 <figcaption>Fuente: https://www.youtube.com/watch?v=IjKDKGqCm_4</figcaption>
 </div>
@@ -123,7 +123,7 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <h3>Función alternante</h3>
 
 <div align="center">
-<img src="image-3.png" alt="Función alternante"/>
+<img src="Imagenes/image-3.png" alt="Función alternante"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -131,7 +131,7 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <h3>Análogo</h3>
 
 <div align="center">
-<img src="image-4.png" alt="Análogo"/>
+<img src="Imagenes/image-4.png" alt="Análogo"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -187,7 +187,7 @@ int main(){
 <h3>RCC_AHB1ENR</h3>
 
 <div align="center">
-<img src="image-7.png" alt="RCC_AHB1ENR"/>
+<img src="Imagenes/image-7.png" alt="RCC_AHB1ENR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -195,7 +195,7 @@ int main(){
 <h3>GPIOx_MODER</h3>
 
 <div align="center">
-<img src="image-8.png" alt="GPIOx_MODER"/>
+<img src="Imagenes/image-8.png" alt="GPIOx_MODER"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -203,7 +203,7 @@ int main(){
 <h3>GPIOx_OTYPER</h3>
 
 <div align="center">
-<img src="image-9.png" alt="GPIOx_OTYPER"/>
+<img src="Imagenes/image-9.png" alt="GPIOx_OTYPER"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -211,7 +211,7 @@ int main(){
 <h3>GPIOx_OSPEEDR</h3>
 
 <div align="center">
-<img src="image-10.png" alt="GPIOx_OSPEEDR"/>
+<img src="Imagenes/image-10.png" alt="GPIOx_OSPEEDR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -219,7 +219,7 @@ int main(){
 <h3>GPIOx_PUPDR</h3>
 
 <div align="center">
-<img src="image-11.png" alt="GPIOx_PUPDR"/>
+<img src="Imagenes/image-11.png" alt="GPIOx_PUPDR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -227,7 +227,7 @@ int main(){
 <h3>GPIOx_IDR</h3>
 
 <div align="center">
-<img src="image-12.png" alt="GPIOx_IDR"/>
+<img src="Imagenes/image-12.png" alt="GPIOx_IDR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -235,7 +235,7 @@ int main(){
 <h3>GPIOx_ODR</h3>
 
 <div align="center">
-<img src="image-13.png" alt="GPIOx_ODR"/>
+<img src="Imagenes/image-13.png" alt="GPIOx_ODR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

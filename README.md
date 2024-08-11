@@ -26,19 +26,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>03/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
 	</tr>
 	<tr>
-		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Manual de usuario (tarjeta nucleo) y datasheet del micro SMT32</td>
+		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
 	</tr>
 	<tr>
-		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>GPIOs (salidas)</td>
+		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>GPIOs (entradas)</td>
+		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>17/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>17/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Interrupciones externas (EXTI)</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Interrupciones</td>
+		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
 		<td>24/08/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>

@@ -169,10 +169,10 @@ int main(){
 	//GPIOC->OSPEEDR |= ((1<<27)|(1<<26));//(0b11<<26)  // Pin PC13 (bits 27:26) as Very High Speed (11)
 	GPIOB->PUPDR &= ~(0b11<<0); //~((1<<1)|(1<<0)) // Pin PB0 (bits 1:0) are 0:0 --> no pull up or pull down
 	//GPIOC->PUPDR &= ~(0b11<<26); //~((1<<27)|(1<<26)) // Pin PC13 (bits 27:26) are 0:0 --> no pull up or pull down
-	//GPIOC->PUPDR |= (1<<26); // Pin PC_13 (bits 27:26) are 0:1 --> pull up
+	//GPIOC->PUPDR |= (1<<27); // Pin PC_13 (bits 27:26) are 0:1 --> pull up
 	
 	while(1){
-    //if(((GPIOC->IDR & (1<<13)) >> 13) == 0){//Read PC13 pin
+    //if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
       //GPIOB->BSRR |= (1<<0); // Set the Pin PB0
       GPIOB->ODR |= 1<<0; // Set the Pin PB0
       Delay(1000000);

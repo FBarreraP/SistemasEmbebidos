@@ -50,6 +50,12 @@ Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se 
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
+<div align="center">
+<img src="image-10.png" alt="Pulsador de usuario"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
  <h3>Pinout</h3>
 
 El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjeta NUCLEO F767ZI utiliza solamente 114 pines GPIO. Los pines son compatibles con +3.3V. En las tablas 19 y 21 se encuentran la asignación de pines Zio y Morpho, respectivamente, para la tarjeta NUCLEO F767ZI.

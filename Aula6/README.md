@@ -37,6 +37,20 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <figcaption>Fuente: Documento STM32F7 - NVIC</figcaption>
 </div>
 
+<h3>Controlador EXTI</h3>
+
+<div align="center">
+<img src="image-6.png" alt="funcionalidad y configuración EXTI"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-7.png" alt="Interrupciones 16 a 24"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 <div align="center">
 <img src="image-4.png" alt="Entrada y retorno de interrupciones"/>
 <br>
@@ -49,6 +63,38 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<h3>Registro SYSCFG_EXTICR1</h3>
+
+<div align="center">
+<img src="image-8.png" alt="SYSCFG_EXTICR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>Registro SYSCFG_EXTICR2</h3>
+
+<div align="center">
+<img src="image-9.png" alt="SYSCFG_EXTICR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>Registro SYSCFG_EXTICR3</h3>
+
+<div align="center">
+<img src="image-10.png" alt="SYSCFG_EXTICR3"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>Registro SYSCFG_EXTICR4</h3>
+
+![alt text](image-11.png)
+<div align="center">
+<img src="image-11.png" alt="SYSCFG_EXTICR4"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 <h3>Ejemplo 1</h3>
 

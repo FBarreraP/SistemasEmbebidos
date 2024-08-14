@@ -89,7 +89,6 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 
 <h3>Registro SYSCFG_EXTICR4</h3>
 
-![alt text](image-11.png)
 <div align="center">
 <img src="image-11.png" alt="SYSCFG_EXTICR4"/>
 <br>

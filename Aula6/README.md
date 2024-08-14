@@ -95,7 +95,6 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-
 <h3>Ejemplo 1</h3>
 
 ```cpp

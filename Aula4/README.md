@@ -150,13 +150,6 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 #include <stdio.h>
 #include "stm32f7xx.h"
 
-void Delay (uint32_t time)
-{
-	//while (time--);  
-	for (int t=0;t<time;t++);
-
-}
-
 int main(){
 
 	RCC->AHB1ENR |= (1<<1); //Enable the GPIOB clock (user led LD1 is connected to PB0)
@@ -176,11 +169,13 @@ int main(){
 	while(1){
     //if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
       //GPIOB->BSRR |= (1<<0); // Set the Pin PB0
-      GPIOB->ODR |= 1<<0; // Set the Pin PB0
-      Delay(1000000);
+	  for (int t=0;t<1000000;t++){
+		GPIOB->ODR |= 1<<0; // Set the Pin PB0
+	  }
       //GPIOB->BSRR |= (1<<16); // Reset the Pin PB0
-      GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
-      Delay(1000000);
+      for (int t=0;t<1000000;t++){
+	  	GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+	  }
     //}
 	}
 }

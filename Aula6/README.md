@@ -53,7 +53,7 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 
 
 <div align="center">
-<img src="image-4.png" alt="Entrada y retorno de interrupciones"/>
+<img src="image-4.png" alt="Diagrama de bloques interrupciones/eventos"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 <br>

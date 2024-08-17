@@ -15,14 +15,6 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <br>
 </div>
 
-
-<div align="center">
-<img src="image-1.png" alt="Hardware interrupciones"/>
-<br>
-<figcaption>Fuente: </figcaption>
-<br>
-</div>
-
 <h3>Controlador interrupciones</h3>
 
 <div align="center">

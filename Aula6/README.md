@@ -121,7 +121,7 @@ int main(){
 	NVIC_EnableIRQ(EXTI15_10_IRQn); //Enable the NVIC module
 		
 	while(1){
-      	for (int t=0;t<1000000;t++){
+		for (int t=0;t<1000000;t++){
 			GPIOB->ODR |= 1<<0;
 		}
 		for (int t=0;t<1000000;t++){

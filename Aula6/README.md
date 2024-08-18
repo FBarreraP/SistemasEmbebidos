@@ -85,7 +85,7 @@ uint32_t a, b, c;
 
 extern "C"{
 	void EXTI15_10_IRQHandler(void){
-		EXTI->PR |= 1; //Down flag
+		EXTI->PR |= (1<<13); //Down flag
 		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
 			cont += 1;
 		}

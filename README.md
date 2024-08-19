@@ -67,13 +67,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 		<tr>
-		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>ADC</td>
+		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>UART</td>
 	</tr>
 	<tr>
 		<td>20/09/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>UART</td>
+		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>ADC</td>
 	</tr>
 	<tr>
 		<td>27/09/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Desarrollo y/o entrega de Laboratorio</td>

@@ -11,3 +11,9 @@ Es un temporizador en tiempo real descendente de 24 bits, el cual genera una int
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+
+
+```c++
+
+```

@@ -1,0 +1,181 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Fabián Barrera, UMNG, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+G:\Meu Drive\ECCI\2024_2\SistemasEmbebidos\Aula11\Ejemplo\Systick.uvprojx
+Project File Date:  08/21/2024
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_stm32f767xx.s...
+RTE/Device/STM32F767ZITx/system_stm32f7xx.c(48): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e.
+                                               ^
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers
+                                                                    ^
+RTE/Device/STM32F767ZITx/system_stm32f7xx.c(48): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(134): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+3 warnings generated.
+compiling system_stm32f7xx.c...
+main.cpp(2): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+//Fabi<E1>n Barrera Prieto
+      ^
+main.cpp(8): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(11): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *              - To use or not the peripheral<92>s drivers in application code(i.e.
+                                               ^
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(12): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *                code will be based on direct access to peripheral<92>s registers
+                                                                    ^
+main.cpp(8): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include\stm32f7xx.h(134): warning: In file included from...
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(10): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+  *           - Macros to access peripheral<92>s registers hardware
+                                           ^
+main.cpp(10): warning: no previous prototype for function 'SysTick_Wait' [-Wmissing-prototypes]
+void SysTick_Wait(uint32_t n){
+     ^
+main.cpp(10): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_Wait(uint32_t n){
+^
+static 
+main.cpp(16): warning: no previous prototype for function 'SysTick_ms' [-Wmissing-prototypes]
+void SysTick_ms(uint32_t delay){
+     ^
+main.cpp(16): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SysTick_ms(uint32_t delay){
+^
+static 
+main.cpp(24): warning: use of old-style cast [-Wold-style-cast]
+        RCC->AHB1ENR |= (1<<1); 
+        ^~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1546): note: expanded from macro 'RCC'
+#define RCC                 ((RCC_TypeDef *) RCC_BASE)
+                             ^               ~~~~~~~~
+main.cpp(25): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->MODER &= ~(0b11<<0);
+        ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(25): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+        GPIOB->MODER &= ~(0b11<<0);
+                          ^
+main.cpp(25): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->MODER &= ~(0b11<<0);
+                     ~~ ^~~~~~~~~~
+main.cpp(26): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->MODER |= (1<<0);         
+        ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(27): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->OTYPER &= ~(1<<0);  
+        ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(27): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->OTYPER &= ~(1<<0);  
+                      ~~ ^~~~~~~
+main.cpp(28): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->OSPEEDR |= ((1<<1)|(1<<0));
+        ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(29): warning: use of old-style cast [-Wold-style-cast]
+        GPIOB->PUPDR &= ~(0b11<<0);
+        ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(29): warning: binary integer literals are a C++14 extension [-Wc++14-binary-literal]
+        GPIOB->PUPDR &= ~(0b11<<0);
+                          ^
+main.cpp(29): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIOB->PUPDR &= ~(0b11<<0);
+                     ~~ ^~~~~~~~~~
+main.cpp(37): warning: use of old-style cast [-Wold-style-cast]
+                GPIOB->ODR |= 1<<0; // Set the Pin PB0
+                ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(40): warning: use of old-style cast [-Wold-style-cast]
+                GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+                ^~~~~
+C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f767xx.h(1535): note: expanded from macro 'GPIOB'
+#define GPIOB               ((GPIO_TypeDef *) GPIOB_BASE)
+                             ^                ~~~~~~~~~~
+main.cpp(40): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+                GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+                           ~~ ^~~~~~~
+main.cpp(43): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+21 warnings generated.
+compiling main.cpp...
+linking...
+Program Size: Code=652 RO-data=520 RW-data=0 ZI-data=1632  
+".\Objects\Systick.axf" - 0 Error(s), 24 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
+                ARM.CMSIS.6.0.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 6.0.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F7xx_DFP.2.13.0.pack
+                Keil.STM32F7xx_DFP.2.13.0
+                STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 1.2.5
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  C:/Users/LENOVO/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/LENOVO/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.13.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:6.0.0
+
+   * Component: Keil::Device:Startup:1.2.5
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F76x_77x_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f767xx.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

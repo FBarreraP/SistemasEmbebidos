@@ -12,7 +12,6 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <img src="image.png" alt="Hardware interrupciones"/>
 <br>
 <figcaption>Fuente: </figcaption>
-<br>
 </div>
 
 <h3>Controlador interrupciones</h3>
@@ -21,14 +20,12 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <img src="image-2.png" alt="Entrada y retorno de interrupciones"/>
 <br>
 <figcaption>Fuente: Documento STM32F7 - NVIC</figcaption>
-<br>
 </div>
 
 <div align="center">
 <img src="image-3.png" alt="Entrada y retorno de interrupciones"/>
 <br>
 <figcaption>Fuente: Documento STM32F7 - NVIC</figcaption>
-<br>
 </div>
 
 <h3>EXTI</h3>
@@ -37,35 +34,36 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <img src="image-6.png" alt="funcionalidad y configuración EXTI"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
-<br>
 </div>
 
 <div align="center">
 <img src="image-4.png" alt="Diagrama de bloques interrupciones/eventos"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
-<br>
 </div>
 
 <div align="center">
 <img src="image-5.png" alt="Interrupciones 0 a 15"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
-<br>
 </div>
 
 <div align="center">
 <img src="image-7.png" alt="Interrupciones 16 a 24"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
-<br>
 </div>
 
 <div align="center">
 <img src="image-13.png" alt="Nombre funciones EXTI"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-1.png" alt="Funciones CMSIS"/>
 <br>
+<figcaption>Fuente: Manual de programación</figcaption>
 </div>
 
 <h3>Ejemplo 1</h3>

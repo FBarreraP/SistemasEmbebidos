@@ -116,7 +116,7 @@ int main(){
 	SYSCFG->EXTICR[3] |= (1<<5); //Select the pin 13 on port C like interrupt [7:0]=0010 (PC13)
 	EXTI->IMR |= (1<<13); //Enable the interrupt on pin 13
 	EXTI->RTSR |= (1<<13); //Select rising edge for interrupt
-	NVIC_EnableIRQ(EXTI15_10_IRQn); //Enable the NVIC module
+	NVIC_EnableIRQ(EXTI15_10_IRQn); //Enable the interrupt function on the NVIC module
 		
 	while(1){
 		for (int t=0;t<1000000;t++){

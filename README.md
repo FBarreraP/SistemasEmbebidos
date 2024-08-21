@@ -58,22 +58,22 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Socialización de proyecto</td>
+		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Socialización de proyecto y Systick</td>
 	</tr>
 	<tr>
-		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Systick</td>
+		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>UART</td>
 	</tr>
 		<tr>
-		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>UART</td>
+		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
-		<td>20/09/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>20/09/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>ADC</td>
 	</tr>
 	<tr>
-		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>ADC</td>
+		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
 	<tr>
 		<td>27/09/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Desarrollo y/o entrega de Laboratorio</td>

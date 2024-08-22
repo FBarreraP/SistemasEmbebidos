@@ -17,7 +17,7 @@ El valor de calibración por defecto es 18750, dando un tiempo de referencia de 
 <h3>Ejemplo 1</h3>
 
 ```c++
-//Ejemplo Systick
+//Ejemplo Systick like delay
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -27,14 +27,14 @@ El valor de calibración por defecto es 18750, dando un tiempo de referencia de 
 #include "stm32f7xx.h"
 
 void SysTick_Wait(uint32_t n){
-	SysTick->LOAD = n - 1;
-	SysTick->VAL = 0;
-	while ((SysTick->CTRL & 0x00010000) == 0);
+	SysTick->LOAD = n - 1; //15999
+	SysTick->VAL = 0; //Clean the value of Systick counter
+	while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
 }
 
-void SysTick_ms(uint32_t delay){
-	for (uint32_t i = 0; i < delay; i++){
-		SysTick_Wait(16000);
+void SysTick_ms(uint32_t x){
+	for (uint32_t i = 0; i < x; i++){//x ms
+		SysTick_Wait(16000); //1ms
 	}
 }
 
@@ -48,15 +48,13 @@ int main(){
 	GPIOB->PUPDR &= ~(0b11<<0);
 	
 	//Systick
-	SysTick->LOAD = 0x00FFFFFF;
-	SysTick->CTRL = 0x00000005; 
+	SysTick->LOAD = 0x00FFFFFF; //Initializing with the maximum value to 24 bits
+	SysTick->CTRL |= (0b101); //Clock source is processor clock (AHB) and counter enable
 	
 	while(1){
-		//GPIOB->BSRR |= (1<<0); // Set the Pin PB0
-		GPIOB->ODR |= 1<<0; // Set the Pin PB0
+		GPIOB->ODR |= 1<<0; 
 		SysTick_ms(1000);
-		//GPIOB->BSRR |= (1<<16); // Reset the Pin PB0
-		GPIOB->ODR &= ~(1<<0); // Reset the Pin PB0
+		GPIOB->ODR &= ~(1<<0);
 		SysTick_ms(1000);
 	}
 }

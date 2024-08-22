@@ -4,13 +4,15 @@ Esta clase consiste en programar el temporizador (`systick`) en tiempo real para
 
 <h2>Systick</h2>
 
-Es un temporizador en tiempo real descendente de 24 bits, el cual genera una interrupción cuando el temporizador alcanza el valor de cero.
+Es un temporizador en tiempo real descendente de 24 bits, el cual genera una interrupción cuando el temporizador alcanza el valor de cero. El systick puede ser utilizado como <i>delays</i> y como interrupciones periodicas.
 
 <div align="center">
 <img src="image.png" alt="Interrupción de Systick"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+El valor de calibración por defecto es 18750, dando un tiempo de referencia de 1 ms hasta llegar a cero con el reloj de SisTick configurado a 18.75 MHz
 
 <h3>Ejemplo 1</h3>
 
@@ -59,3 +61,27 @@ int main(){
 	}
 }
 ```
+
+<h3>Registro STK_LOAD</h3>
+
+<div align="center">
+<img src="image-1.png" alt="STK_LOAD"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>Registro STK_CTRL</h3>
+
+<div align="center">
+<img src="image-2.png" alt="STK_LOAD"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>Registro STK_VAL</h3>
+
+<div align="center">
+<img src="image-3.png" alt="STK_LOAD"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

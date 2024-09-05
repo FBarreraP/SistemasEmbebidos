@@ -102,7 +102,7 @@ $$Tx/Rx baud = \frac{f_{CK}}{USARTDIV}$$
 
 $$BRR = USARTDIV = \frac{f_{CK}}{Tx/Rx baud}$$
 
-$$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_10 = 683_16$$
+$$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_{10} = 683_{16}$$
 
 
 

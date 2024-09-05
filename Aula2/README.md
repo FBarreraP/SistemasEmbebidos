@@ -6,33 +6,41 @@ Esta clase consiste en realizar una introducción al microcontrolador STM32F767Z
 
 El microcontrolador es un sistema programable que cuenta con una CPU (microprocesador), memorias (ROM y RAM), señal de reloj, periféricos, etc.
 
+<div align="center">
 <img src="image-2.png" alt="Microcontrolador"/>
-<figcaption>Fuente: https://tecnoelite.co/que-es-un-microcontrolador-tipos-usos-y-historia/</figcaption>
 <br>
+<figcaption>Fuente: https://tecnoelite.co/que-es-un-microcontrolador-tipos-usos-y-historia/</figcaption>
+</div>
 
 <h3>Arquitectura Von Neumann</h3>
 
 En la arquitectura Von Neumann la CPU se conecta a una única memoria central (RAM y ROM), por lo cual, se tienen únicamente tres buses para el control, las direcciones y el envío de datos e instrucciones para las dos memorias.
 
+<div align="center">
 <img src="image-3.png" alt="Von Neumann"/>
-<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
 <br>
+<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
+</div>
 
 <h3>Arquitectura Harvard</h3>
 
 En la arquitectura Harvard la CPU se conecta de manera independiente a las memorias RAM y ROM, por lo cual, se tienen tres buses para el control, las direcciones y el envío de datos e instrucciones para cada memoria, permitiendo tener acceso simultaneo a las dos.
 
+<div align="center">
 <img src="image-4.png" alt="Harvard"/>
-<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
 <br>
+<figcaption>Fuente: https://dianis-eliz.blogspot.com/</figcaption>
+</div>
 
 <h2>Sistemas embebidos</h2>
 
 Los sistemas embebidos son sistemas programables y diseñados para ejecutar tareas específicas, los cuales constan de un microcontrolador que está embebido o empotrado dentro de un sistema mayor, como lo es una tarjeta de desarrollo que incluye: programador, pinout de conexiones, reguladores de voltajes, acondicionamientos de salida de potencia (Push Pull y Open Drain), configuraciones de entradas (Pull Up y Pull Down).
 
+<div align="center">
 <img src="image-5.png" alt="STM32F767ZI"/>
-<figcaption>Fuente: https://www.sigmaelectronica.net/producto/nucleo-f767zi/</figcaption>
 <br>
+<figcaption>Fuente: https://www.sigmaelectronica.net/producto/nucleo-f767zi/</figcaption>
+</div>
 
 <h2>Introducción al micro STM32</h2>
 
@@ -52,28 +60,41 @@ El microcontrolador STM32F767ZI cuenta con un procesador ARM Cortex M7 de arquit
 - DAC 12 bits (2)
 - CCP 4 canales (13)
 
+<div align="center">
 <img src="image.png" alt="característica micro STM32F767ZI"/>
-<figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
-
 <br>
+<figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+</div>
 
 El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal característica el uso de frecuencias diferentes para los diferentes buses de datos
 
+<div align="center">
 <img src="image-1.png" alt="hardware micro STM32F767ZI"/>
+<br>
 <figcaption>Fuente: Datasheet micro STM32F767ZI</figcaption>
+</div>
 
 La funcionalidad de los pines del microcontrolador STM32F767ZI se encuentran en la tabla 11 y 13 del datasheet.
 
 <h2>Clock</h2>
 
+<div align="center">
 <img src="image-6.png" alt="RCC_CR"/>
+<br>
 <figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
+<div align="center">
 <img src="image-7.png" alt="RCC_CFGR"/>
+<br>
 <figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
+<div align="center">
 <img src="image-8.png" alt="HSI clock"/>
+<br>
 <figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 <h2>Bitwise</h2>
 
@@ -108,8 +129,11 @@ Las operaciones bitwise son aquellas que permiten realizar operaciones bit a bit
 
 <h3>AND</h3>
 
+<div align="center">
 <img src="image-15.png" alt="AND"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 ```c
 #include <stdio.h>
@@ -123,8 +147,11 @@ int main(){
 
 <h3>OR</h3>
 
+<div align="center">
 <img src="image-16.png" alt="OR"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 ```c
 #include <stdio.h>
@@ -138,9 +165,11 @@ int main(){
 
 <h3>XOR</h3>
 
+<div align="center">
 <img src="image-17.png" alt="XOR"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
-
+</div>
 
 ```c
 #include <stdio.h>
@@ -154,8 +183,11 @@ int main(){
 
 <h3>NOT</h3>
 
+<div align="center">
 <img src="image-18.png" alt="NOT"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 ```c
 #include <stdio.h>
@@ -172,18 +204,27 @@ int main(){
 
 <h3>Corrimientos a la derecha</h3>
 
+<div align="center">
 <img src="image-19.png" alt="ShiftRight"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 <h3>Corrimientos a la izquierda</h3>
 
+<div align="center">
 <img src="image-20.png" alt="ShiftLeft"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 <h3>Combinación de corrimientos</h3>
 
+<div align="center">
 <img src="image-21.png" alt="Shifts"/>
+<br>
 <figcaption>Fuente: https://www.programiz.com/c-programming/bitwise-operators</figcaption>
+</div>
 
 ```c
 #include <stdio.h>

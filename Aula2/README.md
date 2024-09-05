@@ -64,6 +64,17 @@ El hardware (diagrama de bloques) del micro STM32F767ZI tiene como principal car
 
 La funcionalidad de los pines del microcontrolador STM32F767ZI se encuentran en la tabla 11 y 13 del datasheet.
 
+<h2>Clock</h2>
+
+<img src="image-6.png" alt="RCC_CR"/>
+<figcaption>Fuente: Manual de referencia</figcaption>
+
+<img src="image-7.png" alt="RCC_CFGR"/>
+<figcaption>Fuente: Manual de referencia</figcaption>
+
+<img src="image-8.png" alt="HSI clock"/>
+<figcaption>Fuente: Manual de referencia</figcaption>
+
 <h2>Bitwise</h2>
 
 Las operaciones bitwise son aquellas que permiten realizar operaciones bit a bit, tales como: suma booleana “or” (|), multiplicación booleana “and” (&), negación “not” (~), disyunción exclusiva “xor” (^) y desplazamiento (<< ó >>).

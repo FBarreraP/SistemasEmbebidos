@@ -46,7 +46,7 @@ $$T_b=104.167 \mu s$$
 
 <h3>FTDI</h3>
 
-El conversor de USB a TTL (FTDI), puede alimentar +5V del PIC puede conectarse a una fuente externa o a los +5V del FTDI
+El conversor de USB a TTL o también conocido como FTDI (CH340 o CP2102) permite realizar comunicación serial UART de un microcontrolador (TTL) a un PC (USB).
 
 <div align="center">
 <img src="Imagenes/image-6.png" alt="FTDI"/>
@@ -64,10 +64,32 @@ El conversor de USB a TTL (FTDI), puede alimentar +5V del PIC puede conectarse a
 
 <h3>Comunicación UART en la tarjeta NUCLEO STM32F767ZI</h3>
 
-Es un protocolo de comunicación del microcontrolador STM32F767ZI, 
+Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una salida y una entrada, Tx (Transmisión) y Rx (Recepción), respectivamente. TDR y RDR son registros del modulo USART del microcontrolador STM32F767ZI para cargar el byte a transmitir y para guardar el byte recibido, respectivamente. En la tarjeta NUCLEO STM32F767ZI hay cuatro canales de UART () y cuatro canales de USART (). 
+
+<div align="center">
+<img src="Imagenes/image-3.png" alt="USART3"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-7.png" alt="SB4, SB5, SB6 y SB7"/>
+<br>
+<figcaption>Fuente: Manual de usuario</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-4.png" alt="Diagrama de bloque USART"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 
-
+<div align="center">
+<img src="Imagenes/image-8.png" alt="Función alternante para USART3"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 
 

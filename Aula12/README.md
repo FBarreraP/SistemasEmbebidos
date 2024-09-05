@@ -125,30 +125,30 @@ unsigned char d;
 char name[7] = "Fabian", text[10];
 
 void SysTick_Wait(uint32_t n){
-	SysTick->LOAD = n - 1; //15999
-	SysTick->VAL = 0; //Clean the value of Systick counter
-	while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
+    SysTick->LOAD = n - 1; //15999
+    SysTick->VAL = 0; //Clean the value of Systick counter
+    while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
 }
 
 void SysTick_ms(uint32_t x){
-	for (uint32_t i = 0; i < x; i++){//x ms
-		SysTick_Wait(16000); //1ms
-	}
+    for (uint32_t i = 0; i < x; i++){//x ms
+        SysTick_Wait(16000); //1ms
+    }
 }
 
 extern "C"{
-	void EXTI15_10_IRQHandler(void){
-		EXTI->PR |= 1; //Down flag
-		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){
-			flag = 1;
-		}
-	}
-	
-	void USART3_IRQHandler(void){ //Receive interrupt
-		if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
-			d = USART3->RDR;//Read the USART receive buffer 
-		}
-	}
+    void EXTI15_10_IRQHandler(void){
+        EXTI->PR |= 1; //Down flag
+        if(((GPIOC->IDR & (1<<13)) >> 13) == 1){
+            flag = 1;
+        }
+    }
+    
+    void USART3_IRQHandler(void){ //Receive interrupt
+        if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
+            d = USART3->RDR;//Read the USART receive buffer 
+        }
+    }
 }
 
 int main(){

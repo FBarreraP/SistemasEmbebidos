@@ -110,7 +110,7 @@ $$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_{10} = 683_{16}$$
 <h3>Ejemplo 1</h3>
 
 ```c++
-//Ejemplo Interrupciones con led de usuario de la tarjeta
+//Ejemplo UART con leds de usuario de la tarjeta
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U

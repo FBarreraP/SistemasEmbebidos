@@ -90,27 +90,10 @@ Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una 
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-<div align="center">
-<img src="Imagenes/image-8.png" alt="Función alternante para USART3"/>
-<br>
-<figcaption>Fuente: Manual de referencia</figcaption>
-</div>
-
-<h3>BRR</h3>
-
-$$Tx/Rx baud = \frac{f_{CK}}{USARTDIV}$$
-
-$$BRR = USARTDIV = \frac{f_{CK}}{Tx/Rx baud}$$
-
-$$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_{10} = 683_{16}$$
-
-
-
-
-<h3>Ejemplo 1</h3>
+<h3>Ejemplo</h3>
 
 ```c++
-//Ejemplo UART con leds de usuario de la tarjeta
+//Ejemplo USART3 de la tarjeta
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -216,3 +199,60 @@ int main(){
     }
 }
 ```
+
+
+<div align="center">
+<img src="Imagenes/image-10.png" alt="Registro GPIOx_AFRL=GPIOx_AFR[0]"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-11.png" alt="Registro GPIOx_AFRH=GPIOx_AFR[1]"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-8.png" alt="Función alternante para los pines USART3"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-12.png" alt="Registro RCC_APB1ENR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<h3>BRR</h3>
+
+$$Tx/Rx baud = \frac{f_{CK}}{USARTDIV}$$
+
+$$BRR = USARTDIV = \frac{f_{CK}}{Tx/Rx baud}$$
+
+$$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_{10} = 683_{16}$$
+
+<div align="center">
+<img src="Imagenes/image-13.png" alt="Registro USART_CR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-15.png" alt="Registro USART_TDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-14.png" alt="Registro USART_ISR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-16.png" alt="Registro USART_RDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

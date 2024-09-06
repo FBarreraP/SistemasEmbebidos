@@ -4,7 +4,7 @@ Esta clase consiste en programar el temporizador (`systick`) en tiempo real para
 
 <h2>Systick</h2>
 
-Es un temporizador en tiempo real descendente de 24 bits, el cual genera una interrupción cuando el temporizador alcanza el valor de cero. El systick puede ser utilizado como <i>delays</i> y como interrupciones periodicas.
+Es un temporizador en tiempo real descendente de 24 bits desde el valor de carga (Systick_LOAD) a cero, el cual genera una interrupción cuando el temporizador alcanza el valor de cero. El valor actual del contador es realizado a través del registro Systick_VAL. El systick puede ser utilizado como <i>delays</i> y como interrupciones periodicas.
 
 <div align="center">
 <img src="image.png" alt="Interrupción de Systick"/>
@@ -12,12 +12,14 @@ Es un temporizador en tiempo real descendente de 24 bits, el cual genera una int
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<!--
 El valor de calibración por defecto es 18750, dando un tiempo de referencia de 1 ms hasta llegar a cero con el reloj de SisTick configurado a 18.75 MHz
+-->
 
 <h3>Ejemplo 1</h3>
 
 ```c++
-//Ejemplo Systick like delay
+//Ejemplo Systick delay
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -27,8 +29,8 @@ El valor de calibración por defecto es 18750, dando un tiempo de referencia de 
 #include "stm32f7xx.h"
 
 void SysTick_Wait(uint32_t n){
-	SysTick->LOAD = n - 1; //15999
-	SysTick->VAL = 0; //Clean the value of Systick counter
+	SysTick->LOAD = n - 1; //15999 is loaded into the SysTick->VAL register when the counter is enabled
+	SysTick->VAL = 0; //Clear the count flag
 	while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
 }
 
@@ -48,7 +50,7 @@ int main(){
 	GPIOB->PUPDR &= ~(0b11<<0);
 	
 	//Systick
-	SysTick->LOAD = 0x00FFFFFF; //Initializing with the maximum value to 24 bits
+	SysTick->LOAD = 0x00FFFFFF; //Initializing with the maximum value to 24 bits and load the SysTick->VAL register when the counter is enabled
 	SysTick->CTRL |= (0b101); //Clock source is processor clock (AHB) and counter enable
 	
 	while(1){

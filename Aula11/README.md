@@ -7,7 +7,7 @@ Esta clase consiste en programar el temporizador (`systick`) en tiempo real para
 Es un temporizador en tiempo real descendente de 24 bits desde el valor de carga (Systick_LOAD) a cero, el cual genera una interrupción cuando el temporizador alcanza el valor de cero. El valor actual del contador es realizado a través del registro Systick_VAL. El systick puede ser utilizado como <i>delays</i> y como interrupciones periodicas.
 
 <div align="center">
-<img src="image.png" alt="Interrupción de Systick"/>
+<img src="Imagenes/image.png" alt="Interrupción de Systick"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -65,7 +65,7 @@ int main(){
 <h3>Registro STK_LOAD</h3>
 
 <div align="center">
-<img src="image-1.png" alt="STK_LOAD"/>
+<img src="Imagenes/image-1.png" alt="STK_LOAD"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -73,7 +73,7 @@ int main(){
 <h3>Registro STK_CTRL</h3>
 
 <div align="center">
-<img src="image-2.png" alt="STK_LOAD"/>
+<img src="Imagenes/image-2.png" alt="STK_LOAD"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -81,7 +81,7 @@ int main(){
 <h3>Registro STK_VAL</h3>
 
 <div align="center">
-<img src="image-3.png" alt="STK_LOAD"/>
+<img src="Imagenes/image-3.png" alt="STK_LOAD"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

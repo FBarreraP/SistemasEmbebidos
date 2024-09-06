@@ -61,7 +61,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Systick y socialización de proyecto</td>
 	</tr>
 	<tr>
-		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>UART/td>
+		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>UART</td>
 	</tr>
 	<tr>
 		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>

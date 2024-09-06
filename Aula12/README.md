@@ -216,7 +216,7 @@ int main(){
 <div align="center">
 <img src="Imagenes/image-8.png" alt="Función alternante para los pines USART3"/>
 <br>
-<figcaption>Fuente: Manual de referencia</figcaption>
+<figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
 </div>
 
 <div align="center">

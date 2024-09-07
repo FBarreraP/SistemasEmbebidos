@@ -234,6 +234,12 @@ $$BRR = USARTDIV = \frac{16MHz}{9600 baud} = 1667_{10} = 683_{16}$$
 </div>
 
 <div align="center">
+<img src="Imagenes/image-17.png" alt="Registro USART_CR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
 <img src="Imagenes/image-15.png" alt="Registro USART_TDR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>

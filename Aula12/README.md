@@ -59,7 +59,7 @@ El conversor de USB a TTL o también conocido como FTDI (CH340 o CP2102) permite
 <div align="center">
 <img src="Imagenes/image-7.png" alt="HC-05"/>
 <br>
-<figcaption>Fuente: https://deepbluembedded.com/usb-ttl-converter-tutorial-pc-control-for-microcontrollers/</figcaption>
+<figcaption>Fuente: </figcaption>
 </div>
 
 <h3>Comunicación UART en la tarjeta NUCLEO STM32F767ZI</h3>

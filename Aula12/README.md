@@ -87,7 +87,7 @@ Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una 
 <h3>Ejemplo</h3>
 
 ```c++
-//Ejemplo USART3 de la tarjeta
+//Ejemplo Interrupciones con led de usuario de la tarjeta
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -104,7 +104,7 @@ char name[7] = "Fabian", text[10];
 void SysTick_Wait(uint32_t n){
     SysTick->LOAD = n - 1; //15999
     SysTick->VAL = 0; //Clean the value of Systick counter
-    while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
+    while (((SysTick->CTRL & 0x00010000) >> 16) == 0); //Check the count flag until it's 1 
 }
 
 void SysTick_ms(uint32_t x){
@@ -120,7 +120,7 @@ extern "C"{
             flag = 1;
         }
     }
-    
+
     void USART3_IRQHandler(void){ //Receive interrupt
         if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
             d = USART3->RDR;//Read the USART receive buffer 
@@ -169,28 +169,28 @@ int main(){
 
     while(1){
         GPIOB->ODR |= 1<<0; 
-        SysTick_ms(1000);
+        SysTick_ms(500);
         GPIOB->ODR &= ~(1<<0);
-        SysTick_ms(1000);
+        SysTick_ms(500);
         if(flag == 1){
             flag = 0;
             cont++;
             sprintf(text,"%s %d\n",name, cont);
             for(i=0; i<strlen(text); i++){
                 USART3->TDR = text[i]; //Data transmitted
-                while((USART3->ISR & 0x80)==0){}; //Wait until the data is transferred to the shift register (flag TXE=0)
+                while(((USART3->ISR & 0x80) >> 7) == 0){}; //Wait until the data is transferred to the shift register (flag TXE=0)
             }
             //USART3->TDR = 0x0A; //Send end line
             //while((USART3->ISR & 0x80)==0){};
             USART3->TDR = 0x0D; //Send carry return
-            while((USART3->ISR & 0x80)==0){};
+            while(((USART3->ISR & 0x80) >> 7) == 0){};
         }
         if(d == 'a'){
             GPIOB->ODR |= 1<<7;
         }else if(d == 'b'){
             GPIOB->ODR &= ~(1<<7);
         }
-    }
+	}
 }
 ```
 

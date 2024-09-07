@@ -31,7 +31,7 @@ El valor de calibración por defecto es 18750, dando un tiempo de referencia de 
 void SysTick_Wait(uint32_t n){
 	SysTick->LOAD = n - 1; //15999 is loaded into the SysTick->VAL register when the counter is enabled
 	SysTick->VAL = 0; //Clear the count flag
-	while ((SysTick->CTRL & 0x00010000) == 0); //Check the count flag until it's 1 
+	while (((SysTick->CTRL & 0x00010000) >> 16) == 0); //Check the count flag until it's 1 
 }
 
 void SysTick_ms(uint32_t x){

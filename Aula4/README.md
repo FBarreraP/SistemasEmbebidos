@@ -136,9 +136,7 @@ La configuración Open-Drain consiste en dejar el pin "Drain" del transistor MOS
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-<h2>Registros STM32F767ZI</h2>
-
-*Si no funciona el código en la placa modificar el compilador en la opción '<i>Options for Target</i>', en la pestaña <i>C/C++</i> seleccionando diferentes opciones en la casilla <i>Optimization</i>
+<h2>Ejemplo</h2>
 
 ```cpp
 //Ejemplo Hola mundo con led de usuario de la tarjeta
@@ -180,6 +178,10 @@ int main(){
 	}
 }
 ```
+
+*Si no funciona el código en la placa modificar el compilador en la opción '<i>Options for Target</i>', en la pestaña <i>C/C++</i> seleccionando diferentes opciones en la casilla <i>Optimization</i>
+
+<h2>Registros STM32F767ZI</h2>
 
 <h3>RCC_AHB1ENR</h3>
 

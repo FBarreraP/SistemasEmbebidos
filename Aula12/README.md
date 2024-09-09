@@ -87,7 +87,7 @@ Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una 
 <h3>Ejemplo</h3>
 
 ```c++
-//Ejemplo Interrupciones con led de usuario de la tarjeta
+//Ejemplo UART3 ST-LINK
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -193,7 +193,6 @@ int main(){
 	}
 }
 ```
-
 
 <div align="center">
 <img src="Imagenes/image-10.png" alt="Registro GPIOx_AFRL=GPIOx_AFR[0]"/>

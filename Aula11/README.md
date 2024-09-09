@@ -16,7 +16,7 @@ Es un temporizador en tiempo real descendente de 24 bits desde el valor de carga
 El valor de calibración por defecto es 18750, dando un tiempo de referencia de 1 ms hasta llegar a cero con el reloj de SisTick configurado a 18.75 MHz
 -->
 
-<h3>Ejemplo 1</h3>
+<h3>Ejemplo</h3>
 
 ```c++
 //Ejemplo Systick delay

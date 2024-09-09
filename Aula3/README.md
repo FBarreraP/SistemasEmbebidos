@@ -15,19 +15,19 @@ La documentación (datasheets) requerida para la programación a descargar son:
 Manual de usuario -> Diagrama St LInk
 
 <div align="center">
-<img src="image-1.png" alt="ST-LINK y microcontrolador"/>
+<img src="Imagenes/image-1.png" alt="ST-LINK y microcontrolador"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
 <div align="center">
-<img src="image.png" alt="Vista superior Nucleo STM32F767ZI"/>
+<img src="Imagenes/image.png" alt="Vista superior Nucleo STM32F767ZI"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
 <div align="center">
-<img src="image-9.png" alt="Vista trasera Nucleo STM32F767ZI"/>
+<img src="Imagenes/image-9.png" alt="Vista trasera Nucleo STM32F767ZI"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
@@ -37,7 +37,7 @@ Manual de usuario -> Diagrama St LInk
 Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se debe verificar que el LED 4 esté encendido en rojo.
 
 <div align="center">
-<img src="image-2.png" alt="Leds Nucleo STM32F767ZI"/>
+<img src="Imagenes/image-2.png" alt="Leds Nucleo STM32F767ZI"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
@@ -45,13 +45,13 @@ Es importante que antes de desconectar la tarjeta Nucleo STM32F767ZI del PC, se 
 <h3>Pulsadores</h3>
 
 <div align="center">
-<img src="image-3.png" alt="Pulsadores Nucleo STM32F767ZI"/>
+<img src="Imagenes/image-3.png" alt="Pulsadores Nucleo STM32F767ZI"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
 <div align="center">
-<img src="image-10.png" alt="Pulsador de usuario"/>
+<img src="Imagenes/image-10.png" alt="Pulsador de usuario"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
@@ -63,15 +63,15 @@ El microcontrolador STM32F767ZI cuenta con 144 pines GPIO, sin embargo la tarjet
 <h4>Pines Zio o Arduino</h4>
 
 <div align="center">
-<img src="image-8.png" alt="Pines Zio o Arduino"/>
+<img src="Imagenes/image-8.png" alt="Pines Zio o Arduino"/>
 <br>
 <figcaption>Fuente: Manual de usuario</figcaption>
 </div>
 
 <div align="center">
-<img src="image-4.png" alt="CN8 y CN9"/>
+<img src="Imagenes/image-4.png" alt="CN8 y CN9"/>
 <br>
-<img src="image-5.png" alt="CN7 y CN10"/>
+<img src="Imagenes/image-5.png" alt="CN7 y CN10"/>
 <br>
 Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 </div>
@@ -79,9 +79,9 @@ Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 <h4>Pines Morphos</h4>
 
 <div align="center">
-<img src="image-6.png" alt="CN11"/>
+<img src="Imagenes/image-6.png" alt="CN11"/>
 <br>
-<img src="image-7.png" alt="CN12"/>
+<img src="Imagenes/image-7.png" alt="CN12"/>
 <br>
 Fuente: https://os.mbed.com/platforms/ST-Nucleo-F767ZI/
 </div>

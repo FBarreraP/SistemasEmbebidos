@@ -66,7 +66,7 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 <figcaption>Fuente: Manual de programación</figcaption>
 </div>
 
-<h3>Ejemplo 1</h3>
+<h3>Ejemplo</h3>
 
 ```cpp
 //Ejemplo Interrupciones con led de usuario de la tarjeta

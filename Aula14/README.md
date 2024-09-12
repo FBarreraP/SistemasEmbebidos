@@ -25,28 +25,28 @@ uint16_t digital;
 float voltaje;
 
 void SysTick_Wait(uint32_t n){
-    SysTick->LOAD = n - 1; //15999
-    SysTick->VAL = 0; //Clean the value of Systick counter
-    while (((SysTick->CTRL & 0x00010000) >> 16) == 0); //Check the count flag until it's 1 
+    SysTick->LOAD = n - 1; 
+    SysTick->VAL = 0; 
+    while (((SysTick->CTRL & 0x00010000) >> 16) == 0); 
 }
 
 void SysTick_ms(uint32_t x){
-    for (uint32_t i = 0; i < x; i++){//x ms
-        SysTick_Wait(16000); //1ms
+    for (uint32_t i = 0; i < x; i++){
+        SysTick_Wait(16000); 
     }
 }
 
 extern "C"{
     void EXTI15_10_IRQHandler(void){
-        EXTI->PR |= 1; //Down flag
+        EXTI->PR |= 1;
         if(((GPIOC->IDR & (1<<13)) >> 13) == 1){
             flag = 1;
         }
     }
 
-    void USART3_IRQHandler(void){ //Receive interrupt
-        if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1) 
-            d = USART3->RDR;//Read the USART receive buffer 
+    void USART3_IRQHandler(void){ 
+        if(((USART3->ISR & 0x20) >> 5) == 1){
+            d = USART3->RDR;
             if(d == 'a'){
                 flag = 1;
             }
@@ -125,7 +125,7 @@ int main(){
             }
             //USART3->TDR = 0x0A; //Send end line
             //while((USART3->ISR & 0x80)==0){};
-            USART3->TDR = 0x0D; //Send carry return
+            USART3->TDR = 0x0D;
             while(((USART3->ISR & 0x80) >> 7) == 0){};
         }  
     }

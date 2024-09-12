@@ -113,7 +113,7 @@ int main(){
         if(flag == 1){
             flag = 0;
             ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
-            while((ADC2->SR & ADC_SR_EOC) == 0){
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){ //Check if the conversion is complete
                 ADC2->SR = 0; //
             }
             digital = ADC2->DR;

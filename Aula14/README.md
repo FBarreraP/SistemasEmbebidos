@@ -203,6 +203,19 @@ int main(){
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+![alt text](image.png)
+<div align="center">
+<img src="Imagenes/image-12.png" alt="ADC_SQR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-13.png" alt="ADC_SQR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 <div align="center">
 <img src="Imagenes/image-9.png" alt="ADC_SQR3"/>
 <br>

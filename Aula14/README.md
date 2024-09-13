@@ -187,3 +187,11 @@ int main(){
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-6.png" alt="ADC_CR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+
+

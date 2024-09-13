@@ -178,19 +178,19 @@ int main(){
             sprintf(text,"%s %d\n",name, cont);
             for(i=0; i<strlen(text); i++){
                 USART3->TDR = text[i]; //Data transmitted
-                while(((USART3->ISR & 0x80) >> 7) == 0){}; //Wait until the data is transferred to the shift register (flag TXE=0)
+                while(((USART3->ISR & 0x80) >> 7) == 0){} //Wait until the data is transferred to the shift register (flag TXE=0)
             }
             //USART3->TDR = 0x0A; //Send end line
             //while((USART3->ISR & 0x80)==0){};
             USART3->TDR = 0x0D; //Send carry return
-            while(((USART3->ISR & 0x80) >> 7) == 0){};
+            while(((USART3->ISR & 0x80) >> 7) == 0){}
         }
         if(d == 'a'){
             GPIOB->ODR |= 1<<7;
         }else if(d == 'b'){
             GPIOB->ODR &= ~(1<<7);
         }
-	}
+    }
 }
 ```
 

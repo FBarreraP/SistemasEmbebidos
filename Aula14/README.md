@@ -190,8 +190,8 @@ int main(){
     USART3->BRR = 0x683; 
     USART3->CR1 |= ((1<<5)|(0b11<<2)); 
     NVIC_EnableIRQ(USART3_IRQn); 
-		
-	//ADC
+
+    //ADC
     GPIOC->MODER |= (0b11<<0); //Set the bit PC0 (ADC123_IN10) as analog mode		
     RCC->APB2ENR |= (1<<9); //Enable the ADC2 clock 
     ADC2->CR2 |= (0b11<<0); //Enable the A/D converter and set the continuous conversion mode

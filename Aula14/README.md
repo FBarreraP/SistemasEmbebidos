@@ -117,9 +117,11 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 #include "stm32f7xx.h"
 #include <string.h>
 
-uint8_t flag = 0, i, cont = 0;
+uint8_t flag = 0, i;
 unsigned char d;
-char name[7] = "Fabian", text[10];
+char text[11];
+uint16_t digital;
+float voltaje;
 
 void SysTick_Wait(uint32_t n){
     SysTick->LOAD = n - 1; //15999
@@ -142,8 +144,11 @@ extern "C"{
     }
 
     void USART3_IRQHandler(void){ //Receive interrupt
-        if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
+        if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1) 
             d = USART3->RDR;//Read the USART receive buffer 
+            if(d == 'a'){
+                    flag = 1;
+            }
         }
     }
 }
@@ -176,17 +181,29 @@ int main(){
     NVIC_EnableIRQ(EXTI15_10_IRQn); 
         
     //UART
-    RCC->AHB1ENR |= (1<<3); //Enable the GPIOD clock (UART3 is connected on PD9 (RX) and PD8 (TX))
-    GPIOD->MODER &= ~((0b11<<18)|(0b11<<16)); //Clear (00) pins PD9 (bits 19:18) and PD8 (bits 17:16)
-    GPIOD->MODER |= (1<<19)|(1<<17); //Set (10) pins PD9=RX (bits 19:18) and PD8=TX (bits 17:16) as alternant function
-    GPIOD->AFR[1] &= ~((0b1111<<4)|(0b1111<<0)); //Clear (0000) alternant functions for pins PD9 (bits 7:4) and PD8 (bits 3:0)
-    GPIOD->AFR[1] |= (0b111<<4)|(0b111<<0); //Set the USART3 (AF7) alternant function for pins PD9=RX (bits 7:4) and PD8=TX (bits 3:0)
-    RCC->APB1ENR |= (1<<18); //Enable the USART3 clock
-    USART3->BRR = 0x683; //Set the baud rate on 9600 baud to 16 MHz (HSI)
-    USART3->CR1 |= ((1<<5)|(0b11<<2)); //RXNE interrupt enable, transmitter enable and receiver enable
-    USART3->CR1 |= (1<<0); //USART enable
-    NVIC_EnableIRQ(USART3_IRQn); //Enable the interrupt function on the NVIC module
+    RCC->AHB1ENR |= (1<<3); 
+    GPIOD->MODER &= ~((0b11<<18)|(0b11<<16)); 
+    GPIOD->MODER |= (1<<19)|(1<<17); 
+    GPIOD->AFR[1] &= ~((0b1111<<4)|(0b1111<<0));
+    GPIOD->AFR[1] |= (0b111<<4)|(0b111<<0); 
+    RCC->APB1ENR |= (1<<18); 
+    USART3->BRR = 0x683; 
+    USART3->CR1 |= ((1<<5)|(0b11<<2)); 
+    NVIC_EnableIRQ(USART3_IRQn); 
+		
+	//ADC
+    GPIOC->MODER |= (0b11<<0); //Set the bit PC0 (ADC123_IN10) as analog mode		
+    RCC->APB2ENR |= (1<<9); //Enable the ADC2 clock 
+    ADC2->CR2 |= (0b11<<0); //Enable the A/D converter and set the continuous conversion mode
+    ADC2->CR1 &= ~(0b11<<24); //Clear the A/D resolution bits 
+    ADC2->CR1 |= (1<<24); //Set the A/D resolution on 10 bits (minimum 13 ADCCLK cycles)
+    ADC2->SMPR1 |= (1<<0); //15 ADCCLK cycles on channel 10 (PC0)
+    ADC2->SQR3 &= ~(0b11111<<0); //Clear the regular sequence bits 
+    ADC2->SQR3 |= (0b1010<<0); //Set the channel 10 on 1st conversion in regular sequence 
 
+    //UART
+    USART3->CR1 |= (1<<0);
+    
     while(1){
         GPIOB->ODR |= 1<<0; 
         SysTick_ms(500);
@@ -194,22 +211,20 @@ int main(){
         SysTick_ms(500);
         if(flag == 1){
             flag = 0;
-            cont++;
-            sprintf(text,"%s %d\n",name, cont);
+            ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete
+            digital = ADC2->DR;
+            voltaje = (float)digital*(3.3/1023.0);
+            sprintf(text,"pot: %.2fV\n", voltaje);
             for(i=0; i<strlen(text); i++){
-                USART3->TDR = text[i]; //Data transmitted
-                while(((USART3->ISR & 0x80) >> 7) == 0){} //Wait until the data is transferred to the shift register (flag TXE=0)
+                USART3->TDR = text[i]; 
+                while(((USART3->ISR & 0x80) >> 7) == 0){}
             }
             //USART3->TDR = 0x0A; //Send end line
             //while((USART3->ISR & 0x80)==0){};
             USART3->TDR = 0x0D; //Send carry return
             while(((USART3->ISR & 0x80) >> 7) == 0){}
-        }
-        if(d == 'a'){
-            GPIOB->ODR |= 1<<7;
-        }else if(d == 'b'){
-            GPIOB->ODR &= ~(1<<7);
-        }
+        }  
     }
 }
 ```

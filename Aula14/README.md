@@ -46,7 +46,14 @@ $$Resolución = \frac{Rango análogico}{2^n} = \frac{3V}{2^3} = 0.375V$$
 
 <h2>ADC en la STM32F767ZI</h2>
 
-El microcontrolador STM32F767ZI tiene internamente tres módulos ADC con resolución configurable de 12, 10 8 o 6 bits; cada módulo tiene la posibilidad de conectar hasta 16 pines análogos externos, 2 fuentes internas y 1 canal CBAT. La ubicación de los pines análogos se encuentra en la tabla 11 del datasheet del microcontrolador STM32F767ZI.
+El microcontrolador STM32F767ZI tiene internamente tres módulos ADC con resolución configurable de 12, 10, 8 o 6 bits; cada módulo tiene la posibilidad de conectar hasta 16 pines análogos externos, 2 fuentes internas y 1 canal CBAT. La ubicación de los pines análogos se encuentra en la tabla 11 del datasheet del microcontrolador STM32F767ZI.
+
+<div align="center">
+<img src="Imagenes/image-4.png" alt="RCC_APB2ENR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 
 <h3>Ejemplo</h3>
 
@@ -156,7 +163,7 @@ int main(){
         if(flag == 1){
             flag = 0;
             ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
-            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the A/D conversion is complete
             digital = ADC2->DR;
             voltaje = (float)digital*(3.3/1023.0);
             sprintf(text,"pot: %.2f\n", voltaje);

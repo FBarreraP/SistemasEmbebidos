@@ -80,6 +80,17 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">s
+<img src="Imagenes/image-20.png" alt="Modos de conversión individual y continuo"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-21.png" alt="Alineación de datos ADC"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 <h3>Ejemplo</h3>
 

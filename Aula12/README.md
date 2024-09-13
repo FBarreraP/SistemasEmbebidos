@@ -64,7 +64,7 @@ El conversor de USB a TTL o también conocido como FTDI (CH340 o CP2102) permite
 
 <h3>Comunicación UART en la tarjeta NUCLEO STM32F767ZI</h3>
 
-Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una salida y una entrada, Tx (Transmisión) y Rx (Recepción), respectivamente. TDR y RDR son registros del modulo USART del microcontrolador STM32F767ZI para cargar el byte a transmitir y para guardar el byte recibido, respectivamente. En la tarjeta NUCLEO STM32F767ZI hay cuatro canales de UART (4, 5, 7 y 8) y cuatro canales de USART (1,2,3 y 6). 
+Es un protocolo de comunicación del microcontrolador STM32F767ZI que tiene una salida y una entrada, Tx (Transmisión) y Rx (Recepción), respectivamente. TDR y RDR son registros del modulo USART del microcontrolador STM32F767ZI para cargar el byte a transmitir y para guardar el byte recibido, respectivamente. En la tarjeta NUCLEO STM32F767ZI hay cuatro canales de UART (4, 5, 7 y 8) y cuatro canales de USART (1,2,3 y 6). La ubicación de los pines UART/USART se encuentra en la tabla 11 del datasheet del microcontrolador STM32F767ZI.
 
 <div align="center">
 <img src="Imagenes/image-3.png" alt="USART3"/>

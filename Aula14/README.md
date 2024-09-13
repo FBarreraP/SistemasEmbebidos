@@ -2,10 +2,53 @@
 
 Esta clase consiste en comprender la Conversión Análogo Digital (ADC) y utilizarla en la tarjeta NUCLEO STM32F767ZI
 
+<h2>Señal análoga</h2>
+
+Una señal análoga se caracteriza por ser continua en función del tiempo, sin embargo es variable en amplitud y periodo (frecuencia).
+
+<div align="center">
+<img src="Imagenes/image.png" alt="Señal análoga"/>
+<br>
+<figcaption>Fuente: https://alejandrocbba.wordpress.com/</figcaption>
+</div>
+
+<h2>Conversión análoga a digital</h2>
+
+Para el procesamiento de información en circuitos electrónicos digitales y sistemas embebidos (Arduino, Microcontroladores, STM32, Raspberry, FPGA, entre otros), es indispensable tener la información digital debido a la lógica booleana de los procesadores digitales.
+
+<div align="center">
+<img src="Imagenes/image-1.png" alt="Señal análoga a digital"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
 <h2>Conversor Análogo Digital (ADC)</h2>
 
+Un Conversor Análogo Digital (ADC) permite convertir una señal análoga en una señal digital equivalente, donde cada valor de muestra de la señal análoga está representado por una cantidad de bits. 
 
+<div align="center">
+<img src="Imagenes/image-2.png" alt="ADC"/>
+<br>
+<figcaption>Fuente: https://alejandrocbba.wordpress.com/</figcaption>
+</div>
 
+<h3>Resolución ADC</h3>
+
+<div align="center">
+<img src="Imagenes/image-3.png" alt="ADC"/>
+<br>
+<figcaption>Fuente: https://alejandrocbba.wordpress.com/</figcaption>
+</div>
+
+$$Rango análogico = V_{máx} - V_{mín} = 3V - 0V = 3V$$
+
+$$Resolución = \frac{Rango análogico}{2^n} = \frac{3V}{2^3} = 0.375V$$
+
+<h2>ADC en la STM32F767ZI</h2>
+
+El microcontrolador STM32F767ZI tiene internamente tres módulos ADC con resolución configurable de 12, 10 8 o 6 bits; cada módulo tiene la posibilidad de conectar hasta 16 pines análogos externos, 2 fuentes internas y 1 canal CBAT. La ubicación de los pines análogos se encuentra en la tabla 11 del datasheet del microcontrolador STM32F767ZI.
+
+<h3>Ejemplo</h3>
 
 ```c++
 //Ejemplo ADC2 canal 10
@@ -131,3 +174,16 @@ int main(){
     }
 }
 ```
+
+<div align="center">
+<img src="Imagenes/image-4.png" alt="RCC_APB2ENR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-5.png" alt="ADC_CR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+

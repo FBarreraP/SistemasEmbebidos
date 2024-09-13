@@ -62,26 +62,26 @@ int main(){
 }
 ```
 
-<h3>Registro STK_LOAD</h3>
-
 <div align="center">
 <img src="Imagenes/image-1.png" alt="STK_LOAD"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-<h3>Registro STK_CTRL</h3>
-
 <div align="center">
-<img src="Imagenes/image-2.png" alt="STK_LOAD"/>
+<img src="Imagenes/image-2.png" alt="STK_CTRL"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-<h3>Registro STK_VAL</h3>
-
 <div align="center">
-<img src="Imagenes/image-3.png" alt="STK_LOAD"/>
+<img src="Imagenes/image-3.png" alt="STK_VAL"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/IMG_20240912_150235.jpg" alt="Osciloscopio PB0"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
 </div>

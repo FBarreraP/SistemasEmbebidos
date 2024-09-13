@@ -92,6 +92,12 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-22.png" alt="Tiempo de conversión ADC"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 <h3>Ejemplo</h3>
 
 ```c++

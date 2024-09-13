@@ -19,7 +19,7 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 
 ```
 
-```c++
+```cpp
 //Ejemplo Hola mundo con led de usuario de la tarjeta
 //Fabián Barrera Prieto
 //Universidad ECCI

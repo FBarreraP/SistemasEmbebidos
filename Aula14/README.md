@@ -107,7 +107,7 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 <h3>Ejemplo</h3>
 
 ```c++
-//Ejemplo UART3 ST-LINK
+//Ejemplo ADC
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U

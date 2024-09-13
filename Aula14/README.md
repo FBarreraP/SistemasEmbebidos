@@ -156,20 +156,18 @@ int main(){
         if(flag == 1){
             flag = 0;
             ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
-            while(((ADC2->SR & (1<<1)) >> 1) == 0){ //Check if the conversion is complete
-                ADC2->SR = 0; //
-            }
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete
             digital = ADC2->DR;
             voltaje = (float)digital*(3.3/1023.0);
             sprintf(text,"pot: %.2f\n", voltaje);
             for(i=0; i<strlen(text); i++){
                 USART3->TDR = text[i]; 
-                while(((USART3->ISR & 0x80) >> 7) == 0){};
+                while(((USART3->ISR & 0x80) >> 7) == 0){}
             }
             //USART3->TDR = 0x0A; //Send end line
             //while((USART3->ISR & 0x80)==0){};
             USART3->TDR = 0x0D;
-            while(((USART3->ISR & 0x80) >> 7) == 0){};
+            while(((USART3->ISR & 0x80) >> 7) == 0){}
         }  
     }
 }
@@ -193,5 +191,20 @@ int main(){
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-7.png" alt="ADC_SMPR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
+<div align="center">
+<img src="Imagenes/image-8.png" alt="ADC_SMPR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
+<div align="center">
+<img src="Imagenes/image-9.png" alt="ADC_SQR3"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

@@ -160,7 +160,7 @@ int main(){
     GPIOD->MODER &= ~((0b11<<18)|(0b11<<16)); //Clear (00) pins PD9 (bits 19:18) and PD8 (bits 17:16)
     GPIOD->MODER |= (1<<19)|(1<<17); //Set (10) pins PD9=RX (bits 19:18) and PD8=TX (bits 17:16) as alternant function
     GPIOD->AFR[1] &= ~((0b1111<<4)|(0b1111<<0)); //Clear (0000) alternant functions for pins PD9 (bits 7:4) and PD8 (bits 3:0)
-    GPIOD->AFR[1] |= (0b111<<4)|(0b111<<0); //Set the alternant function AF7 for pins PD9=RX (bits 19:18) and PD8=TX (bits 17:16)
+    GPIOD->AFR[1] |= (0b111<<4)|(0b111<<0); //Set the USART3 (AF7) alternant function for pins PD9=RX (bits 7:4) and PD8=TX (bits 3:0)
     RCC->APB1ENR |= (1<<18); //Enable the USART3 clock
     USART3->BRR = 0x683; //Set the baud rate on 9600 baud to 16 MHz (HSI)
     USART3->CR1 |= ((1<<5)|(0b11<<2)); //RXNE interrupt enable, transmitter enable and receiver enable

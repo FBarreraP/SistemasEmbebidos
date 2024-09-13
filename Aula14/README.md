@@ -203,7 +203,6 @@ int main(){
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-![alt text](image.png)
 <div align="center">
 <img src="Imagenes/image-12.png" alt="ADC_SQR1"/>
 <br>
@@ -233,4 +232,3 @@ int main(){
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
-

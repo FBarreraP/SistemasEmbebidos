@@ -213,7 +213,7 @@ int main(){
             flag = 0;
             ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
             while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete reading the EOC bit
-			ADC2->SR &= ~(1<<1); //Clear the EOC bit
+            ADC2->SR &= ~(1<<1); //Clear the EOC bit
             digital = ADC2->DR;
             voltaje = (float)digital*(3.3/1023.0);
             sprintf(text,"pot: %.2fV\n", voltaje);

@@ -194,7 +194,7 @@ int main(){
     //ADC
     GPIOC->MODER |= (0b11<<0); //Set the bit PC0 (ADC123_IN10) as analog mode		
     RCC->APB2ENR |= (1<<9); //Enable the ADC2 clock 
-    ADC2->CR2 |= (0b1<<0); //Enable the A/D converter
+    ADC2->CR2 |= ((1<<10)|(1<<0)); //Select the EOC bit at the end of each regular conversion and enable the A/D converter
     ADC2->CR1 &= ~(0b11<<24); //Clear the A/D resolution bits 
     ADC2->CR1 |= (1<<24); //Set the A/D resolution on 10 bits (minimum 13 ADCCLK cycles)
     ADC2->SMPR1 |= (1<<0); //15 ADCCLK cycles on channel 10 (PC0)

@@ -106,7 +106,7 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 
 <h3>Ejemplo</h3>
 
-```c
+```c++
 //Ejemplo ADC
 //Fabián Barrera Prieto
 //Universidad ECCI
@@ -147,7 +147,7 @@ extern "C"{
         if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1) 
             d = USART3->RDR;//Read the USART receive buffer 
             if(d == 'a'){
-                    flag = 1;
+                flag = 1;
             }
         }
     }
@@ -190,11 +190,11 @@ int main(){
     USART3->BRR = 0x683; 
     USART3->CR1 |= ((1<<5)|(0b11<<2)); 
     NVIC_EnableIRQ(USART3_IRQn); 
-
+    
     //ADC
     GPIOC->MODER |= (0b11<<0); //Set the bit PC0 (ADC123_IN10) as analog mode		
     RCC->APB2ENR |= (1<<9); //Enable the ADC2 clock 
-    ADC2->CR2 |= (0b11<<0); //Enable the A/D converter and set the continuous conversion mode
+    ADC2->CR2 |= (0b1<<0); //Enable the A/D converter and set the single conversion mode
     ADC2->CR1 &= ~(0b11<<24); //Clear the A/D resolution bits 
     ADC2->CR1 |= (1<<24); //Set the A/D resolution on 10 bits (minimum 13 ADCCLK cycles)
     ADC2->SMPR1 |= (1<<0); //15 ADCCLK cycles on channel 10 (PC0)
@@ -203,7 +203,7 @@ int main(){
 
     //UART
     USART3->CR1 |= (1<<0);
-    
+          
     while(1){
         GPIOB->ODR |= 1<<0; 
         SysTick_ms(500);

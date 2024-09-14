@@ -1,4 +1,4 @@
-//Ejemplo ADC2 canal 10
+//Ejemplo ADC
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -10,12 +10,12 @@
 
 uint8_t flag = 0, i;
 unsigned char d;
-char text[10];
+char text[11];
 uint16_t digital;
 float voltaje;
 
 void SysTick_Wait(uint32_t n){
-    SysTick->LOAD = n - 1; 
+    SysTick->LOAD = n - 1;
     SysTick->VAL = 0; 
     while (((SysTick->CTRL & 0x00010000) >> 16) == 0); 
 }
@@ -28,7 +28,7 @@ void SysTick_ms(uint32_t x){
 
 extern "C"{
     void EXTI15_10_IRQHandler(void){
-        EXTI->PR |= 1;
+        EXTI->PR |= 1; 
         if(((GPIOC->IDR & (1<<13)) >> 13) == 1){
             flag = 1;
         }
@@ -70,7 +70,7 @@ int main(){
     EXTI->IMR |= (1<<13); 
     EXTI->RTSR |= (1<<13);
     NVIC_EnableIRQ(EXTI15_10_IRQn); 
-        
+            
     //UART
     RCC->AHB1ENR |= (1<<3); 
     GPIOD->MODER &= ~((0b11<<18)|(0b11<<16)); 
@@ -81,11 +81,11 @@ int main(){
     USART3->BRR = 0x683; 
     USART3->CR1 |= ((1<<5)|(0b11<<2)); 
     NVIC_EnableIRQ(USART3_IRQn); 
-        
-        //ADC
+
+    //ADC
     GPIOC->MODER |= (0b11<<0); //Set the bit PC0 (ADC123_IN10) as analog mode       
     RCC->APB2ENR |= (1<<9); //Enable the ADC2 clock 
-    ADC2->CR2 |= (0b11<<0); //Enable the A/D converter and set the continuous conversion mode
+    ADC2->CR2 |= (0b1<<0); //Enable the A/D converter
     ADC2->CR1 &= ~(0b11<<24); //Clear the A/D resolution bits 
     ADC2->CR1 |= (1<<24); //Set the A/D resolution on 10 bits (minimum 13 ADCCLK cycles)
     ADC2->SMPR1 |= (1<<0); //15 ADCCLK cycles on channel 10 (PC0)
@@ -94,7 +94,7 @@ int main(){
 
     //UART
     USART3->CR1 |= (1<<0);
-        
+
     while(1){
         GPIOB->ODR |= 1<<0; 
         SysTick_ms(500);
@@ -103,20 +103,18 @@ int main(){
         if(flag == 1){
             flag = 0;
             ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
-            while(((ADC2->SR & (1<<1)) >> 1) == 0){ //Check if the conversion is complete
-                ADC2->SR = 0; //
-            }
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete
             digital = ADC2->DR;
             voltaje = (float)digital*(3.3/1023.0);
-            sprintf(text,"pot: %.2f\n", voltaje);
+            sprintf(text,"pot: %.2fV\n", voltaje);
             for(i=0; i<strlen(text); i++){
                 USART3->TDR = text[i]; 
-                while(((USART3->ISR & 0x80) >> 7) == 0){};
+                while(((USART3->ISR & 0x80) >> 7) == 0){}
             }
-            //USART3->TDR = 0x0A; //Send end line
+            //USART3->TDR = 0x0A; 
             //while((USART3->ISR & 0x80)==0){};
-            USART3->TDR = 0x0D;
-            while(((USART3->ISR & 0x80) >> 7) == 0){};
+            USART3->TDR = 0x0D; 
+            while(((USART3->ISR & 0x80) >> 7) == 0){}
         }  
     }
 }

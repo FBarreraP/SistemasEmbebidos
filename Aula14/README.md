@@ -54,6 +54,12 @@ El microcontrolador STM32F767ZI tiene internamente tres módulos ADC con resoluc
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-23.png" alt="Diagrama de tiempo ADC"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines análogos externos, 2 fuentes internas y 1 canal VBAT, pero alguno de los pines externos están compartidos entre los tres módulos. Así mismo, es posible utilizar dos o tres módulos de ADC de forma paralela.
 
 <div align="center">
@@ -94,12 +100,6 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 
 <div align="center">
 <img src="Imagenes/image-22.png" alt="Tiempo de conversión ADC"/>
-<br>
-<figcaption>Fuente: Manual de referencia</figcaption>
-</div>
-
-<div align="center">
-<img src="Imagenes/image-23.png" alt="Diagrama de tiempo ADC"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

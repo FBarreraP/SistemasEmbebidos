@@ -4,4 +4,10 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 
 <h2>Temporizadores</h2>
 
+
+$$T = \frac{1}{Freq_{update}}$$
+
+$$Freq_{update} = \frac{F_{OSC}}{PSC \cdot ARR}$$
+
+
 <h3>Ejemplo</h3>

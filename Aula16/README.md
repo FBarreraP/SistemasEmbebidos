@@ -12,6 +12,13 @@ $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 1. Utilizar un prescaler pequeño y sumar las interrrupciones de un tiempo pequeño (ej:1ms)
 2. Buscar el tiempo aproximado (ej:100ms) para un valor de prescaler y posteriormente encontrar el valor límite de conteo
 
+
+<div align="center">
+<img src="Imagenes/image.png" alt="Mapa de clocks"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
 <h3>Ejemplo</h3>
 
 ```c++

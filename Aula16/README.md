@@ -7,7 +7,7 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 
 $$T = \frac{1}{Freq_{update}}$$
 
-$$Freq_{update} = \frac{F_{OSC}}{PSC \cdot ARR}$$
+$$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 
 
 <h3>Ejemplo</h3>

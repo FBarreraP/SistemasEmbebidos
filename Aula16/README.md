@@ -14,7 +14,7 @@ $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 
 
 <div align="center">
-<img src="Imagenes/image.png" alt="Mapa de clocks"/>
+<img src="image.png" alt="Mapa de clocks"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

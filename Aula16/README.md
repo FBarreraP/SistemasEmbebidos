@@ -32,7 +32,7 @@ $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 #include "stm32f7xx.h"
 #include <string.h>
 
-uint8_t flag = 0, i;
+uint8_t flag = 0, i, cont = 0;
 unsigned char d;
 char text[11];
 uint16_t digital;
@@ -58,14 +58,19 @@ extern "C"{
             flag = 1;
         }
     }
-		
-		void TIM3_IRQHandler(void){ // Interruption Timer 
-			TIM3->SR &= ~(1<<0); // Clear the flag on TIM3 
-			a = (~(GPIOB->ODR&(1<<7)));
-			b = (GPIOB->ODR|(1<<7));
-			c = a&b;
-			GPIOB->ODR = c;
-		}	
+
+    void TIM3_IRQHandler(void){ // Interruption Timer 
+        TIM3->SR &= ~(1<<0); // Clear the flag on TIM3 
+        a = (~(GPIOB->ODR&(1<<7)));
+        b = (GPIOB->ODR|(1<<7));
+        c = a&b;
+        GPIOB->ODR = c;
+        cont += 1;
+        if(cont == 50){
+            cont = 0;
+            flag = 1;
+        }
+    }
 
 
     void USART3_IRQHandler(void){ 
@@ -125,15 +130,14 @@ int main(){
     ADC2->SMPR1 |= (1<<0); 
     ADC2->SQR3 &= ~(0b11111<<0); 
     ADC2->SQR3 |= (0b1010<<0); 
-		
-		//TIMER
-		RCC->APB1ENR |= (1<<1); //Enable the TIMER3 clock 
-		TIM3->PSC = 24; // Prescale factor 25 for 100ms of time
-		TIM3->ARR = 64000; // Maximum count value
-		TIM3->DIER |= (1<<0); //Enable IRQ on update		 
-		TIM3->CR1 |= (1<<0); // Enable Counting
-		NVIC_EnableIRQ(TIM3_IRQn); // Enable IRQ for TIM3 in NVIC	
-
+    
+    //TIMER
+    RCC->APB1ENR |= (1<<1); //Enable the TIMER3 clock 
+    TIM3->PSC = 24; // Prescale factor 25 for 100ms of time
+    TIM3->ARR = 64000; // Maximum count value
+    TIM3->DIER |= (1<<0); //Enable IRQ on update		 
+    TIM3->CR1 |= (1<<0); // Enable Counting
+    NVIC_EnableIRQ(TIM3_IRQn); // Enable IRQ for TIM3 in NVIC	
 
     //UART
     USART3->CR1 |= (1<<0);
@@ -145,20 +149,20 @@ int main(){
         SysTick_ms(500);
         if(flag == 1){
             flag = 0;
-//            ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
-//            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete reading the EOC bit
-//            ADC2->SR &= ~(1<<1); //Clear the EOC bit
-//            digital = ADC2->DR;
-//            voltaje = (float)digital*(3.3/1023.0);
-//            sprintf(text,"pot: %.2fV\n", voltaje);
-//            for(i=0; i<strlen(text); i++){
-//                USART3->TDR = text[i]; 
-//                while(((USART3->ISR & 0x80) >> 7) == 0){}
-//            }
-//            //USART3->TDR = 0x0A; 
-//            //while((USART3->ISR & 0x80)==0){};
-//            USART3->TDR = 0x0D; 
-//            while(((USART3->ISR & 0x80) >> 7) == 0){}
+            ADC2->CR2 |= (1<<30); // Start A/D conversion on ADC2 module for channel 10 on ADC2->SQR3 register
+            while(((ADC2->SR & (1<<1)) >> 1) == 0){} //Check if the conversion is complete reading the EOC bit
+            ADC2->SR &= ~(1<<1); //Clear the EOC bit
+            digital = ADC2->DR;
+            voltaje = (float)digital*(3.3/1023.0);
+            sprintf(text,"pot: %.2fV\n", voltaje);
+            for(i=0; i<strlen(text); i++){
+                USART3->TDR = text[i]; 
+                while(((USART3->ISR & 0x80) >> 7) == 0){}
+            }
+            //USART3->TDR = 0x0A; 
+            //while((USART3->ISR & 0x80)==0){};
+            USART3->TDR = 0x0D; 
+            while(((USART3->ISR & 0x80) >> 7) == 0){}
         }  
     }
 }

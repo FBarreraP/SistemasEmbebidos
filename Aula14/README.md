@@ -106,7 +106,7 @@ Cada uno de los tres módulos tiene la posibilidad de conectar hasta 16 pines an
 
 <h3>Ejemplo</h3>
 
-```c
+```c++
 //Ejemplo ADC
 //Fabián Barrera Prieto
 //Universidad ECCI

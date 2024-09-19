@@ -9,6 +9,10 @@ $$T = \frac{1}{Freq_{update}}$$
 
 $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 
+
+
+$$F_{CNT} = \frac{F_{PSC}}{PSC+1}$$
+
 1. Utilizar un prescaler pequeño y sumar las interrrupciones de un tiempo pequeño (ej:1ms)
 2. Buscar el tiempo aproximado (ej:100ms) para un valor de prescaler y posteriormente encontrar el valor límite de conteo
 
@@ -167,3 +171,39 @@ int main(){
     }
 }
 ```
+
+<div align="center">
+<img src="image-2.png" alt="TIMx_CNT"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-1.png" alt="RCC_APB1ENR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-3.png" alt="TIMx_PSC"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-4.png" alt="TIMx_ARR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-5.png" alt="TIMx_DIER"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-6.png" alt="TIMx_CR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

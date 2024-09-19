@@ -4,6 +4,44 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 
 <h2>Temporizadores</h2>
 
+Los temporizadores en un microcontrolador son controlados por software para generar atrasos (delays), conteo de eventos, generación de señales cuadradas (PWM).
+
+
+
+
+
+
+
+<h3>Temporizadores en el STM32F767ZI</h3>
+
+El microcontrolador STM32F767ZI cuenta con 15 temporizadores internos, a) 2 temporizadores de control avanzado de 16 bits (TMR1 y TMR8), b) 10 temporizadores de propósito general de 16 o 32 bits (TMR2, TMR3, TMR4, TMR5, TMR9, TMR10, TMR11, TMR12, TMR13 y TMR14), c) 2 temporizadores básicos (TMR6 y TMR7).
+
+<div align="center">
+<img src="image-7.png" alt="Timers"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-8.png" alt="Timers de control avanzado"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-9.png" alt="Timers de propósito general"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-10.png" alt="Timers básicos"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+
+
 
 $$T = \frac{1}{Freq_{update}}$$
 
@@ -22,6 +60,8 @@ $$F_{CNT} = \frac{F_{PSC}}{PSC+1}$$
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+
 
 <h3>Ejemplo</h3>
 

@@ -207,3 +207,9 @@ int main(){
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+<div align="center">
+<img src="1726778518531.jpg" alt="Timer con osciloscopio"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>

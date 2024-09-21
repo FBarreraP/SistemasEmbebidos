@@ -13,7 +13,7 @@ Los temporizadores en un microcontrolador son controlados por software para cont
 </div>
 
 <div align="center">
-<img src="Imagenes/image-17.png" alt="Captura de encoders" width="500" height="500"/>
+<img src="Imagenes/image-17.png" alt="Captura de encoders" width="500" height="400"/>
 <br>
 <figcaption>Fuente: https://www.futek.com/incremental-encoder-signal-converter</figcaption>
 </div>

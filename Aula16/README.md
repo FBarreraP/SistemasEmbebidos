@@ -84,7 +84,7 @@ El microcontrolador STM32F767ZI cuenta con 15 temporizadores internos, a) 2 temp
 
 Frecuencia de conteo
 
-$$F_{CNT} = \frac{F_{PSC}}=F_{OSC}{PSC+1}$$
+$$F_{CNT} = \frac{F_{PSC}=F_{OSC}}{PSC+1}$$
 
 Calculo de la frecuencia para un tiempo determinado T
 

@@ -12,6 +12,18 @@ Los temporizadores en un microcontrolador son controlados por software para cont
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-17.png" alt="Captura de encoders"/>
+<br>
+<figcaption>Fuente: https://www.futek.com/incremental-encoder-signal-converter</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-18.png" alt="PWM servos"/>
+<br>
+<figcaption>Fuente: https://www.futek.com/incremental-encoder-signal-converter</figcaption>
+</div>
+
 <h3>Temporizadores en el STM32F767ZI</h3>
 
 El microcontrolador STM32F767ZI cuenta con 15 temporizadores internos, a) 2 temporizadores de control avanzado de 16 bits (TMR1 y TMR8) que permite reconteo, b) 10 temporizadores de propósito general de 16 o 32 bits (TMR2, TMR3, TMR4, TMR5, TMR9, TMR10, TMR11, TMR12, TMR13 y TMR14), c) 2 temporizadores básicos (TMR6 y TMR7).

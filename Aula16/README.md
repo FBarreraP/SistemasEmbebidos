@@ -7,7 +7,7 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 Los temporizadores en un microcontrolador son controlados por software para contar tiempos, generar atrasos (delays), conteo de eventos (captura de flancos), generación de señales cuadradas (PWM).
 
 <div align="center">
-<img src="image-11.png" alt="Timer por desbordamiento"/>
+<img src="Imagenes/image-11.png" alt="Timer por desbordamiento"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -17,64 +17,74 @@ Los temporizadores en un microcontrolador son controlados por software para cont
 El microcontrolador STM32F767ZI cuenta con 15 temporizadores internos, a) 2 temporizadores de control avanzado de 16 bits (TMR1 y TMR8) que permite reconteo, b) 10 temporizadores de propósito general de 16 o 32 bits (TMR2, TMR3, TMR4, TMR5, TMR9, TMR10, TMR11, TMR12, TMR13 y TMR14), c) 2 temporizadores básicos (TMR6 y TMR7).
 
 <div align="center">
-<img src="image-7.png" alt="Timers"/>
+<img src="Imagenes/image-7.png" alt="Timers"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-8.png" alt="Timers de control avanzado"/>
+<img src="Imagenes/image-8.png" alt="Timers de control avanzado"/>
 <br>
 <figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
 </div>
 
 <div align="center">
-<img src="image-12.png" alt="Prescaler TIM1/TIM8"/>
+<img src="Imagenes/image-12.png" alt="Descripción TIM1/TIM8"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-9.png" alt="Timers de propósito general"/>
+<img src="Imagenes/image-9.png" alt="Timers de propósito general"/>
 <br>
 <figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
 </div>
 
 <div align="center">
-<img src="image-14.png" alt="Prescaler TIM2/TIM3/TIM4/TIM5"/>
+<img src="Imagenes/image-14.png" alt="Descripción TIM2/TIM3/TIM4/TIM5"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-15.png" alt="Conteo ascendente TIM2/TIM3/TIM4/TIM5"/>
+<img src="Imagenes/image-15.png" alt="Conteo ascendente TIM2/TIM3/TIM4/TIM5"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-10.png" alt="Timers básicos"/>
+<img src="Imagenes/image-13.png" alt="Descripción TIM9/TIM10/TIM11/TIM12/TIM13/TIM14"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="Imagenes/image-10.png" alt="Timers básicos"/>
 <br>
 <figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
 </div>
 
+<div align="center">
+<img src="Imagenes/image-16.png" alt="Descripción TIM6/TIM7"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
+Frecuencia de conteo
 
+$$F_{CNT} = \frac{F_{PSC}=F_{OSC}{PSC+1}$$
 
-$$T = \frac{1}{Freq_{update}}$$
+Calculo de la frecuencia para un tiempo determinado T
+
+$$Freq_{update} = \frac{1}{T}$$
 
 $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
 
-
-
-$$F_{CNT} = \frac{F_{PSC}}{PSC+1}$$
-
-1. Utilizar un prescaler pequeño y sumar las interrrupciones de un tiempo pequeño (ej:1ms)
-2. Buscar el tiempo aproximado (ej:100ms) para un valor de prescaler y posteriormente encontrar el valor límite de conteo
-
+1. Utilizar un prescaler pequeño (PSC) y sumar las interrrupciones de un tiempo pequeño (ej:1ms).
+2. Buscar el tiempo aproximado (ej:100ms) para un valor de prescaler (PSC) para una interrupción y posteriormente encontrar el valor límite de conteo (ARR).
 
 <div align="center">
-<img src="image.png" alt="Mapa de clocks"/>
+<img src="Imagenes/image.png" alt="Mapa de clocks"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -231,43 +241,43 @@ int main(){
 ```
 
 <div align="center">
-<img src="image-2.png" alt="TIMx_CNT"/>
+<img src="Imagenes/image-2.png" alt="TIMx_CNT"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-1.png" alt="RCC_APB1ENR"/>
+<img src="Imagenes/image-1.png" alt="RCC_APB1ENR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-3.png" alt="TIMx_PSC"/>
+<img src="Imagenes/image-3.png" alt="TIMx_PSC"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-4.png" alt="TIMx_ARR"/>
+<img src="Imagenes/image-4.png" alt="TIMx_ARR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-5.png" alt="TIMx_DIER"/>
+<img src="Imagenes/image-5.png" alt="TIMx_DIER"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-6.png" alt="TIMx_CR1"/>
+<img src="Imagenes/image-6.png" alt="TIMx_CR1"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="1726778518531.jpg" alt="Timer con osciloscopio"/>
+<img src="Imagenes/1726778518531.jpg" alt="Timer con osciloscopio"/>
 <br>
 <figcaption>Fuente: Autor</figcaption>
 </div>

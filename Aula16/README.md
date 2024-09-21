@@ -4,7 +4,7 @@ Esta clase consiste en comprender los TIMERS (temporizadores) y utilizarlos en l
 
 <h2>Temporizadores</h2>
 
-Los temporizadores en un microcontrolador son controlados por software para generar atrasos (delays), conteo de eventos (captura de flancos), generación de señales cuadradas (PWM).
+Los temporizadores en un microcontrolador son controlados por software para contar tiempos, generar atrasos (delays), conteo de eventos (captura de flancos), generación de señales cuadradas (PWM).
 
 <div align="center">
 <img src="image-11.png" alt="Timer por desbordamiento"/>

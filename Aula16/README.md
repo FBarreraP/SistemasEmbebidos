@@ -35,15 +35,22 @@ El microcontrolador STM32F767ZI cuenta con 15 temporizadores internos, a) 2 temp
 </div>
 
 <div align="center">
-<img src="image-13.png" alt="Conteo ascendente"/>
+<img src="image-9.png" alt="Timers de propósito general"/>
+<br>
+<figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
+</div>
+
+![alt text](image-14.png)
+<div align="center">
+<img src="image-12.png" alt="Prescaler TIM2/TIM3/TIM4/TIM5"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-9.png" alt="Timers de propósito general"/>
+<img src="image-15.png" alt="Conteo ascendente TIM2/TIM3/TIM4/TIM5"/>
 <br>
-<figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
+<figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">

@@ -9,7 +9,7 @@ Los temporizadores en un microcontrolador son controlados por software para cont
 <div align="center">
 <img src="Imagenes/image-11.png" alt="Timer por desbordamiento"/>
 <br>
-<figcaption>Fuente: Manual de referencia</figcaption>
+<figcaption>Fuente: https://www.electronicwings.com/pic/pic18f4550-timer</figcaption>
 </div>
 
 <div align="center">
@@ -21,7 +21,7 @@ Los temporizadores en un microcontrolador son controlados por software para cont
 <div align="center">
 <img src="Imagenes/image-18.png" alt="PWM servos"/>
 <br>
-<figcaption>Fuente: https://www.futek.com/incremental-encoder-signal-converter</figcaption>
+<figcaption>Fuente: https://www.zonamaker.com/servo-motores</figcaption>
 </div>
 
 <h3>Temporizadores en el STM32F767ZI</h3>

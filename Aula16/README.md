@@ -106,7 +106,7 @@ $$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot (ARR+1)}$$
 <h3>Ejemplo</h3>
 
 ```c++
-//Ejemplo ADC
+//Ejemplo TIMER
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U

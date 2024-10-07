@@ -12,6 +12,8 @@ Una modulación por ancho de pulso (PWM) se caracteriza por una señal que tiene
 <figcaption>Fuente: https://exploreembedded.com/wiki/LPC1768:_PWM</figcaption>
 </div>
 
+La variación de una señal PWM consiste la variación desde 0% hasta 100% en el ciclo útil de dicha señal, por tanto, es posible obtener diferentes valores de salida de voltaje de manera proporcional al valor máximo de voltaje.
+
 <div align="center">
 <img src="image.png" alt="PWMs"/>
 <br>

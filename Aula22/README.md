@@ -7,7 +7,7 @@ Esta clase consiste en comprender el PWM (Modulación por Ancho de Pulso) y util
 Una modulación por ancho de pulso (PWM) se caracteriza por una señal que tiene una frecuencia determinada, la cual se compone por un tiempo en alto (duty cycle) y/o un tiempo en bajo. Son utilizados para variar la intensidad de luz de leds, variar velocidad de motores DC, variar la posición angular de servomotores, etc.
 
 <div align="center">
-<img src="LEDPWM.gif" alt="PWM led"/>
+<img src="PWMLED.gif" alt="PWM led"/>
 <br>
 <figcaption>Fuente: https://exploreembedded.com/wiki/LPC1768:_PWM</figcaption>
 </div>

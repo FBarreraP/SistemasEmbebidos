@@ -90,7 +90,7 @@ Calculo de la frecuencia para un tiempo determinado T
 
 $$Freq_{update} = \frac{1}{T}$$
 
-$$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot ARR}$$
+$$Freq_{update} = \frac{F_{OSC}}{(PSC+1) \cdot (ARR+1)}$$
 
 1. Utilizar un prescaler pequeño (PSC) y sumar las interrrupciones de un tiempo pequeño (ej:1ms).
 2. Buscar el tiempo aproximado (ej:100ms) para un valor de prescaler (PSC) para una interrupción y posteriormente encontrar el valor límite de conteo (ARR).
@@ -218,7 +218,7 @@ int main(){
     //TIMER
     RCC->APB1ENR |= (1<<1); //Enable the TIMER3 clock 
     TIM3->PSC = 24; // Prescale factor 25 for 100ms of time
-    TIM3->ARR = 64000; // Maximum count value
+    TIM3->ARR = 63999; // Maximum count value
     TIM3->DIER |= (1<<0); //Enable IRQ on update		 
     TIM3->CR1 |= (1<<0); // Enable Counting
     NVIC_EnableIRQ(TIM3_IRQn); // Enable IRQ for TIM3 in NVIC	

@@ -190,7 +190,7 @@ int main(){
             voltaje = (float)digital*(3.3/1023.0);
             DC = ((0.6061*voltaje)+0.5);
             servo = voltaje*(180.0/3.3);
-            TIM1->CCR1 = int((1939.48*(voltaje))+1600.0); //Duty Cycle between 1600 (0°) and 8000 (180°)
+            TIM1->CCR1 = (int)((1939.48*(voltaje))+1600.0); //Duty Cycle between 1600 (0°) and 8000 (180°)
             sprintf(text,"servo: %.2f°(%.2fms)\n", servo, DC);
             for(j=0; j<strlen(text); j++){
                 USART3->TDR = text[j]; 

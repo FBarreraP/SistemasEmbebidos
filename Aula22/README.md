@@ -206,6 +206,12 @@ int main(){
 ```
 
 <div align="center">
+<img src="image-3.png" alt="AFRL"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
 <img src="image-2.png" alt="AF TM1 canales 1,2,3 y 4"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>

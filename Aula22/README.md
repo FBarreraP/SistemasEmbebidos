@@ -216,3 +216,17 @@ int main(){
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+<div align="center">
+<img src="image-4.png" alt="TIMX_CCMR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-5.png" alt="TIMX_CCMR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+

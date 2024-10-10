@@ -240,3 +240,27 @@ int main(){
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+<div align="center">
+<img src="image-8.png" alt="TIMX_CCR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-9.png" alt="TIMX_CCR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-10.png" alt="TIMX_CCR3"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-11.png" alt="TIMX_CCR4"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

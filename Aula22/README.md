@@ -229,7 +229,11 @@ int main(){
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
-
+<div align="center">
+<img src="image-6.png" alt="TIMX_CCER"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 <div align="center">
 <img src="image-7.png" alt="TIMX_EGR"/>

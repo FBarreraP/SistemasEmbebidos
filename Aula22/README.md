@@ -218,6 +218,12 @@ int main(){
 </div>
 
 <div align="center">
+<img src="image-12.png" alt="TIMX_CR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
 <img src="image-4.png" alt="TIMX_CCMR1"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>

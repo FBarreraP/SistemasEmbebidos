@@ -7,13 +7,13 @@ Esta clase consiste en comprender el PWM (Modulación por Ancho de Pulso) y util
 Una modulación por ancho de pulso (PWM) se caracteriza por una señal que tiene una frecuencia determinada, la cual se compone por un tiempo en alto (duty cycle) y/o un tiempo en bajo. Son utilizados para variar la intensidad de luz de leds, variar velocidad de motores DC, variar la posición angular de servomotores, etc.
 
 <div align="center">
-<img src="PWMLed.gif" alt="PWM led"/>
+<img src="Imagenes/PWMLed.gif" alt="PWM led"/>
 <br>
 <figcaption>Fuente: https://exploreembedded.com/wiki/LPC1768:_PWM</figcaption>
 </div>
 
 <div align="center">
-<img src="PWMServo.gif" alt="PWM servo"/>
+<img src="Imagenes/PWMServo.gif" alt="PWM servo"/>
 <br>
 <figcaption>Fuente: https://www.gie.com.my/shop.php?action=robotics/motors/ldx335</figcaption>
 </div>
@@ -21,7 +21,7 @@ Una modulación por ancho de pulso (PWM) se caracteriza por una señal que tiene
 La variación de una señal PWM consiste la variación desde 0% hasta 100% en el ciclo útil de dicha señal, por tanto, es posible obtener diferentes valores de salida de voltaje de manera proporcional al valor máximo de voltaje.
 
 <div align="center">
-<img src="image.png" alt="PWMs"/>
+<img src="Imagenes/image.png" alt="PWMs"/>
 <br>
 <figcaption>Fuente: https://arduinokitproject.com/l298n-dc-stepper-driver-arduino-tutorial/</figcaption>
 </div>
@@ -32,7 +32,7 @@ Los TIMERs 1, 8, 2, 3, 4, 5, 9, 10, 11, 12, 13 y 14
 Cada uno de estos puede generar hasta 4 PWMs a través de los registros CCR1, CCR2, CCR3 y CCR4
 
 <div align="center">
-<img src="image-1.png" alt="modo PWM STM32F767ZI"/>
+<img src="Imagenes/image-1.png" alt="modo PWM STM32F767ZI"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -206,67 +206,67 @@ int main(){
 ```
 
 <div align="center">
-<img src="image-3.png" alt="AFRL"/>
+<img src="Imagenes/image-3.png" alt="AFRL"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-2.png" alt="AF TM1 canales 1,2,3 y 4"/>
+<img src="Imagenes/image-2.png" alt="AF TM1 canales 1,2,3 y 4"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-12.png" alt="TIMX_CR1"/>
+<img src="Imagenes/image-12.png" alt="TIMX_CR1"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-4.png" alt="TIMX_CCMR1"/>
+<img src="Imagenes/image-4.png" alt="TIMX_CCMR1"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-5.png" alt="TIMX_CCMR2"/>
+<img src="Imagenes/image-5.png" alt="TIMX_CCMR2"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-6.png" alt="TIMX_CCER"/>
+<img src="Imagenes/image-6.png" alt="TIMX_CCER"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-7.png" alt="TIMX_EGR"/>
+<img src="Imagenes/image-7.png" alt="TIMX_EGR"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-8.png" alt="TIMX_CCR1"/>
+<img src="Imagenes/image-8.png" alt="TIMX_CCR1"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-9.png" alt="TIMX_CCR2"/>
+<img src="Imagenes/image-9.png" alt="TIMX_CCR2"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-10.png" alt="TIMX_CCR3"/>
+<img src="Imagenes/image-10.png" alt="TIMX_CCR3"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
 
 <div align="center">
-<img src="image-11.png" alt="TIMX_CCR4"/>
+<img src="Imagenes/image-11.png" alt="TIMX_CCR4"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

@@ -28,8 +28,7 @@ La variación de una señal PWM consiste la variación desde 0% hasta 100% en el
 
 <h2>PWM en el STM32F767ZI</h2>
 
-Los TIMERs 1, 8, 2, 3, 4, 5, 9, 10, 11, 12, 13 y 14
-Cada uno de estos puede generar hasta 4 PWMs a través de los registros CCR1, CCR2, CCR3 y CCR4
+Una de las características principales de los TIMERs en el microcontrolador STM32F767ZI es que pueden tener hasta 4 canales de salida en los GPIOs de la tarjeta NUCLEO F767ZI, por lo que se pueden llegar a tener hasta 4 salidas de PWM con un solo TIMER a través de los registros CCR1, CCR2, CCR3 y CCR4. Los TIMERs 1, 2, 3, 4, 5 y 8 cuentan con cuatro canales de salidas, mientras que los TIMERs 9 y 12 tienen dos canales de salida y los TIMERs 10, 11, 13 y 14 tienen un único canal de salida.
 
 <div align="center">
 <img src="Imagenes/image-1.png" alt="modo PWM STM32F767ZI"/>

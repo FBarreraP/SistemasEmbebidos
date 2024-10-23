@@ -1,5 +1,363 @@
 <h1>Aula 25</h1>
 
-Esta clase consiste en comprender el PLL (Multiplicador de Frecuencia) y utilizarlo en la tarjeta NUCLEO STM32F767ZI
+Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO STM32F767ZI
 
-<h2>PLL</h2>
+<h2>I2C</h2>
+
+
+
+<h3>Ejemplo</h3>
+
+```c
+//Ejemplo UART3 ST-LINK
+//Fabián Barrera Prieto
+//Universidad ECCI
+//STM32F767ZIT6U
+//operation 'or' (|) for set bit and operation 'and' (&) for clear bit
+
+#include <stdio.h>
+#include "stm32f7xx.h"
+#include <string.h>
+
+//MPU6050
+#define MPU6050_ADDR 				 0x68 
+#define MPU6050_SMPLRT_DIV   0x19 
+#define MPU6050_CONFIG       0x1A
+#define MPU6050_GYRO_CONFIG  0x1B
+#define MPU6050_ACCEL_CONFIG 0x1C
+#define MPU6050_WHO_AM_I     0x75
+#define MPU6050_PWR_MGMT_1   0x6B
+
+// Escalas de conversao (As taxas de conversão são especificadas na documentação)
+#define SENSITIVITY_ACCEL     2.0/32768.0             // Valor de conversão do Acelerômetro (g/LSB) para 2g e 16 bits de comprimento da palavra
+#define SENSITIVITY_GYRO      250.0/32768.0           // Valor de conversão do Girôscopio ((°/s)/LSB) para 250 °/s e 16 bits de comprimento da palavra
+#define SENSITIVITY_TEMP      333.87                  // Valor de sensitividade do Termometro (Datasheet: MPU-9250 Product Specification, pag. 12)
+#define TEMP_OFFSET           21                      // Valor de offset do Termometro (Datasheet: MPU-9250 Product Specification, pag. 12)
+#define SENSITIVITY_MAGN      (10.0*4800.0)/32768.0   // Valor de conversão do Magnetômetro (mG/LSB) para 4800uT, 16 bits de comprimento da palavra e conversao a Gauss (10mG = 1uT)
+
+
+// Offsets de calibração (AQUI DEVEM IR OS VALORES DETERMINADOS EN LA CALIBRACAO PREVIA COM O CÓDIGO "calibracao.ino")
+double offset_accelx = 334.0, offset_accely = -948.0, offset_accelz = 16252.0;
+double offset_gyrox = 111.0, offset_gyroy = 25.0, offset_gyroz = -49.0;
+
+// Valores "RAW" de tipo inteiro
+int16_t raw_accelx, raw_accely, raw_accelz;
+int16_t raw_gyrox, raw_gyroy, raw_gyroz;
+int16_t raw_temp;
+
+// Saídas calibradas
+float accelx, accely, accelz;
+float gyrox, gyroy, gyroz;
+float temp;
+
+char GirAcel[14];
+
+uint8_t flag = 0, j, cont = 0;
+int i;
+unsigned char d;
+char text[50], test[60]={"TESTE DE CONEXAO PARA O GIROSCOPIO E O ACELEROMETRO \n\r"};
+int tx_data[1];
+
+int	I2C1_Lee(int direccion, int reg_dir, char *buffer, int nbytes );
+int	I2C1_Escribe( int direccion, int reg_dir, int *buffer, int nbytes );
+
+double raw_acc_x,raw_acc_y;
+
+void SysTick_Wait(uint32_t n){
+    SysTick->LOAD = n - 1; //15999
+    SysTick->VAL = 0; //Clean the value of Systick counter
+    while (((SysTick->CTRL & 0x00010000) >> 16) == 0); //Check the count flag until it's 1 
+}
+
+void SysTick_ms(uint32_t x){
+    for (uint32_t i = 0; i < x; i++){//x ms
+        SysTick_Wait(16000); //1ms
+    }
+}
+
+extern "C"{
+    void EXTI15_10_IRQHandler(void){
+        EXTI->PR |= 1; //Down flag
+        if(((GPIOC->IDR & (1<<13)) >> 13) == 1){
+            flag = 1;
+        }
+    }
+
+    void USART3_IRQHandler(void){ //Receive interrupt
+        if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
+            d = USART3->RDR;//Read the USART receive buffer 
+						if(d == 'H'){
+								flag = 1;
+						}
+        }
+    }
+}
+
+int main(){
+    //GPIOs
+    RCC->AHB1ENR |= ((1<<1)|(1<<2)); 
+
+    GPIOB->MODER &= ~((0b11<<0)|(0b11<<14));
+    GPIOB->MODER |= ((1<<0)|(1<<14)); 
+    GPIOC->MODER &= ~(0b11<<26);
+
+    GPIOB->OTYPER &= ~((1<<0)|(1<<7));
+    GPIOB->OSPEEDR |= (((1<<1)|(1<<0)|(1<<15)|(1<<14)));
+    GPIOC->OSPEEDR |= ((1<<27)|(1<<26));
+    GPIOB->PUPDR &= ~((0b11<<0)|(0b11<<14));
+    GPIOC->PUPDR &= ~(0b11<<26);
+    GPIOC->PUPDR |= (1<<27);
+
+    //Systick
+    SysTick->LOAD = 0x00FFFFFF; 
+    SysTick->CTRL |= (0b101);
+
+    //Interrupt
+    RCC->APB2ENR |= (1<<14); 
+    SYSCFG->EXTICR[3] &= ~(0b1111<<4); 
+    SYSCFG->EXTICR[3] |= (1<<5); 
+    EXTI->IMR |= (1<<13); 
+    EXTI->RTSR |= (1<<13);
+    NVIC_EnableIRQ(EXTI15_10_IRQn); 
+        
+    //UART
+    RCC->AHB1ENR |= (1<<3); 
+    GPIOD->MODER |= (1<<19)|(1<<17); 
+    GPIOD->AFR[1] |= (0b111<<4)|(0b111<<0); 
+    RCC->APB1ENR |= (1<<18); 
+    USART3->BRR = 0x683; 
+    USART3->CR1 |= ((1<<5)|(0b11<<2)); 
+    NVIC_EnableIRQ(USART3_IRQn);
+
+    //I2C
+    RCC->AHB1ENR |= (1<<1); //Enable GPIOB clock (PB9=I2C1_SDA and PB8=I2C1_SCL)
+    GPIOB->MODER |= (1<<19)|(1<<17); //Set (10) pins PB9 (bits 19:18) and PB8 (bits 17:16) as alternant function
+    GPIOB->OTYPER |= (1<<9)|(1<<8); //Set (1) pin PB9 (bit 9) and pin PB8 (bit 8) as output open drain (HIGH or LOW)
+    GPIOB->OSPEEDR |= (0b11<<18)|(0b11<<16); //Set (11) pin PB9 (bits 19:18) and pin PB8 (bits 17:16) as Very High Speed
+    GPIOB->PUPDR|= (1<<18)|(1<<16); //Set (01) pin PB9 (bits 19:18) and pin PB8 (bits 17:16) as pull up
+    GPIOB->AFR[1] |= (1<<6)|(1<<2); //Set the I2C1 (AF4) alternant function for pins PB9=I2C1_SDA (bits 7:4) and PB8=I2C1_SCL (bits 3:0)
+    RCC->APB1ENR |= (1<<21); //Enable I2C1 clock
+    RCC->DCKCFGR2 |= (1<<17); //Set (10) bits 17:16 as HSI clock is selected as source I2C1 clock
+    //I2C1->CR1 &= ~I2C_CR1_PE; //
+    I2C1->TIMINGR |= (1<<29)|(0b101<<20)|(0b1010<<16)|(0b11<<11)|(0b11001<<0);//0x205A1819; //
+    I2C1->CR1 |= I2C_CR1_PE;// Enable I2C1
+
+    USART3->CR1 |= (1<<0);
+    
+    SysTick_ms(1000);
+
+    //MPU6050
+    
+    for(j=0; j<strlen(test); j++){
+            USART3->TDR = test[j]; 
+            while(((USART3->ISR & 0x80) >> 7) == 0){} 
+    }
+    //USART3->TDR = 0x0A; 
+    //while((USART3->ISR & 0x80)==0){};
+    USART3->TDR = 0x0D; 
+    while(((USART3->ISR & 0x80) >> 7) == 0){}
+    //.....................................................................
+//        Quem sou eu para a MPU6050 (giroscópio e acelerômetro)
+//.....................................................................
+    
+    tx_data[0]=0x00;
+    I2C1_Escribe(MPU6050_ADDR, MPU6050_SMPLRT_DIV, tx_data, 1);	
+    
+    tx_data[0]=0x00;
+    I2C1_Escribe(MPU6050_ADDR, MPU6050_CONFIG, tx_data, 1);	
+    
+    tx_data[0]=0x08;
+    I2C1_Escribe(MPU6050_ADDR, MPU6050_GYRO_CONFIG, tx_data, 1);	
+    
+    tx_data[0]=0x00;
+    I2C1_Escribe(MPU6050_ADDR, MPU6050_ACCEL_CONFIG, tx_data, 1);		
+    
+    tx_data[0]=0x01;
+    I2C1_Escribe(MPU6050_ADDR, MPU6050_PWR_MGMT_1, tx_data, 1);		
+		
+    while(1){
+        GPIOB->ODR |= 1<<0; 
+        SysTick_ms(500);
+        GPIOB->ODR &= ~(1<<0);
+        SysTick_ms(500);
+        if(flag == 1){
+            flag = 0;
+            for(i=0; i<299; i++){
+                I2C1_Lee(MPU6050_ADDR, 0x3B, GirAcel, 14);
+                raw_accelx = GirAcel[0]<<8 | GirAcel[1];    
+                raw_accely = GirAcel[2]<<8 | GirAcel[3];
+                raw_accelz = GirAcel[4]<<8 | GirAcel[5];
+                raw_temp = GirAcel[6]<<8 | GirAcel[7];
+                raw_gyrox = GirAcel[8]<<8 | GirAcel[9];
+                raw_gyroy = GirAcel[10]<<8 | GirAcel[11];
+                raw_gyroz = GirAcel[12]<<8 | GirAcel[13];
+                SysTick_ms(10);	
+                //Dados escalados
+                accelx = raw_accelx*SENSITIVITY_ACCEL;
+                accely = raw_accely*SENSITIVITY_ACCEL;
+                accelz = raw_accelz*SENSITIVITY_ACCEL;
+                gyrox = raw_gyrox*SENSITIVITY_GYRO;
+                gyroy = raw_gyroy*SENSITIVITY_GYRO;
+                gyroz = raw_gyroz*SENSITIVITY_GYRO;
+                temp = (raw_temp/SENSITIVITY_TEMP)+21;
+                //sprintf(text,"%d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \n",i+1,raw_accelx, raw_accely, raw_accelz, raw_gyrox, raw_gyroy, raw_gyroz, raw_temp);
+                sprintf(text,"%d \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \n\r",i+1,accelx, accely, accelz, gyrox, gyroy, gyroz, temp);
+                for(j=0; j<strlen(text); j++){
+                        USART3->TDR = text[j]; 
+                        while(((USART3->ISR & 0x80) >> 7) == 0){} 
+                }
+                //USART3->TDR = 0x0A; 
+                //while((USART3->ISR & 0x80)==0){};
+                USART3->TDR = 0x0D; 
+                while(((USART3->ISR & 0x80) >> 7) == 0){}
+            }
+        }
+    }
+}
+
+int	I2C1_Escribe( int direccion, int reg_dir, int *buffer, int nbytes ){
+	uint32_t 	t_espera;	// t_espera
+	uint8_t		n;		// Contador para la lectura de datos
+
+	// Dirección del esclavo
+	I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
+	I2C1->CR2 |= ((direccion <<1) <<I2C_CR2_SADD_Pos);
+
+	// i2c modo escritura
+	I2C1->CR2 &= ~I2C_CR2_RD_WRN;
+	I2C1->CR2 &= ~I2C_CR2_NBYTES;
+	I2C1->CR2 |= ((nbytes+1) <<16);
+	I2C1->CR2 |= I2C_CR2_AUTOEND;
+
+	// Limpiar bandera de STOP, por si acaso
+	I2C1->ICR |= I2C_ICR_STOPCF;
+
+	// iniciar i2c
+	I2C1->CR2 |= I2C_CR2_START;
+
+	// Espera lla bandera TXIS o que se acabe el tiempo de espera
+	t_espera = 200000;
+	while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
+	{
+		t_espera--;
+		if (t_espera == 0) return 1;
+	}
+
+	// Dirección del registro que se quiere modificar
+	I2C1->TXDR = reg_dir;
+
+	n = nbytes;
+
+	while(n>0)
+	{
+		// Espera la bandera TXIS o que se acabe el tiempo de espera
+		t_espera = 100000;
+		while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
+		{
+			t_espera--;
+			if (t_espera == 0) return 2;
+		}
+
+		// Se envian los datos en el array llamado buffer
+		I2C1->TXDR = *buffer;
+		buffer++;
+		n--; // La n que cuenta el numero de datos
+	}
+
+	// Hasta que este STOPF o se cumpla el t_espera
+	t_espera = 200000;
+	while (((I2C1->ISR) & I2C_ISR_STOPF) != I2C_ISR_STOPF)
+	{
+		t_espera--;
+		if (t_espera == 0) return 3;
+	}
+
+	// Si todo sale bien seria 0
+	return 0;
+}
+
+int	I2C1_Lee(int direccion, int reg_dir, char *buffer, int nbytes ) {
+	uint32_t 	t_espera;
+	uint8_t		n;			// Contador para la lectura de los nbytes
+
+	// Dirección del dispositivo
+	I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
+	I2C1->CR2 |= ((direccion <<1U) <<I2C_CR2_SADD_Pos);
+
+  // i2c Modo Escritura
+	I2C1->CR2 &= ~I2C_CR2_RD_WRN;
+
+	I2C1->CR2 &= ~I2C_CR2_NBYTES;
+	I2C1->CR2 |= (1 <<16U);
+	I2C1->CR2 &= ~I2C_CR2_AUTOEND;
+
+	// Iniciar charla I2C 
+	I2C1->CR2 |= I2C_CR2_START;
+
+	// Espera a TXIS o se sale del while y devuelve un 1
+	// SI devuelve 1 significa que no se inicio la charla
+	t_espera = 200000;
+	while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
+	{
+		t_espera--;
+		if (t_espera == 0) return 1;
+	}
+
+	// Envia la dirección del registro que se va a leer
+	I2C1->TXDR = reg_dir;
+
+	// Espera a TC o se sale del while y devuelve un 2
+	t_espera = 200000;
+	while (((I2C1->ISR) & I2C_ISR_TC) != I2C_ISR_TC)
+	{
+		t_espera--;
+		if (t_espera == 0) return 2;
+	}
+
+	// i2c en modo lectura
+	I2C1->CR2 |= I2C_CR2_RD_WRN;
+  
+	I2C1->CR2 &= ~I2C_CR2_NBYTES;
+	I2C1->CR2 |= (nbytes <<16U);
+	I2C1->CR2 &= ~I2C_CR2_AUTOEND;
+
+	// Se repite la condición de inicio para indicar que se leen
+	// nbytes
+	I2C1->CR2 |= I2C_CR2_START;
+
+	n = nbytes;
+
+	while (n>0)
+	{
+		// Espera a RXNE o se sale del while y devuelve un 3
+		t_espera = 200000;
+		while (((I2C1->ISR) & I2C_ISR_RXNE) != I2C_ISR_RXNE)
+		{
+			t_espera--;
+			if (t_espera == 0) return 3;
+		}
+
+		// Se guardan los datos en buffer.
+		// Buffer debe tener tantas posiciones como datos a leer
+		*buffer = I2C1->RXDR;
+		buffer++;
+		n--;
+	}
+
+	// para i2c
+	I2C1->CR2 |= I2C_CR2_STOP;
+
+	// Espera a STOPF o se sale del while y devuelve un 4
+	t_espera = 200000;
+	while (((I2C1->ISR) & I2C_ISR_STOPF) != I2C_ISR_STOPF)
+	{
+		t_espera--;
+		if (t_espera == 0) return 4;
+	}
+
+	// Todo OK, todo correcto y yo retorno 0.
+	return 0;
+}
+
+```
+

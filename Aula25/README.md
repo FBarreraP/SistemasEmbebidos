@@ -9,7 +9,7 @@ Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO ST
 <h3>Ejemplo</h3>
 
 ```c
-//Ejemplo UART3 ST-LINK
+//Ejemplo I2C
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U
@@ -50,16 +50,17 @@ float accelx, accely, accelz;
 float gyrox, gyroy, gyroz;
 float temp;
 
+char data[1];
 char GirAcel[14];
 
 uint8_t flag = 0, j, cont = 0;
 int i;
 unsigned char d;
 char text[50], test[60]={"TESTE DE CONEXAO PARA O GIROSCOPIO E O ACELEROMETRO \n\r"};
-int tx_data[1];
+unsigned char tx_data[1];
 
 int	I2C1_Lee(int direccion, int reg_dir, char *buffer, int nbytes );
-int	I2C1_Escribe( int direccion, int reg_dir, int *buffer, int nbytes );
+int	I2C1_Escribe(unsigned char direccion, unsigned char reg_dir, unsigned char *buffer, int nbytes );
 
 double raw_acc_x,raw_acc_y;
 
@@ -147,7 +148,9 @@ int main(){
     SysTick_ms(1000);
 
     //MPU6050
-    
+    tx_data[0] = 0x00;	
+    I2C1_Escribe(MPU6050_ADDR, 0x6B, tx_data, 1); // Desativa modo de hibernação do MPU6050
+    SysTick_ms(100);
     for(j=0; j<strlen(test); j++){
             USART3->TDR = test[j]; 
             while(((USART3->ISR & 0x80) >> 7) == 0){} 
@@ -159,63 +162,74 @@ int main(){
     //.....................................................................
 //        Quem sou eu para a MPU6050 (giroscópio e acelerômetro)
 //.....................................................................
+    I2C1_Lee(MPU6050_ADDR, 0x75, data, 14);
+    if (data[0] != 0x68) { // DEFAULT_REGISTER_WHO_AM_I_MPU6050 0x68
+        //pc.printf("Erro de conexao com a MPU6050 \n\r");
+        //pc.printf("Opaaa. Eu nao sou a MPU6050, Quem sou eu? :S. I am: %#x \n\r",data[0]);
+        USART3->TDR = data[0]; 
+        while(((USART3->ISR & 0x80) >> 7) == 0){}
+        //pc.printf("\n\r");
+        while (1);
+    }else{
+        //pc.printf("Conexao bem sucedida com a MPU6050 \n\r");
+        //pc.printf("Oi, tudo joia?... Eu sou a MPU6050 XD \n\r");
+        //pc.printf("\n\r");
+        USART3->TDR = 0x46; 
+    }
     
-    tx_data[0]=0x00;
-    I2C1_Escribe(MPU6050_ADDR, MPU6050_SMPLRT_DIV, tx_data, 1);	
+//		tx_data[0]=0x00;
+//		I2C1_Escribe(MPU6050_ADDR, MPU6050_SMPLRT_DIV, tx_data, 1);	
+//		
+//		tx_data[0]=0x00;
+//		I2C1_Escribe(MPU6050_ADDR, MPU6050_CONFIG, tx_data, 1);	
     
-    tx_data[0]=0x00;
-    I2C1_Escribe(MPU6050_ADDR, MPU6050_CONFIG, tx_data, 1);	
-    
-    tx_data[0]=0x08;
-    I2C1_Escribe(MPU6050_ADDR, MPU6050_GYRO_CONFIG, tx_data, 1);	
-    
-    tx_data[0]=0x00;
-    I2C1_Escribe(MPU6050_ADDR, MPU6050_ACCEL_CONFIG, tx_data, 1);		
-    
-    tx_data[0]=0x01;
-    I2C1_Escribe(MPU6050_ADDR, MPU6050_PWR_MGMT_1, tx_data, 1);		
+    tx_data[0] = 0x00;
+    I2C1_Escribe(MPU6050_ADDR, 0x1B, tx_data, 1);	
+    I2C1_Escribe(MPU6050_ADDR, 0x1C, tx_data, 1);	
+
+    SysTick_ms(1000);
 		
     while(1){
         GPIOB->ODR |= 1<<0; 
         SysTick_ms(500);
         GPIOB->ODR &= ~(1<<0);
         SysTick_ms(500);
-        if(flag == 1){
-            flag = 0;
-            for(i=0; i<299; i++){
-                I2C1_Lee(MPU6050_ADDR, 0x3B, GirAcel, 14);
-                raw_accelx = GirAcel[0]<<8 | GirAcel[1];    
-                raw_accely = GirAcel[2]<<8 | GirAcel[3];
-                raw_accelz = GirAcel[4]<<8 | GirAcel[5];
-                raw_temp = GirAcel[6]<<8 | GirAcel[7];
-                raw_gyrox = GirAcel[8]<<8 | GirAcel[9];
-                raw_gyroy = GirAcel[10]<<8 | GirAcel[11];
-                raw_gyroz = GirAcel[12]<<8 | GirAcel[13];
-                SysTick_ms(10);	
-                //Dados escalados
-                accelx = raw_accelx*SENSITIVITY_ACCEL;
-                accely = raw_accely*SENSITIVITY_ACCEL;
-                accelz = raw_accelz*SENSITIVITY_ACCEL;
-                gyrox = raw_gyrox*SENSITIVITY_GYRO;
-                gyroy = raw_gyroy*SENSITIVITY_GYRO;
-                gyroz = raw_gyroz*SENSITIVITY_GYRO;
-                temp = (raw_temp/SENSITIVITY_TEMP)+21;
-                //sprintf(text,"%d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \n",i+1,raw_accelx, raw_accely, raw_accelz, raw_gyrox, raw_gyroy, raw_gyroz, raw_temp);
-                sprintf(text,"%d \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \n\r",i+1,accelx, accely, accelz, gyrox, gyroy, gyroz, temp);
-                for(j=0; j<strlen(text); j++){
-                        USART3->TDR = text[j]; 
-                        while(((USART3->ISR & 0x80) >> 7) == 0){} 
+            if(flag == 1){
+                flag = 0;
+                for(i=0; i<299; i++){
+                    I2C1_Lee(MPU6050_ADDR, 0x3B, GirAcel, 14);
+                    raw_accelx = GirAcel[0]<<8 | GirAcel[1];    
+                    raw_accely = GirAcel[2]<<8 | GirAcel[3];
+                    raw_accelz = GirAcel[4]<<8 | GirAcel[5];
+                    raw_temp = GirAcel[6]<<8 | GirAcel[7];
+                    raw_gyrox = GirAcel[8]<<8 | GirAcel[9];
+                    raw_gyroy = GirAcel[10]<<8 | GirAcel[11];
+                    raw_gyroz = GirAcel[12]<<8 | GirAcel[13];
+                    SysTick_ms(10);	
+                    //Dados escalados
+                    accelx = raw_accelx*SENSITIVITY_ACCEL;
+                    accely = raw_accely*SENSITIVITY_ACCEL;
+                    accelz = raw_accelz*SENSITIVITY_ACCEL;
+                    gyrox = raw_gyrox*SENSITIVITY_GYRO;
+                    gyroy = raw_gyroy*SENSITIVITY_GYRO;
+                    gyroz = raw_gyroz*SENSITIVITY_GYRO;
+                    temp = (raw_temp/SENSITIVITY_TEMP)+21;
+                    //sprintf(text,"%d \t %d \t %d \t %d \t %d \t %d \t %d \t %d \n",i+1,raw_accelx, raw_accely, raw_accelz, raw_gyrox, raw_gyroy, raw_gyroz, raw_temp);
+                    sprintf(text,"%d \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \t %.2f \n\r",i+1,accelx, accely, accelz, gyrox, gyroy, gyroz, temp);
+                    for(j=0; j<strlen(text); j++){
+                            USART3->TDR = text[j]; 
+                            while(((USART3->ISR & 0x80) >> 7) == 0){} 
+                    }
+                    //USART3->TDR = 0x0A; 
+                    //while((USART3->ISR & 0x80)==0){};
+                    USART3->TDR = 0x0D; 
+                    while(((USART3->ISR & 0x80) >> 7) == 0){}
                 }
-                //USART3->TDR = 0x0A; 
-                //while((USART3->ISR & 0x80)==0){};
-                USART3->TDR = 0x0D; 
-                while(((USART3->ISR & 0x80) >> 7) == 0){}
             }
-        }
     }
 }
 
-int	I2C1_Escribe( int direccion, int reg_dir, int *buffer, int nbytes ){
+int	I2C1_Escribe(unsigned char direccion, unsigned char reg_dir, unsigned char *buffer, int nbytes ){
 	uint32_t 	t_espera;	// t_espera
 	uint8_t		n;		// Contador para la lectura de datos
 
@@ -358,6 +372,5 @@ int	I2C1_Lee(int direccion, int reg_dir, char *buffer, int nbytes ) {
 	// Todo OK, todo correcto y yo retorno 0.
 	return 0;
 }
-
 ```
 

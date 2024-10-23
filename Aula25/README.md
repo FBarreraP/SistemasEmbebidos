@@ -9,7 +9,7 @@ Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO ST
 <h3>Ejemplo</h3>
 
 ```c
-//Ejemplo UART3 ST-LINK
+//Ejemplo I2C
 //Fabián Barrera Prieto
 //Universidad ECCI
 //STM32F767ZIT6U

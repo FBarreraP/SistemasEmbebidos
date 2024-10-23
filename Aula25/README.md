@@ -20,21 +20,25 @@ Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO ST
 #include <string.h>
 
 //MPU6050
-#define MPU6050_ADDR 				 0x68 
-#define MPU6050_SMPLRT_DIV   0x19 
-#define MPU6050_CONFIG       0x1A
-#define MPU6050_GYRO_CONFIG  0x1B
-#define MPU6050_ACCEL_CONFIG 0x1C
-#define MPU6050_WHO_AM_I     0x75
-#define MPU6050_PWR_MGMT_1   0x6B
+#define MPU6500_address 0x68 // Endereço da MPU6500 (giroscópio e acelerômetro)
+
+// Escalas do girôscopio
+#define    GYRO_FULL_SCALE_250_DPS    0x00 // SCALE_250 (°/s) = 0 (0x00 = 000|00|000)
+#define    GYRO_FULL_SCALE_500_DPS    0x08 // SCALE_500 (°/s) = 1 (0x08 = 000|01|000)
+#define    GYRO_FULL_SCALE_1000_DPS   0x10 // SCALE_1000 (°/s) = 2 (0x10 = 000|10|000)
+#define    GYRO_FULL_SCALE_2000_DPS   0x18 // SCALE_2000 (°/s) = 3 (0x18 = 000|11|000)
+
+// Escalas do acelerômetro
+#define    ACC_FULL_SCALE_2_G        0x00 // SCALE_2_G (g) = 0 (0x00 = 000|00|000)
+#define    ACC_FULL_SCALE_4_G        0x08 // SCALE_4_G (g) = 1 (0x08 = 000|01|000)
+#define    ACC_FULL_SCALE_8_G        0x10 // SCALE_8_G (g) = 2 (0x10 = 000|10|000)
+#define    ACC_FULL_SCALE_16_G       0x18 // SCALE_16_G (g) = 3 (0x18 = 000|11|000)
 
 // Escalas de conversao (As taxas de conversão são especificadas na documentação)
 #define SENSITIVITY_ACCEL     2.0/32768.0             // Valor de conversão do Acelerômetro (g/LSB) para 2g e 16 bits de comprimento da palavra
 #define SENSITIVITY_GYRO      250.0/32768.0           // Valor de conversão do Girôscopio ((°/s)/LSB) para 250 °/s e 16 bits de comprimento da palavra
 #define SENSITIVITY_TEMP      333.87                  // Valor de sensitividade do Termometro (Datasheet: MPU-9250 Product Specification, pag. 12)
-#define TEMP_OFFSET           21                      // Valor de offset do Termometro (Datasheet: MPU-9250 Product Specification, pag. 12)
-#define SENSITIVITY_MAGN      (10.0*4800.0)/32768.0   // Valor de conversão do Magnetômetro (mG/LSB) para 4800uT, 16 bits de comprimento da palavra e conversao a Gauss (10mG = 1uT)
-
+#define TEMP_OFFSET           21                      // Valor de offset do Termometro (Datasheet: MPU-6050 Product Specification, pag. 12)
 
 // Offsets de calibração (AQUI DEVEM IR OS VALORES DETERMINADOS EN LA CALIBRACAO PREVIA COM O CÓDIGO "calibracao.ino")
 double offset_accelx = 334.0, offset_accely = -948.0, offset_accelz = 16252.0;
@@ -50,8 +54,8 @@ float accelx, accely, accelz;
 float gyrox, gyroy, gyroz;
 float temp;
 
-char data[1];
-char GirAcel[14];
+uint8_t data[1];
+uint8_t GirAcel[14];
 
 uint8_t flag = 0, j, cont = 0;
 int i;
@@ -64,8 +68,8 @@ char text5[45]={"Oi, tudo joia?... Eu sou a MPU6050 XD \n\r"};
 unsigned char tx_data[1];
 
 //I2C
-int	ReadI2C1(int direccion, int reg_dir, char *buffer, int nbytes );
-int	WriteI2C1(unsigned char direccion, unsigned char reg_dir, unsigned char *buffer, int nbytes );
+int	ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
+int	WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
 
 void Print(char *data, int n);
 
@@ -91,7 +95,7 @@ extern "C"{
 
     void USART3_IRQHandler(void){ //Receive interrupt
         if(((USART3->ISR & 0x20) >> 5) == 1){//Received data is ready to be read (flag RXNE = 1)
-            d = USART3->RDR;//Read the USART receive buffer 
+            d = USART3->RDR;//Read the USART receive Data 
             if(d == 'H'){
                 flag = 1;
             }
@@ -166,12 +170,12 @@ int main(){
     //                        				MPU6050
     //----------------------------------------------------------------------------
     tx_data[0] = 0x00;	
-    WriteI2C1(MPU6050_ADDR, 0x6B, tx_data, 1); // Desativa modo de hibernação do MPU6050
+    WriteI2C1(MPU6500_address, 0x6B, tx_data, 1); // Desativa modo de hibernação do MPU6050
     Print(text1, strlen(text1));
     //.....................................................................
     //        Quem sou eu para a MPU6050 (giroscópio e acelerômetro)
     //.....................................................................
-    ReadI2C1(MPU6050_ADDR, 0x75, data, 14);
+    ReadI2C1(MPU6500_address, 0x75, data, 14);
     if (data[0] != 0x68) { // DEFAULT_REGISTER_WHO_AM_I_MPU6050 0x68
     Print(text2, strlen(text2));
     sprintf(text3,"%s %#x \n\r",data[0]);
@@ -186,8 +190,8 @@ int main(){
     //        Configuracao dos sensores giroscópio e acelerômetro
     //.....................................................................
     tx_data[0] = 0x00;
-    WriteI2C1(MPU6050_ADDR, 0x1B, tx_data, 1);	
-    WriteI2C1(MPU6050_ADDR, 0x1C, tx_data, 1);	
+    WriteI2C1(MPU6500_address, 0x1B, tx_data, 1);	
+    WriteI2C1(MPU6500_address, 0x1C, tx_data, 1);	
     SysTick_ms(10);
     
     while(1){
@@ -198,7 +202,7 @@ int main(){
         if(flag == 1){
             flag = 0;
             for(i=0; i<299; i++){
-                ReadI2C1(MPU6050_ADDR, 0x3B, GirAcel, 14);
+                ReadI2C1(MPU6500_address, 0x3B, GirAcel, 14);
                 raw_accelx = GirAcel[0]<<8 | GirAcel[1];    
                 raw_accely = GirAcel[2]<<8 | GirAcel[3];
                 raw_accelz = GirAcel[4]<<8 | GirAcel[5];
@@ -230,18 +234,18 @@ int main(){
     }
 }
 
-int	WriteI2C1(unsigned char direccion, unsigned char reg_dir, unsigned char *buffer, int nbytes ){
+int	WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ){
     uint32_t t_espera;	// t_espera
     uint8_t n; // Contador para la lectura de datos
 
     // Dirección del esclavo
     I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
-    I2C1->CR2 |= ((direccion <<1) <<I2C_CR2_SADD_Pos);
+    I2C1->CR2 |= ((Address <<1) <<I2C_CR2_SADD_Pos);
 
     // i2c modo escritura
     I2C1->CR2 &= ~I2C_CR2_RD_WRN;
     I2C1->CR2 &= ~I2C_CR2_NBYTES;
-    I2C1->CR2 |= ((nbytes+1) <<16);
+    I2C1->CR2 |= ((bytes+1) <<16);
     I2C1->CR2 |= I2C_CR2_AUTOEND;
 
     // Limpiar bandera de STOP, por si acaso
@@ -259,9 +263,9 @@ int	WriteI2C1(unsigned char direccion, unsigned char reg_dir, unsigned char *buf
     }
 
     // Dirección del registro que se quiere modificar
-    I2C1->TXDR = reg_dir;
+    I2C1->TXDR = Register;
 
-    n = nbytes;
+    n = bytes;
 
     while(n>0)
     {
@@ -273,9 +277,9 @@ int	WriteI2C1(unsigned char direccion, unsigned char reg_dir, unsigned char *buf
             if (t_espera == 0) return 2;
         }
 
-        // Se envian los datos en el array llamado buffer
-        I2C1->TXDR = *buffer;
-        buffer++;
+        // Se envian los datos en el array llamado Data
+        I2C1->TXDR = *Data;
+        Data++;
         n--; // La n que cuenta el numero de datos
     }
 
@@ -291,13 +295,13 @@ int	WriteI2C1(unsigned char direccion, unsigned char reg_dir, unsigned char *buf
     return 0;
 }
 
-int	ReadI2C1(int direccion, int reg_dir, char *buffer, int nbytes ) {
+int	ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ) {
     uint32_t t_espera;
-    uint8_t n; // Contador para la lectura de los nbytes
+    uint8_t n; // Contador para la lectura de los bytes
 
     // Dirección del dispositivo
     I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
-    I2C1->CR2 |= ((direccion <<1U) <<I2C_CR2_SADD_Pos);
+    I2C1->CR2 |= ((Address <<1U) <<I2C_CR2_SADD_Pos);
 
     // i2c Modo Escritura
     I2C1->CR2 &= ~I2C_CR2_RD_WRN;
@@ -319,7 +323,7 @@ int	ReadI2C1(int direccion, int reg_dir, char *buffer, int nbytes ) {
     }
 
     // Envia la dirección del registro que se va a leer
-    I2C1->TXDR = reg_dir;
+    I2C1->TXDR = Register;
 
     // Espera a TC o se sale del while y devuelve un 2
     t_espera = 200000;
@@ -333,14 +337,14 @@ int	ReadI2C1(int direccion, int reg_dir, char *buffer, int nbytes ) {
     I2C1->CR2 |= I2C_CR2_RD_WRN;
 
     I2C1->CR2 &= ~I2C_CR2_NBYTES;
-    I2C1->CR2 |= (nbytes <<16U);
+    I2C1->CR2 |= (bytes <<16U);
     I2C1->CR2 &= ~I2C_CR2_AUTOEND;
 
     // Se repite la condición de inicio para indicar que se leen
-    // nbytes
+    // bytes
     I2C1->CR2 |= I2C_CR2_START;
 
-    n = nbytes;
+    n = bytes;
 
     while (n>0)
     {
@@ -352,10 +356,10 @@ int	ReadI2C1(int direccion, int reg_dir, char *buffer, int nbytes ) {
             if (t_espera == 0) return 3;
         }
 
-        // Se guardan los datos en buffer.
-        // Buffer debe tener tantas posiciones como datos a leer
-        *buffer = I2C1->RXDR;
-        buffer++;
+        // Se guardan los datos en Data.
+        // Data debe tener tantas posiciones como datos a leer
+        *Data = I2C1->RXDR;
+        Data++;
         n--;
     }
 

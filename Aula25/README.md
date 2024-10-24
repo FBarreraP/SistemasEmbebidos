@@ -1,6 +1,6 @@
 <h1>Aula 25</h1>
 
-Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO STM32F767ZI
+Esta clase consiste en comprender el I2C y utilizarlo en la tarjeta NUCLEO STM32F767ZI
 
 <h2>I2C</h2>
 
@@ -9,6 +9,24 @@ Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO ST
 
 <div align="center">
 <img src="image.png" alt="I2C"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-1.png" alt="Introducción I2C"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-2.png" alt="rise and fall times"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<div align="center">
+<img src="image-3.png" alt="rise and fall times"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
@@ -72,7 +90,7 @@ char text2[35]={"Erro de conexao com a MPU6050 \n\r"};
 char text3[55]={"Opaaa. Eu nao sou a MPU6050, Quem sou eu? :S. I am:"};
 char text4[40]={"Conexao bem sucedida com a MPU6050 \n\r"};
 char text5[45]={"Oi, tudo joia?... Eu sou a MPU6050 XD \n\r"};
-unsigned char tx_data[1];
+unsigned char cmd[1];
 
 //I2C
 void ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
@@ -165,8 +183,8 @@ int main(){
     GPIOB->AFR[1] |= (1<<6)|(1<<2); //Set the I2C1 (AF4) alternant function for pins PB9=I2C1_SDA (bits 7:4) and PB8=I2C1_SCL (bits 3:0)
     RCC->APB1ENR |= (1<<21); //Enable I2C1 clock
     RCC->DCKCFGR2 |= (1<<17); //Set (10) bits 17:16 as HSI clock is selected as source I2C1 clock
-    //I2C1->CR1 &= ~I2C_CR1_PE; //
-    I2C1->TIMINGR |= (1<<29)|(0b101<<20)|(0b1010<<16)|(0b11<<11)|(0b11001<<0);//0x205A1819; //
+    I2C1->CR1 &= ~(1<<0);// Clear the enable I2C1
+    I2C1->TIMINGR |= 0x30420F13;// Table 207 of reference manual
     I2C1->CR1 |= (1<<0);// Enable I2C1
 
     USART3->CR1 |= (1<<0);
@@ -176,8 +194,8 @@ int main(){
     //----------------------------------------------------------------------------
     //                        				MPU6050
     //----------------------------------------------------------------------------
-    tx_data[0] = 0x00;	
-    WriteI2C1(MPU6500_address, 0x6B, tx_data, 1); // Desativa modo de hibernação do MPU6050
+    cmd[0] = 0x00;	
+    WriteI2C1(MPU6500_address, 0x6B, cmd, 1); // Desativa modo de hibernação do MPU6050
     Print(text1, strlen(text1));
     //.....................................................................
     //        Quem sou eu para a MPU6050 (giroscópio e acelerômetro)
@@ -196,9 +214,9 @@ int main(){
     //.....................................................................
     //        Configuracao dos sensores giroscópio e acelerômetro
     //.....................................................................
-    tx_data[0] = 0x00;
-    WriteI2C1(MPU6500_address, 0x1B, tx_data, 1);	
-    WriteI2C1(MPU6500_address, 0x1C, tx_data, 1);	
+    cmd[0] = 0x00;
+    WriteI2C1(MPU6500_address, 0x1B, cmd, 1);	
+    WriteI2C1(MPU6500_address, 0x1C, cmd, 1);	
     SysTick_ms(10);
     
     while(1){

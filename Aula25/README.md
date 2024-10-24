@@ -4,8 +4,61 @@ Esta clase consiste en comprender el I2C y utilizarlo en la tarjeta NUCLEO STM32
 
 <h2>I2C</h2>
 
+I2C (Inter Integrated Circuits) es una comunicación tipo ‘half duplex’ que puede ser realizada entre uno o más maestros y uno o más esclavos, a partir de una señal de reloj (SCL) y una señal de datos (SDA). El direccionamiento de los datos se realiza a través de la dirección de esclavo de 7 bits.
 
-<h2>I2C</h2>
+<div align="center">
+<img src="image-6.png" alt="Diagrama conexión I2C"/>
+<br>
+<figcaption>Fuente: https://howtomechatronics.com/tutorials/arduino/how-i2c-communication-works-and-how-to-use-it-with-arduino/
+</figcaption>
+</div>
+
+La velocidad del puerto I2C están estandarizadas en 100Khz, 400Khz y 1Mhz
+
+<div align="center">
+<img src="image-7.png" alt="Frecuencia I2C"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<h3>Start I2C</h3>
+
+Para iniciar la comunicación I2C, el maestro debe cambiar la señal de datos (SDA) de high (1) a low (0), cuando la señal de clock (SCL) está en high (1).
+
+<div align="center">
+<img src="image-8.png" alt="Start I2C"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<h3>Stop I2C</h3>
+
+Para finalizar la comunicación I2C, el maestro debe cambiar la señal de datos (SDA) de low (0) a high (1), cuando la señal de clock (SCL) está en high (1).
+
+<div align="center">
+<img src="image-9.png" alt="Start I2C"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<h3>Escribir I2C</h3>
+
+<div align="center">
+<img src="image-15.png" alt="Escribir I2C"/>
+<br>
+<figcaption>Fuente: https://howtomechatronics.com/tutorials/arduino/how-i2c-communication-works-and-how-to-use-it-with-arduino/
+</figcaption>
+</div>
+
+<h3>Leer I2C</h3>
+
+<div align="center">
+<img src="image-10.png" alt="Leer I2C"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<h3>I2C en el STM32F767ZI</h3>
 
 <div align="center">
 <img src="image.png" alt="I2C"/>
@@ -42,6 +95,39 @@ Esta clase consiste en comprender el I2C y utilizarlo en la tarjeta NUCLEO STM32
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+<h2>IMU</h2>
+
+Las Unidades de Medición Inercial (IMUs) son dispositivos electrónicos que proporcionan mediciones de velocidad angular y fuerza gravitacional en diferentes ejes. Algunas IMUs pueden medir campo magnético, temperatura, presión atmosférica, entre otras variables físicas.
+
+<div align="center">
+<img src="image-11.png" alt="IMU"/>
+</div>
+
+Una IMU detecta las variaciones de fuerza gravitacional ($g=m/s^2$) y velocidad angular  ($°/s$), además del campo magnético terrestre (T o G), a través de los acelerómetros, giroscopios y magnetómetros. Los ángulos de Euler pueden ser estimados por fusión sensorial. Estos sensores en una IMU son de tecnología MEMS.
+
+<div align="center">
+<img src="image-12.png" alt="IMU"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+<h3>MPU6050 (6 GDL)</h3>
+
+La MPU6050 es un dispositivo de 6 GDL que integra acelerómetro y giroscopio y cuenta con comunicación SPI e I2C.
+
+<div align="center">
+<img src="image-13.png" alt="MPU6050 y MPU9250"/>
+<br>
+<figcaption>Fuente: Datasheet MPU6050 y MPU9250</figcaption>
+</div>
+
+<div align="center">
+<img src="image-14.png" alt="MPU6050 y MPU9250"/>
+<br>
+<figcaption>Fuente: Autor</figcaption>
+</div>
+
 
 <h3>Ejemplo</h3>
 

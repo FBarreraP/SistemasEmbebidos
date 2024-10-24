@@ -5,6 +5,13 @@ Esta clase consiste en comprender el I2C () y utilizarlo en la tarjeta NUCLEO ST
 <h2>I2C</h2>
 
 
+<h2>I2C</h2>
+
+<div align="center">
+<img src="image.png" alt="I2C"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
 
 <h3>Ejemplo</h3>
 

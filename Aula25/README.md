@@ -20,13 +20,25 @@ Esta clase consiste en comprender el I2C y utilizarlo en la tarjeta NUCLEO STM32
 </div>
 
 <div align="center">
+<img src="image-3.png" alt="I2C data transfer"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-4.png" alt="I2C master mode"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
 <img src="image-2.png" alt="rise and fall times"/>
 <br>
 <figcaption>Fuente: </figcaption>
 </div>
 
 <div align="center">
-<img src="image-3.png" alt="rise and fall times"/>
+<img src="image-5.png" alt="I2C master communication initialization"/>
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>

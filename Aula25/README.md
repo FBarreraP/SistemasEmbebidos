@@ -13,7 +13,11 @@ I2C (Inter Integrated Circuits) es una comunicación tipo ‘half duplex’ que 
 </figcaption>
 </div>
 
-La velocidad del puerto I2C están estandarizadas en 100Khz, 400Khz y 1Mhz
+La velocidad del puerto I2C están estandarizadas en:
+
+- Standard-Mode (Sm) con una velocidad de hasta 100Khz (100 kbit/s)
+- Fast-Mode (Fm) with con una velocidad de hasta 400Khz (400 kbit/s)
+- Fast-Mode Plus (Fm+) con una velocidad de hasta 1Mhz (1 Mbit/s)
 
 <div align="center">
 <img src="image-7.png" alt="Frecuencia I2C"/>
@@ -83,6 +87,32 @@ Para finalizar la comunicación I2C, el maestro debe cambiar la señal de datos 
 <br>
 <figcaption>Fuente: Manual de referencia</figcaption>
 </div>
+
+Tiempo de start
+
+<div align="center">
+<img src="image-16.png" alt="rise and fall times"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+Tiempo de stop
+
+<div align="center">
+<img src="image-17.png" alt="rise and fall times"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+Tiempo de buffer entre la condición de stop y la condición de start
+
+<div align="center">
+<img src="image-18.png" alt="rise and fall times"/>
+<br>
+<figcaption>Fuente: </figcaption>
+</div>
+
+Tiempo de subida y bajada de las señales de SCL y SDA
 
 <div align="center">
 <img src="image-2.png" alt="rise and fall times"/>

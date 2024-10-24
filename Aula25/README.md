@@ -68,8 +68,8 @@ char text5[45]={"Oi, tudo joia?... Eu sou a MPU6050 XD \n\r"};
 unsigned char tx_data[1];
 
 //I2C
-int	ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
-int	WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
+void ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
+void WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes);
 
 void Print(char *data, int n);
 
@@ -160,7 +160,7 @@ int main(){
     RCC->DCKCFGR2 |= (1<<17); //Set (10) bits 17:16 as HSI clock is selected as source I2C1 clock
     //I2C1->CR1 &= ~I2C_CR1_PE; //
     I2C1->TIMINGR |= (1<<29)|(0b101<<20)|(0b1010<<16)|(0b11<<11)|(0b11001<<0);//0x205A1819; //
-    I2C1->CR1 |= I2C_CR1_PE;// Enable I2C1
+    I2C1->CR1 |= (1<<0);// Enable I2C1
 
     USART3->CR1 |= (1<<0);
     
@@ -234,148 +234,75 @@ int main(){
     }
 }
 
-int	WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ){
-    uint32_t t_espera;	// t_espera
-    uint8_t n; // Contador para la lectura de datos
+void WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes){
+		uint8_t n; // Count for data read
+		
+		I2C1->CR2 &= ~(0x3FF<<0);// Clear the slave address
+		I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
 
-    // Dirección del esclavo
-    I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
-    I2C1->CR2 |= ((Address <<1) <<I2C_CR2_SADD_Pos);
-
-    // i2c modo escritura
-    I2C1->CR2 &= ~I2C_CR2_RD_WRN;
-    I2C1->CR2 &= ~I2C_CR2_NBYTES;
-    I2C1->CR2 |= ((bytes+1) <<16);
-    I2C1->CR2 |= I2C_CR2_AUTOEND;
-
-    // Limpiar bandera de STOP, por si acaso
-    I2C1->ICR |= I2C_ICR_STOPCF;
-
-    // iniciar i2c
-    I2C1->CR2 |= I2C_CR2_START;
-
-    // Espera lla bandera TXIS o que se acabe el tiempo de espera
-    t_espera = 200000;
-    while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
-    {
-        t_espera--;
-        if (t_espera == 0) return 1;
-    }
-
-    // Dirección del registro que se quiere modificar
-    I2C1->TXDR = Register;
+		// i2c modo escritura
+		I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
+		I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
+		I2C1->CR2 |= ((bytes+1)<<16);// Set the number of bytes to be transmitted
+		I2C1->CR2 |= (1<<25);// Set automatic end mode
+	
+		I2C1->CR2 |= (1<<13);// Generate START
+	
+    while (((I2C1->ISR) & (1<<1)) != (0b10)){}// Wait the (TXIS) Transmit interrupt status
+	
+    I2C1->TXDR = Register;// Transmit the register
 
     n = bytes;
-
-    while(n>0)
-    {
-        // Espera la bandera TXIS o que se acabe el tiempo de espera
-        t_espera = 100000;
-        while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
-        {
-            t_espera--;
-            if (t_espera == 0) return 2;
-        }
-
-        // Se envian los datos en el array llamado Data
-        I2C1->TXDR = *Data;
+    while(n>0){
+        while (((I2C1->ISR) & (1<<1)) != (0b10)){}// Wait the (TXIS) Transmit interrupt status
+        I2C1->TXDR = *Data;// Data to be sent
         Data++;
-        n--; // La n que cuenta el numero de datos
+        n--;
     }
-
-    // Hasta que este STOPF o se cumpla el t_espera
-    t_espera = 200000;
-    while (((I2C1->ISR) & I2C_ISR_STOPF) != I2C_ISR_STOPF)
-    {
-        t_espera--;
-        if (t_espera == 0) return 3;
-    }
-
-    // Si todo sale bien seria 0
-    return 0;
+    while (((I2C1->ISR) & (1<<5)) != (0b100000)){}// Wait the STOPF detection flag
 }
 
-int	ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ) {
-    uint32_t t_espera;
+void ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ) {
+    
     uint8_t n; // Contador para la lectura de los bytes
 
     // Dirección del dispositivo
-    I2C1->CR2 &= ~I2C_CR2_SADD_Msk;
-    I2C1->CR2 |= ((Address <<1U) <<I2C_CR2_SADD_Pos);
+    I2C1->CR2 &= ~(0x3FF<<0);// Clear the slave address
+		I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
 
-    // i2c Modo Escritura
-    I2C1->CR2 &= ~I2C_CR2_RD_WRN;
+    // i2c modo escritura
+		I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
+		I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
+		I2C1->CR2 |= (1<<16);// Set the number of bytes to be transmitted
+		I2C1->CR2 &= ~(1<<25);// Set software end mode
+	
+    I2C1->CR2 |= (1<<13);// Generate START
+    
+    while (((I2C1->ISR) & (1<<1)) != (0b10)){}// Wait the (TXIS) Transmit interrupt status
 
-    I2C1->CR2 &= ~I2C_CR2_NBYTES;
-    I2C1->CR2 |= (1 <<16U);
-    I2C1->CR2 &= ~I2C_CR2_AUTOEND;
+    I2C1->TXDR = Register;// Transmit the register
 
-    // Iniciar charla I2C 
-    I2C1->CR2 |= I2C_CR2_START;
-
-    // Espera a TXIS o se sale del while y devuelve un 1
-    // SI devuelve 1 significa que no se inicio la charla
-    t_espera = 200000;
-    while (((I2C1->ISR) & I2C_ISR_TXIS) != I2C_ISR_TXIS)
-    {
-        t_espera--;
-        if (t_espera == 0) return 1;
-    }
-
-    // Envia la dirección del registro que se va a leer
-    I2C1->TXDR = Register;
-
-    // Espera a TC o se sale del while y devuelve un 2
-    t_espera = 200000;
-    while (((I2C1->ISR) & I2C_ISR_TC) != I2C_ISR_TC)
-    {
-        t_espera--;
-        if (t_espera == 0) return 2;
-    }
+    while (((I2C1->ISR) & (1<<6)) != (0b1000000)){}// Wait a (TC) Transfer complete
 
     // i2c en modo lectura
-    I2C1->CR2 |= I2C_CR2_RD_WRN;
+    I2C1->CR2 |= (1<<10);// Master requests a read transfer
+    I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
+    I2C1->CR2 |= (bytes<<16);// Set the number of bytes to be received
+    I2C1->CR2 &= ~(1<<25);// Set software end mode
 
-    I2C1->CR2 &= ~I2C_CR2_NBYTES;
-    I2C1->CR2 |= (bytes <<16U);
-    I2C1->CR2 &= ~I2C_CR2_AUTOEND;
-
-    // Se repite la condición de inicio para indicar que se leen
-    // bytes
-    I2C1->CR2 |= I2C_CR2_START;
+    I2C1->CR2 |= (1<<13);// Generate RE-START
 
     n = bytes;
-
-    while (n>0)
-    {
-        // Espera a RXNE o se sale del while y devuelve un 3
-        t_espera = 200000;
-        while (((I2C1->ISR) & I2C_ISR_RXNE) != I2C_ISR_RXNE)
-        {
-            t_espera--;
-            if (t_espera == 0) return 3;
-        }
-
-        // Se guardan los datos en Data.
-        // Data debe tener tantas posiciones como datos a leer
-        *Data = I2C1->RXDR;
+    while (n>0){
+        while (((I2C1->ISR) & (1<<2)) != (0b100)){}// Wait (RXNE) that the received data is copied into the I2C_RXDR register
+        *Data = I2C1->RXDR;// Receive the register
         Data++;
         n--;
     }
 
-    // para i2c
-    I2C1->CR2 |= I2C_CR2_STOP;
+    I2C1->CR2 |= (1<<14);// I2C stop
 
-    // Espera a STOPF o se sale del while y devuelve un 4
-    t_espera = 200000;
-    while (((I2C1->ISR) & I2C_ISR_STOPF) != I2C_ISR_STOPF)
-    {
-        t_espera--;
-        if (t_espera == 0) return 4;
-    }
-
-    // Todo OK, todo correcto y yo retorno 0.
-    return 0;
+    while (((I2C1->ISR) & (1<<5)) != (0b100000)){}// Wait the STOPF detection flag
 }
 
 void Print(char *data, int n){

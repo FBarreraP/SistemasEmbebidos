@@ -235,21 +235,21 @@ int main(){
 }
 
 void WriteI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes){
-		uint8_t n; // Count for data read
-		
-		I2C1->CR2 &= ~(0x3FF<<0);// Clear the slave address
-		I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
+    uint8_t n; // Count for data read
+    
+    I2C1->CR2 &= ~(0x3FF<<0);// Clear the slave address
+    I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
 
-		// i2c modo escritura
-		I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
-		I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
-		I2C1->CR2 |= ((bytes+1)<<16);// Set the number of bytes to be transmitted
-		I2C1->CR2 |= (1<<25);// Set automatic end mode
-	
-		I2C1->CR2 |= (1<<13);// Generate START
-	
+    // i2c modo escritura
+    I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
+    I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
+    I2C1->CR2 |= ((bytes+1)<<16);// Set the number of bytes to be transmitted
+    I2C1->CR2 |= (1<<25);// Set automatic end mode
+
+    I2C1->CR2 |= (1<<13);// Generate START
+
     while (((I2C1->ISR) & (1<<1)) != (0b10)){}// Wait the (TXIS) Transmit interrupt status
-	
+
     I2C1->TXDR = Register;// Transmit the register
 
     n = bytes;
@@ -268,14 +268,14 @@ void ReadI2C1(uint8_t Address, uint8_t Register, uint8_t *Data, uint8_t bytes ) 
 
     // Dirección del dispositivo
     I2C1->CR2 &= ~(0x3FF<<0);// Clear the slave address
-		I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
+    I2C1->CR2 |= (Address<<1);// Set the 7-bit slave address to be sent
 
-    // i2c modo escritura
-		I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
-		I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
-		I2C1->CR2 |= (1<<16);// Set the number of bytes to be transmitted
-		I2C1->CR2 &= ~(1<<25);// Set software end mode
-	
+// i2c modo escritura
+    I2C1->CR2 &= ~(1<<10);// Master requests a write transfer
+    I2C1->CR2 &= ~(0xFF<<16);// Clear the number of bytes to be transmitted
+    I2C1->CR2 |= (1<<16);// Set the number of bytes to be transmitted
+    I2C1->CR2 &= ~(1<<25);// Set software end mode
+
     I2C1->CR2 |= (1<<13);// Generate START
     
     while (((I2C1->ISR) & (1<<1)) != (0b10)){}// Wait the (TXIS) Transmit interrupt status

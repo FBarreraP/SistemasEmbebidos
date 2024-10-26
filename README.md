@@ -108,13 +108,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>PLL</td>
+		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>Teoría I2C</td>
 	</tr>
     <tr>
-		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Ejemplo I2C</td>
 	</tr>
     <tr>
-		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>I2C</td>
+		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
 	</tr>
     <tr>
 		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>

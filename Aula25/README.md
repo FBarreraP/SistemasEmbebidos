@@ -471,3 +471,56 @@ void Print(char *data, int n){
 }
 ```
 
+<div align="center">
+<img src="image-19.png" alt="GPIOx_AFRH"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-20.png" alt="Tabla funciones alternantes"/>
+<br>
+<figcaption>Fuente: Datasheet STM32F767ZI</figcaption>
+</div>
+
+<div align="center">
+<img src="image-21.png" alt="RCC_DCKCFGR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-22.png" alt="I2C_CR1"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-23.png" alt="I2C_TIMINGR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-24.png" alt="I2C_CR2"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-25.png" alt="I2C_ISR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-26.png" alt="I2C_TXDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>
+
+<div align="center">
+<img src="image-27.png" alt="I2C_RXDR"/>
+<br>
+<figcaption>Fuente: Manual de referencia</figcaption>
+</div>

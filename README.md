@@ -1,7 +1,7 @@
 <h1 align="center">Profesor: MSc. Fabián Barrera Prieto 👨‍🏫<br>
 Materia: Sistemas embebidos 🏧<br>
 Universidad: ECCI 🏫<br>
-Año: 2024 📅</h1><br>
+Año: 2025 📅</h1><br>
 
 El curso de sistemas embebidos está enfocado al desarrollo de aplicaciones con los periféricos de la STM32, operadas por medio de una interfaz gráfica con comunicación UART en Matlab o Python.
 
@@ -20,34 +20,34 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>02/08/2024</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>07/02/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>03/08/2024</td> <td>2</td> <td>2</td> <td>2</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
+		<td>08/02/2025</td> <td>2</td> <td>2</td> <td>1</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
 	</tr>
 	<tr>
-		<td>09/08/2024</td> <td>2</td> <td>3</td> <td>3</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
+		<td>14/02/2025</td> <td>2</td> <td>3</td> <td>2</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
 	</tr>
 	<tr>
-		<td>10/08/2024</td> <td>2</td> <td>4</td> <td>4</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
+		<td>15/02/2025</td> <td>2</td> <td>4</td> <td>2</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
 	</tr>
 	<tr>
-		<td>16/08/2024</td> <td>2</td> <td>5</td> <td>5</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>21/02/2025</td> <td>2</td> <td>5</td> <td>3</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>17/08/2024</td> <td>2</td> <td>6</td> <td>6</td> <td>Interrupciones externas (EXTI)</td>
+		<td>22/02/2025</td> <td>2</td> <td>6</td> <td>3</td> <td>Interrupciones externas (EXTI)</td>
 	</tr>
 	<tr>
-		<td>23/08/2024</td> <td>2</td> <td>7</td> <td>7</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>28/02/2025</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>24/08/2024</td> <td>2</td> <td>8</td> <td>8</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>01/03/2025</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>30/08/2024</td> <td>2</td> <td>9</td> <td>9</td> <td>Parcial primer corte</td>
+		<td>07/03/2025</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>31/08/2024</td> <td>2</td> <td>10</td> <td>10</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>08/03/2025</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -58,34 +58,34 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>06/09/2024</td> <td>2</td> <td>11</td> <td>11</td> <td>Systick y socialización de proyecto</td>
+		<td>14/03/2025</td> <td>2</td> <td>11</td> <td>6</td> <td>Systick y socialización de proyecto</td>
 	</tr>
 	<tr>
-		<td>07/09/2024</td> <td>2</td> <td>12</td> <td>12</td> <td>UART</td>
+		<td>15/03/2025</td> <td>2</td> <td>12</td> <td>6</td> <td>UART</td>
 	</tr>
 	<tr>
-		<td>13/09/2024</td> <td>2</td> <td>13</td> <td>13</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>21/03/2025</td> <td>2</td> <td>13</td> <td>7</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 		<tr>
-		<td>14/09/2024</td> <td>2</td> <td>14</td> <td>14</td> <td>ADC</td>
+		<td>22/03/2025</td> <td>2</td> <td>14</td> <td>7</td> <td>ADC</td>
 	</tr>
 	<tr>
-		<td>20/09/2024</td> <td>2</td> <td>15</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>28/03/2025</td> <td>2</td> <td>15</td> <td>8</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>21/09/2024</td> <td>2</td> <td>16</td> <td>16</td> <td>Timers</td>
+		<td>29/03/2025</td> <td>2</td> <td>16</td> <td>8</td> <td>Timers</td>
 	</tr>
 	<tr>
-		<td>27/09/2024</td> <td>2</td> <td>17</td> <td>17</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>04/04/2025</td> <td>2</td> <td>17</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>28/09/2024</td> <td>2</td> <td>18</td> <td>18</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>05/04/2025</td> <td>2</td> <td>18</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>04/10/2024</td> <td>2</td> <td>19</td> <td>19</td> <td>Parcial segundo corte</td>
+		<td>11/04/2025</td> <td>2</td> <td>19</td> <td>10</td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>05/10/2024</td> <td>2</td> <td>20</td> <td>20</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>12/04/2025</td> <td>2</td> <td>20</td> <td>10</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del segundo corte-->
 </table>
 
@@ -96,40 +96,43 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>11/10/2024</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
+		<td>18/04/2025<br>19/04/2025</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
 	</tr>
 	<tr>
-		<td>12/10/2024</td> <td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
+		<td>25/04/2025</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td>18/10/2024</td> <td>2</td> <td>23</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
+		<td>26/04/2025</td> <td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
 	</tr>
 	<tr>
-		<td>19/10/2024</td> <td>2</td> <td>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
+		<td>02/05/2025</td> <td>2</td> <td>23</td> <td>12</td> <td>Teoría I2C</td>
 	</tr>
 	<tr>
-		<td>25/10/2024</td> <td>2</td> <td>25</td> <td>13</td> <td>Teoría I2C</td>
+		<td>03/05/2025</td> <td>2</td> <td>24</td> <td>12</td> <td>Ejemplo I2C (IMU)</td>
+	</tr>
+	<tr>
+		<td>09/05/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>26/10/2024</td> <td>2</td> <td>26</td> <td>13</td> <td>Ejemplo I2C</td>
+		<td>10/05/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>01/11/2024</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>16/05/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>02/11/2024</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de Laboratorio</td>
+		<td>17/05/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>08/11/2024</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>23/05/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>09/11/2024</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de Laboratorio y proyecto</td>
+		<td>24/05/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr><!--Finalización de clases-->
     <tr>
-		<td>15/11/2024</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
+		<td>30/05/2025</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
 	</tr>
 	<tr>
-		<td>16/11/2024</td> <td>2</td> <td>32</td> <td>16</td> <td>Desarrollo y/o entrega de proyecto</td>
+		<td>31/05/2025</td> <td>2</td> <td>32</td> <td>16</td> <td>Retroalimentación del examen final y entrega de notas tercer corte</td>
 	</tr>
 </table>
 
@@ -147,40 +150,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (20%)</td>
 		<td>Parcial</td>
 		<td>10%</td>
-		<td>30/08/2024</td>
+		<td>30/08/2025</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>10%</td>
-		<td>17/08/2024<br>24/08/2024</td>
+		<td>17/08/2025<br>24/08/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (30%)</td>
 		<td>Parcial</td>
 		<td>15%</td>
-		<td>04/10/2024</td>
+		<td>04/10/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>13/09/2024<br>20/09/2024<br>27/09/2024<br>28/09/2024</td>
+		<td>13/09/2025<br>20/09/2025<br>27/09/2025<br>28/09/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (50%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>15/11/2024</td>
+		<td>15/11/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>18/10/2024<br>25/10/2024<br>01/11/2024<br>02/11/2024<br>08/11/2024<br>09/11/2024</td>
+		<td>18/10/2025<br>25/10/2025<br>01/11/2025<br>02/11/2025<br>08/11/2025<br>09/11/2025</td>
 	</tr>
     <tr>
 		<td>Proyecto</td>
 		<td>20%</td>
-		<td>02/11/2024<br>08/11/2024<br>09/11/2024<br>16/11/2024</td>
+		<td>02/11/2025<br>08/11/2025<br>09/11/2025<br>16/11/2025</td>
 	</tr>
 </table>
 

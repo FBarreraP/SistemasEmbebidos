@@ -42,8 +42,7 @@ Los sistemas embebidos son sistemas programables y diseñados para ejecutar tare
 <figcaption>Fuente: https://www.sigmaelectronica.net/producto/nucleo-f767zi/</figcaption>
 </div>
 
-<h2>Introducción al micro STM32</h2>
-
+<h2>Introducción al micro STM32F767ZITx</h2>
 
 <div align="center">
 <img src="Imagenes/image-9.png" alt="micro STM32F767ZI pinout"/>

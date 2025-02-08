@@ -285,3 +285,13 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
     </ol>
 	-->
 </ul>
+
+<h3>Bibliografía</h3>
+
+- G. Galeano. Programación de Sistemas embebidos en C. Ed Alfaomega. 2009.
+- D. D. Gajski. Principios de Diseño Digital. Ed Prentice Hall. 1997.
+- Teres, L. Lenguaje estándar de Diseño Electrónico. McGraw-Hill. 1998.
+- Sayers L. Ian, Adams Alan. Principios De Microprocesadores. 1ª Edición. Cecsa
+- Martinez Sánchez Victoriano. Desarrollo Y Programación De Sistemas Digitales. Adisson Wesley Iberoamericana.
+- Gonzales Vazquez Adolfo. Cabeza Soberon M Lourdes. Introducción A Los Microcontroladores De 16 bits
+- R. L. Tokheim. Fundamentos de los Microprocesadores. Ed McGraw-Hill. 1991.

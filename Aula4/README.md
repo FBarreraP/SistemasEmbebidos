@@ -20,7 +20,7 @@ A través de los siguientes registros:
 - GPIOx_OTYPER -> Registro de selección del tipo de salida (Push-Pull o Open-Drain)
 - GPIOx_PUPDR -> Registro de selección de Pull Up o Pull Down
 - GPIOx_OSPEEDER -> Registro de configuración de velocidad del pin
-- GPIOx_IDR -> Registro de salida de datos en el pin (Leer)
+- GPIOx_IDR -> Registro de entrada de datos en el pin (Leer)
 - GPIOx_ODR	-> Registro de salida de datos en el pin (Escribir)
 
 <div align="center">

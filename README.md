@@ -114,7 +114,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>07/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Ejemplo I2C (IMU)</td>
 	</tr>
     <tr>
-		<td>09/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>08/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
 		<td>14/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
@@ -172,12 +172,12 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>24/10/2025<br>01/11/2025<br>07/11/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
+		<td>31/10/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
 	</tr>
     <tr>
 		<td>Proyecto</td>
 		<td>20%</td>
-		<td>24/10/2025<br>01/11/2025<br>07/11/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
+		<td>31/10/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
 	</tr>
 </table>
 

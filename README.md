@@ -230,7 +230,11 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 	<li> Computador 💻</li>
 	<li> Keil</li>
 	<li> STM-32 (NUCLEO STM32F767ZI)</li>
-	<img src="https://www.codeinsideout.com/blog/stm32/stm32-nucleo-boards.png" alt="Imagen de Raspberrys Pi 3B y 4B" caption="Hola"/>
+	<div align="center">
+	<img src="image.png" alt="Tarjetas STM32"/>
+	<br>
+	<figcaption>Fuente: https://www.st.com/en/ecosystems/stm32-nucleo.html</figcaption>
+	</div>
     <li> Fuentes de alimentación</li>
     <img src="https://cdnx.jumpseller.com/mactornica/image/9804941/1.jpg?1653696069" alt="Fuente AMS1117" caption="Hola"/>
     <li> Multimetro</li>

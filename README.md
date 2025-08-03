@@ -20,34 +20,34 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>07/02/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td>08/08/2025</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>08/02/2025</td> <td>2</td> <td>2</td> <td>1</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
+		<td>09/08/2025</td> <td>2</td> <td>2</td> <td>1</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
 	</tr>
 	<tr>
-		<td>14/02/2025</td> <td>2</td> <td>3</td> <td>2</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
+		<td>15/08/2025</td> <td>2</td> <td>3</td> <td>2</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
 	</tr>
 	<tr>
-		<td>15/02/2025</td> <td>2</td> <td>4</td> <td>2</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
+		<td>16/08/2025</td> <td>2</td> <td>4</td> <td>2</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
 	</tr>
 	<tr>
-		<td>21/02/2025</td> <td>2</td> <td>5</td> <td>3</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>22/08/2025</td> <td>2</td> <td>5</td> <td>3</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>22/02/2025</td> <td>2</td> <td>6</td> <td>3</td> <td>Interrupciones externas (EXTI)</td>
+		<td>23/08/2025</td> <td>2</td> <td>6</td> <td>3</td> <td>Interrupciones externas (EXTI)</td>
 	</tr>
 	<tr>
-		<td>28/02/2025</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>29/08/2025</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>01/03/2025</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>30/08/2025</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>07/03/2025</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
+		<td>05/09/2025</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>08/03/2025</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>06/09/2025</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
@@ -58,34 +58,34 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>14/03/2025</td> <td>2</td> <td>11</td> <td>6</td> <td>Systick y socialización de proyecto</td>
+		<td>12/09/2025</td> <td>2</td> <td>11</td> <td>6</td> <td>Systick y socialización de proyecto</td>
 	</tr>
 	<tr>
-		<td>15/03/2025</td> <td>2</td> <td>12</td> <td>6</td> <td>UART</td>
+		<td>13/09/2025</td> <td>2</td> <td>12</td> <td>6</td> <td>UART</td>
 	</tr>
 	<tr>
-		<td>21/03/2025</td> <td>2</td> <td>13</td> <td>7</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>19/09/2025</td> <td>2</td> <td>13</td> <td>7</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 		<tr>
-		<td>22/03/2025</td> <td>2</td> <td>14</td> <td>7</td> <td>ADC</td>
+		<td>20/09/2025</td> <td>2</td> <td>14</td> <td>7</td> <td>ADC</td>
 	</tr>
 	<tr>
-		<td>28/03/2025</td> <td>2</td> <td>15</td> <td>8</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>26/09/2025</td> <td>2</td> <td>15</td> <td>8</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>29/03/2025</td> <td>2</td> <td>16</td> <td>8</td> <td>Timers</td>
+		<td>27/09/2025</td> <td>2</td> <td>16</td> <td>8</td> <td>Timers</td>
 	</tr>
 	<tr>
-		<td>04/04/2025</td> <td>2</td> <td>17</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>03/10/2025</td> <td>2</td> <td>17</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>05/04/2025</td> <td>2</td> <td>18</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>04/10/2025</td> <td>2</td> <td>18</td> <td>9</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>11/04/2025</td> <td>2</td> <td>19</td> <td>10</td> <td>Parcial segundo corte</td>
+		<td>10/10/2025</td> <td>2</td> <td>19</td> <td>10</td> <td>Parcial segundo corte</td>
 	</tr><!--semana de parciales del segundo corte-->
 	<tr>
-		<td>12/04/2025</td> <td>2</td> <td>20</td> <td>10</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
+		<td>11/10/2025</td> <td>2</td> <td>20</td> <td>10</td> <td>Retroalimentación del parcial segundo corte y entrega de notas segundo corte</td>
 	</tr><!--última semana de registro de notas del segundo corte-->
 </table>
 
@@ -96,43 +96,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>18/04/2025<br>19/04/2025</td> <td></td> <td></td> <td></td> <td>SEMANA SANTA</td>
+		<td>17/10/2025</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td>25/04/2025</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
+		<td>18/10/2025</td> <td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
 	</tr>
 	<tr>
-		<td>26/04/2025</td> <td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
+		<td>24/10/2025</td> <td>2</td> <td>23</td> <td>12</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	<tr>
-		<td>02/05/2025</td> <td>2</td> <td>23</td> <td>12</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>25/10/2025</td> <td>2</td> <td>24</td> <td>12</td> <td>Teoría I2C</td>
 	</tr>
 	<tr>
-		<td>03/05/2025</td> <td>2</td> <td>24</td> <td>12</td> <td>Teoría I2C</td>
-	</tr>
-	<tr>
-		<td>09/05/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Ejemplo I2C (IMU)</td>
+		<td>31/10/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Ejemplo I2C (IMU)</td>
 	</tr>
     <tr>
-		<td>10/05/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>01/11/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>16/05/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>07/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>17/05/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>08/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>23/05/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>14/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
-		<td>24/05/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>15/11/2025</td> <td>2</td> <td>30</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr><!--Finalización de clases-->
     <tr>
-		<td>30/05/2025</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
+		<td>21/11/2025</td> <td>2</td> <td>31</td> <td>16</td> <td>Examen final</td>
 	</tr>
 	<tr>
-		<td>31/05/2025</td> <td>2</td> <td>32</td> <td>16</td> <td>Retroalimentación del examen final y entrega de notas tercer corte</td>
+		<td>22/11/2025</td> <td>2</td> <td>32</td> <td>16</td> <td>Retroalimentación del examen final y entrega de notas tercer corte</td>
 	</tr>
 </table>
 
@@ -204,7 +201,8 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
 		<li> Los laboratorios y el proyecto se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
 		<li> Uso obligatorio de bata blanca en el laboratorio de robótica 🥼</li>
-		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li> 
+		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li>
+		<li> Subir un video grabado en la clase de entrega del funcionamiento práctico del laboratorio y proyecto en el aula virtual 🧐</li> 
 	</ul>
 
 <h4>Observaciones de reglamento estudiantil</h4>

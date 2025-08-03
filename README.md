@@ -147,40 +147,40 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Primer (20%)</td>
 		<td>Parcial</td>
 		<td>10%</td>
-		<td>07/03/2025</td>
+		<td>05/09/2025</td>
 		<td rowspan="7">Presencial</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>10%</td>
-		<td>21/02/2025<br>28/02/2025<br>01/03/2025</td>
+		<td>22/08/2025<br>29/08/2025<br>30/08/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="2">Segundo (30%)</td>
 		<td>Parcial</td>
 		<td>15%</td>
-		<td>11/04/2025</td>
+		<td>10/10/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>21/03/2025<br>28/03/2025<br>04/04/2025<br>05/04/2025</td>
+		<td>19/09/2025<br>26/09/2025<br>03/10/2025<br>04/10/2025</td>
 	</tr>
 	<tr>
 		<td rowspan="3">Tercer (50%)</td>
 		<td>Examen final</td>
 		<td>15%</td>
-		<td>30/05/2025</td>
+		<td>21/11/2025</td>
 	</tr>
 	<tr>
 		<td>Quices y/o laboratorio</td>
 		<td>15%</td>
-		<td>02/05/2025<br>10/05/2025<br>16/05/2025<br>17/05/2025<br>23/05/2025<br>24/05/2025</td>
+		<td>24/10/2025<br>01/11/2025<br>07/11/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
 	</tr>
     <tr>
 		<td>Proyecto</td>
 		<td>20%</td>
-		<td>02/05/2025<br>10/05/2025<br>16/05/2025<br>17/05/2025<br>23/05/2025<br>24/05/2025</td>
+		<td>24/10/2025<br>01/11/2025<br>07/11/2025<br>08/11/2025<br>14/11/2025<br>15/11/2025</td>
 	</tr>
 </table>
 

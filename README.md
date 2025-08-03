@@ -102,22 +102,19 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>18/10/2025</td> <td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
 	</tr>
 	<tr>
-		<td>24/10/2025</td> <td>2</td> <td>23</td> <td>12</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>24/10/2025<br>25/10/2025</td> <td>2<br>2</td> <td>23<br>24</td> <td>12</td> <td>CONGRESO DE INGENIERÍA ECCI</td>
 	</tr>
 	<tr>
-		<td>25/10/2025</td> <td>2</td> <td>24</td> <td>12</td> <td>Teoría I2C</td>
+		<td>31/10/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
 	<tr>
-		<td>31/10/2025</td> <td>2</td> <td>25</td> <td>13</td> <td>Ejemplo I2C (IMU)</td>
+		<td>01/11/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Teoría I2C</td>
+	</tr>
+	<tr>
+		<td>07/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Ejemplo I2C (IMU)</td>
 	</tr>
     <tr>
-		<td>01/11/2025</td> <td>2</td> <td>26</td> <td>13</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
-	</tr>
-    <tr>
-		<td>07/11/2025</td> <td>2</td> <td>27</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
-	</tr>
-    <tr>
-		<td>08/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td>09/11/2025</td> <td>2</td> <td>28</td> <td>14</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
 	</tr>
     <tr>
 		<td>14/11/2025</td> <td>2</td> <td>29</td> <td>15</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>

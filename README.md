@@ -284,7 +284,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Quices y/o laboratorio</td> <td>15%</td> <td>27/04/2026<br>04/05/2026<br>06/05/2026<br>11/05/2026<br>13/05/2026<br>20/05/2026</td>
 	</tr>
     <tr>
-		<td>Proyecto</td> <td>20%</td> <td>15%</td> <td>27/04/2026<br>04/05/2026<br>06/05/2026<br>11/05/2026<br>13/05/2026<br>20/05/2026</td>
+		<td>Proyecto</td> <td>20%</td> <td>27/04/2026<br>04/05/2026<br>06/05/2026<br>11/05/2026<br>13/05/2026<br>20/05/2026</td>
 	</tr>
 </table>
 
@@ -313,7 +313,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Quices y/o laboratorio</td> <td>15%</td> <td>02/05/2026<br>08/05/2026<br>09/05/2026<br>15/05/2026<br>16/05/2026<br>22/05/2026<br>23/05/2026</td>
 	</tr>
     <tr>
-		<td>Proyecto</td> <td>20%</td> <td>15%</td> <td>02/05/2026<br>08/05/2026<br>09/05/2026<br>15/05/2026<br>16/05/2026<br>22/05/2026<br>23/05/2026</td>
+		<td>Proyecto</td> <td>20%</td> <td>02/05/2026<br>08/05/2026<br>09/05/2026<br>15/05/2026<br>16/05/2026<br>22/05/2026<br>23/05/2026</td>
 	</tr>
 </table>
 

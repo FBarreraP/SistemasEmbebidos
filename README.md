@@ -13,45 +13,45 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 
 <h3>TEMAS 🤓</h3>
 
-<h4>Primer corte</h4>
+<h4>Primer corte 8AN</h4>
 
 <table>
 	<tr>
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td>06/02/2026</td> <td>2</td> <td>1</td> <td>1</td> <td>Presentación de la materia</td>
+		<td rowspan="2">07/08/2026</td> <td>2</td> <td>1</td> <td>1</td> <td rowspan="2">FESTIVO</td>
 	</tr>
 	<tr>
-		<td>07/02/2026</td> <td>2</td> <td>2</td> <td>1</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
+		<td>2</td> <td>2</td> <td>1</td>
 	</tr>
 	<tr>
-		<td>13/02/2026</td> <td>2</td> <td>3</td> <td>2</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
+		<td rowspan="2">14/08/2026</td> <td>2</td> <td>3</td> <td>2</td> <td>Presentación de la materia</td>
 	</tr>
 	<tr>
-		<td>14/02/2026</td> <td>2</td> <td>4</td> <td>2</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
+		<td>2</td> <td>4</td> <td>2</td> <td>Introducción al microcontrolador STM32 y bitwise</td>
 	</tr>
 	<tr>
-		<td>20/02/2026</td> <td>2</td> <td>5</td> <td>3</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td rowspan="2">21/08/2026</td> <td>2</td> <td>5</td> <td>3</td> <td>Manual de usuario (tarjeta nucleo) e instalación de Keil y ST-LINK</td>
 	</tr>
 	<tr>
-		<td>21/02/2026</td> <td>2</td> <td>6</td> <td>3</td> <td>Interrupciones externas (EXTI)</td>
+		<td>2</td> <td>6</td> <td>3</td> <td>GPIOs, programación y depuración con Keil de Hola Mundo</td>
 	</tr>
 	<tr>
-		<td>27/02/2026</td> <td>2</td> <td>7</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td rowspan="2">28/08/2026</td> <td>2</td> <td>7</td> <td>4</td> <td>Interrupciones externas (EXTI)</td>
 	</tr>
 	<tr>
-		<td>28/02/2026</td> <td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
+		<td>2</td> <td>8</td> <td>4</td> <td>Desarrollo y/o entrega de laboratorio</td>
 	</tr>
 	<tr>
-		<td>06/03/2026</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
+		<td rowspan="2">04/09/2026</td> <td>2</td> <td>9</td> <td>5</td> <td>Parcial primer corte</td>
 	</tr><!--semana de parciales del primer corte-->
 	<tr>
-		<td>07/03/2026</td> <td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
+		<td>2</td> <td>10</td> <td>5</td> <td>Retroalimentación del parcial primer corte y entrega de notas primer corte</td>
 	</tr><!--última semana de registro de notas del primer corte-->
 </table>
 
-<h4>Segundo corte</h4>
+<h4>Segundo corte 8AN</h4>
 
 <table>
 	<tr>
@@ -92,7 +92,7 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 	</tr><!--última semana de registro de notas del segundo corte-->
 </table>
 
-<h4>Tercer corte</h4>
+<h4>Tercer corte 8AN</h4>
 
 <table>
 	<tr>
@@ -174,13 +174,14 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 		<li> Inicio de clases: Quince (15) minutos después de la hora inicial definida de la clase y el control de asistencia se realiza a cada inicio de clase ⌚</li>
 		<li> Fin de clases: Quince (15) minutos antes de la hora final definida de la clase ⏱️</li>
 		<li> Respeto en clase 🤝</li>
+		<li> Seguir el conducto regular (profesor, gestor, director, etc.) 📢</li>
 		<li> No presto mi computador para presentar laboratorios, talleres y/o proyectos 🤦‍♂️</li>
 		<li> Permitidas las salidas al baño 🚻 y a recibir llamadas 📲</li>
 		<li> Si no dejan dictar la clase, pasan al tablero a dar la clase o doy la clase por vista 😤</li>
 		<li> No es permitido tomar fotos, ni videos en clase 📵. El material de clase está en el siguiente repositorio git: https://github.com/FBarreraP/SistemasEmbebidos </li>
 		<li> Los laboratorios y el proyecto consistirán únicamente de montaje y podrán ser realizados en grupos de máximo 2 estudiantes 🧍‍♂️🧍‍♀️</li>
 		<li> Los montajes realizados en protoboard no son aceptados con jumpers, por tanto, deben ser realizados con cable UTP y no son compartidos, es decir, un montaje por grupo 🤷‍♂️</li>
-		<li> Los laboratorios y el proyecto se calificarán con rúbricas de 0.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
+		<li> Los laboratorios y proyecto se calificarán con rúbricas de 1.0 a 5.0 con intervalo de 1.0; las cuales tendrán diferentes entregables con fechas fijas de entrega y el orden de entrega de los grupos será definida por el profesor 💥</li> 
 		<li> Uso obligatorio de bata blanca en el laboratorio de robótica 🥼</li>
 		<li> Quien llegue tarde se adelanta en el tema visto hasta el momento 🏃‍♂️</li>
 		<li> Subir un video grabado en la clase de entrega del funcionamiento práctico del laboratorio y proyecto en el aula virtual 🧐</li> 

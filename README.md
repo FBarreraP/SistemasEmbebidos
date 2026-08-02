@@ -96,13 +96,13 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td>Fecha</td> <td>Horas</td> <td>Clase</td> <td>Semana</td> <td>Actividades</td>
 	</tr>
 	<tr>
-		<td rowspan="2">16/10/2026</td> <td>2</td> <td>21</td> <td>11</td> <td>Avance de proyecto</td>
+		<td rowspan="2">16/10/2026</td> <td>2</td> <td>21</td> <td>11</td> <td>PWM</td>
 	</tr>
 	<tr>
-		<td>2</td> <td>22</td> <td>11</td> <td>PWM</td>
+		<td>2</td> <td>22</td> <td>11</td> <td>Avance de proyecto</td>
 	</tr>
 	<tr>
-		<td rowspan="2">23/10/2026</td> <td>2</td> <td>24</td> <td>12</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
+		<td rowspan="2">23/10/2026</td> <td>2</td> <td>24</td> <td>12</td> <td>I2C</td>
 	</tr>
 	<tr>
 		<td>2</td> <td>23</td> <td>12</td> <td>Desarrollo y/o entrega de laboratorio y/o proyecto</td>
@@ -149,16 +149,16 @@ En esta clase se presenta la materia, en cuanto al contenido temático, los mét
 		<td rowspan="2">Segundo (33%)</td> <td>Parcial</td> <td>16.5%</td> <td>09/10/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o laboratorio</td> <td>16.5%</td> <td>20/03/2026<br>27/03/2026<br>10/04/2026<br>11/04/2026</td>
+		<td>Quices y/o laboratorio</td> <td>16.5%</td> <td>18/09/2026<br>25/09/2026<br>02/10/2026</td>
 	</tr>
 	<tr>
-		<td rowspan="3">Tercer (34%)</td> <td>Examen final</td> <td>10%</td> <td>29/05/2026</td>
+		<td rowspan="3">Tercer (34%)</td> <td>Examen final</td> <td>10%</td> <td>20/11/2026</td>
 	</tr>
 	<tr>
-		<td>Quices y/o laboratorio</td> <td>9%</td> <td>02/05/2026<br>08/05/2026<br>09/05/2026<br>15/05/2026<br>16/05/2026<br>22/05/2026<br>23/05/2026</td>
+		<td>Quices y/o laboratorio</td> <td>9%</td> <td>23/10/2026<br>30/10/2026<br>06/11/2026<br>13/11/2026</td>
 	</tr>
     <tr>
-		<td>Proyecto</td> <td>15%</td> <td>02/05/2026<br>08/05/2026<br>09/05/2026<br>15/05/2026<br>16/05/2026<br>22/05/2026<br>23/05/2026</td>
+		<td>Proyecto</td> <td>15%</td> <td>23/10/2026<br>30/10/2026<br>06/11/2026<br>13/11/2026</td>
 	</tr>
 </table>
 

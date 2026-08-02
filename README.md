@@ -210,9 +210,9 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
 	<li> Keil</li>
 	<li> STM-32 (NUCLEO STM32F767ZI)</li>
 	<div align="center">
-	<img src="image.png" alt="Tarjetas STM32"/>
-	<br>
-	<figcaption>Fuente: https://www.st.com/en/ecosystems/stm32-nucleo.html</figcaption>
+		<img src="image.png" alt="Tarjetas STM32"/>
+		<br>
+		<figcaption>Fuente: https://www.st.com/en/ecosystems/stm32-nucleo.html</figcaption>
 	</div>
     <li> Fuentes de alimentación</li>
     <img src="https://cdnx.jumpseller.com/mactornica/image/9804941/1.jpg?1653696069" alt="Fuente AMS1117" caption="Hola"/>
@@ -225,7 +225,11 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
     <li> Leds, resistencias, pulsadores, cables, protoboard</li>
     <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcR9gkrJHsEK9MCYNnJTZklwsNtW58ZzmrtdPMma9dXKXkLdYbt1PkHeGMi5cwDLLlRiOng2ozwdsB60QtZNCQF4hc3WUnPT6rx9HmCUAt1KuATjyJY9bNNWRA&usqp=CAE" alt="kit de protoboard" caption="Hola"/>
     <li> Potenciómetro</li>
-    <img src="https://curtocircuito.com.br/pub/media/catalog/product/cache/ebf77fb58d795a2dbe3218c301c821c6/p/o/potenci_metro_linear_-_1m_-_l20_2_.jpg" alt="potenciometro" caption="Hola"/>
+    <div align="center">
+		<img src="image-1.png" alt="Potenciómetro" width="400"/>
+		<br>
+		<figcaption>Fuente: https://www.mercadolivre.com.br/potenciometro-linear-1m--l20/up/MLBU1478983095</figcaption>
+	</div>	
     <li> Fotoresistencia</li>
     <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgZMUgeeo_cD2X8ee0ldjF5oU2SK4IW-KIQ3qScgyX5VK-_nQKHIE7Nib3CWr0sns62JKbOmdY8DN4W7E6B6e69yUVtN9VqbfuQeoyVlv2DGlseWsc8h-ZgHh7Zn-HDrUTszr-FQdiEFW7nGhOPSjDTN6egELeqlyI8VwM_8mrX0z7WUQcaFnW_AAHh5Q/s499/ldr-5mm-fvml.jpg" alt="fotoresistencia" caption="Hola"/>
     <li> PT100</li>
@@ -241,19 +245,40 @@ Nota del curso = (0.2)*NotaCorte1 + (0.3)*NotaCorte2 + (0.5)*NotaCorte3
     <li> Teclado matricial de membrana</li>
     <img src="https://sonrobots.com/wp-content/uploads/2021/01/TEC16.jpg" alt="teclado matricial" caption="Hola"/>
     <li> Conversor UART a USB (FTDI)</li>
-    <img src="https://images.tcdn.com.br/img/img_prod/751846/conversor_ftdi_ft232rl_com_chave_3_3v_5v_3341_1_534bc68dc75f6a42f8b8d3d0c2d78eca.jpg" alt="FTDI FT2323RL" caption="Hola"/>
-    <li> Motor paso a paso</li>
-    <img src="https://i0.wp.com/suconel.com/wp-content/uploads/Motor-Paso-a-Paso-De-5V-4-fases-5-Paso-de-engranaje-de-alambre-28BYJ48-MOTOR5V..jpg?fit=600%2C600&ssl=1" alt="Motor paso a paso" caption="Hola"/>
+    <div align="center">
+		<img src="image-1.png" width="500" alt="FTDI"/>
+		<br>
+		<figcaption>Fuente: https://circuit-electronics.com/product/ftdi-basic-breakout-5v-3-3v-usb-to-serial-ttl-red-board/</figcaption>
+	</div>
     <li> Servomotores SG90 o MG90</li>
     <img src="https://cdn.shopify.com/s/files/1/0069/0028/5529/files/Servos_fb55bae1-aef3-4bd6-bf0f-f2eff21c849a_large.jpg?v=1565803072" alt="servomotores" caption="Hola"/>
     <li> Motoreductor DC</li>
-    <img src="https://static.wixstatic.com/media/d96bda_8b8831ef4e0541c1839ac31ecdd8241e~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d96bda_8b8831ef4e0541c1839ac31ecdd8241e~mv2.png" alt="motoreductor" caption="Hola"/>
+	<div align="center">
+		<img src="image-2.png" width="500" alt="Motoreductor DC con encoder"/>
+		<br>
+		<figcaption>Fuente: https://www.electric-b2c.com/products/65mm-85mm-130mm-wheel-hub-motor-kit-encode-wheel-motor</figcaption>
+	</div>
+	<div align="center">
+		<img src="image-4.png" width="500" alt="Motoreductor DC con encoder"/>
+		<br>
+		<figcaption>Fuente: https://www.haljia.com/products/haljia-4pcs-dc-drive-gear-motor-dual-shaft-and-tire-wheel-for-dc-3v-6v-smart-car-robot-projects-compatible-with-arduino</figcaption>
+	</div>
     <li> Sensor ultrasónico HC-SR04</li>
     <img src="https://ferretronica.com/cdn/shop/products/sensor_ultrasonico_HC_-_SR04_de_distancia_ultrasonido_hc-sr04_ferretronica_x700.jpg?v=1577502249" alt="HC-SR04" caption="Hola"/>
-    <li> Puente H (L298/L293)</li>
-    <img src="https://www.ardobot.co/pub/media/catalog/product/cache/2641e33458f1ae4a696b47b0da974426/l/2/l2998neco.jpg" alt="L298" caption="Hola"/>
+    <li> Puente H (L298)</li>
+	<div align="center">
+		<img src="image-5.png" alt="Puente H" width="400"/>
+		<br>
+		<figcaption>Fuente: https://megatronica.cc/producto/modulo-puente-h-l298-l298n-2a-robot-driver-motor/</figcaption>
+	</div>
     <li> Encoder incremental</li>
     <img src="https://http2.mlstatic.com/D_NQ_NP_731207-MEC31981852736_082019-O.webp" alt="encoder arduino" caption="Hola"/>
+	<li>INA219</li>
+	<div align="center">
+		<img src="image-6.png" alt="INA219" width="500"/>
+		<br>
+		<figcaption>Fuente: https://makerselectronics.com/product/ina219-dc-current-measurement-sensor/</figcaption>
+	</div>
     <!--
 	<li> Sensor o actuador I2C (IMU (MPU6050, MPU9250), PCA9685, RTC (DS1307, DS3231), INA219, EEPROMs (24lc04, 24lc64,  24lc6128,  24lc256,  24lc512 24lc1025)</li>
     <ol type="I">

@@ -1,4 +1,4 @@
-<h1>Aula 6</h1>
+<h1>Aula 5</h1>
 
 Esta clase consiste en realizar la programación de interrupciones
 
@@ -75,6 +75,12 @@ El (NVIC) es el encargado de procesar todas las interrupciones en los procesador
 //STM32F767ZIT6U
 //operation 'or' (|) for set bit and operation 'and' (&) for clear bit
 
+//Ejemplo Interrupciones con led de usuario de la tarjeta
+//Fabián Barrera Prieto
+//Universidad ECCI
+//STM32F767ZIT6U
+//operation 'or' (|) for set bit and operation 'and' (&) for clear bit
+
 #include <stdio.h>
 #include "stm32f7xx.h"
 
@@ -83,6 +89,8 @@ uint32_t a, b, c;
 
 extern "C"{
 	void EXTI15_10_IRQHandler(void){
+		for (int t=0;t<1000;t++){
+		}
 		EXTI->PR |= (1<<13); //Down flag
 		if(((GPIOC->IDR & (1<<13)) >> 13) == 1){//Read PC13 pin
 			cont += 1;
@@ -125,7 +133,7 @@ int main(){
 		for (int t=0;t<1000000;t++){
 			GPIOB->ODR &= ~(1<<0);
 		}
-		if(cont == 5){
+		if(cont >= 5){
 			cont = 0;
 			a = (~(GPIOB->ODR&(1<<7)));
 			b = (GPIOB->ODR|(1<<7));
